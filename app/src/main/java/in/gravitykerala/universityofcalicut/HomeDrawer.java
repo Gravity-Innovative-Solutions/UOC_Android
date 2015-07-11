@@ -1,9 +1,8 @@
 package in.gravitykerala.universityofcalicut;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -12,23 +11,17 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
-import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.SectionDrawerItem;
-import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
-import com.mikepenz.materialdrawer.model.ToggleDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 import in.gravitykerala.universityofcalicut.Fragment.DemoFragment;
-import in.gravitykerala.universityofcalicut.Fragment.DemoOne;
+import in.gravitykerala.universityofcalicut.Fragment.PareekshaBhavanFragment;
+import in.gravitykerala.universityofcalicut.Fragment.HomeFragment;
 
 
 public class HomeDrawer extends AppCompatActivity {
@@ -45,6 +38,9 @@ public class HomeDrawer extends AppCompatActivity {
         // Handle Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Fragment f = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
         headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -85,13 +81,13 @@ public class HomeDrawer extends AppCompatActivity {
                             } else if (drawerItem.getIdentifier() == 3) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
-                                Fragment f = new DemoOne();
+                                Fragment f = new PareekshaBhavanFragment();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
                             } else if (drawerItem.getIdentifier() == 1) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
-                                Fragment f = new DemoOne();
+                                Fragment f = new HomeFragment();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
                             }

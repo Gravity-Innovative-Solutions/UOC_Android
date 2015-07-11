@@ -4,7 +4,173 @@
     tools:context="in.gravitykerala.universityofcalicut.Fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ImageView3_Left"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:baselineAlignBottom="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="The University of Calicut is the largest University in Kerala. Established in the year 1968, it is the second university to be set up in Kerala. The University aims to nurture excellence in education and research in its catchment areas of Northern Kerala, historically consigned to the periphery of Kerala’s academic map. The University lays its emphasis on fostering quality human resource and promoting productive research that benefit both local communities and wider humanity. The University was created through a Government plan bifurcating Kerala University. As per the plan, the four post-graduate departments of the University of Kerala operating in Calicut were annexed to the new University along with fifty four constituent colleges spread across seven northern districts. With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to surmount all challenges and emerge as the largest residential cum affiliating University in Kerala. With 30 post graduate departments and 373 affiliated colleges it has become a beacon of hope and enlightenment for hundreds of thousands of young men and women in North Kerala."
+                        android:id="@+id/textView2"
+                        android:textColor="#000" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/chancellor"
+
+                                android:id="@+id/textView_chancellor"
+                                android:gravity="center"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/img_home_chancellor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView4"
+                            android:src="@drawable/img_home_pro_chancellor"
+                            android:scaleType="centerCrop"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/pro_chancellor"
+                            android:layout_weight="1"
+                            android:id="@+id/textView"
+                            android:gravity="center"
+                            android:textColor="#000" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/vice_chancellor"
+                            android:layout_weight="1"
+                            android:id="@+id/textView_vc"
+                            android:gravity="center"
+                            android:textColor="#000" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView2"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_home_vc" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView3"
+                            android:src="@drawable/img_home_pvc"
+                            android:scaleType="centerCrop"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Pro Vice Chancellor"
+                            android:id="@+id/textView_pvc"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 </FrameLayout>
