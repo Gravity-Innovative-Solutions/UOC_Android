@@ -19,9 +19,13 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
+import in.gravitykerala.universityofcalicut.Fragment.Contact;
 import in.gravitykerala.universityofcalicut.Fragment.DemoFragment;
+import in.gravitykerala.universityofcalicut.Fragment.DistanceEducation;
+import in.gravitykerala.universityofcalicut.Fragment.OnlineRegistration;
 import in.gravitykerala.universityofcalicut.Fragment.PareekshaBhavanFragment;
 import in.gravitykerala.universityofcalicut.Fragment.HomeFragment;
+import in.gravitykerala.universityofcalicut.Fragment.PlacementPortal;
 
 
 public class HomeDrawer extends AppCompatActivity {
@@ -55,9 +59,16 @@ public class HomeDrawer extends AppCompatActivity {
                 .withAccountHeader(headerResult) //set the AccountHeader we created earlier for the header
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(R.string.home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(1).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_pareeksha_bhavan).withIcon(GoogleMaterial.Icon.gmd_notifications).withIdentifier(4).withCheckable(false),
                         new PrimaryDrawerItem().withName(R.string.about_fragment_title).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(2).withCheckable(true),
-                        new PrimaryDrawerItem().withName(R.string.demo_two).withIcon(GoogleMaterial.Icon.gmd_event).withIdentifier(3).withCheckable(true)
+                        new PrimaryDrawerItem().withName(R.string.title_fragment_pareekshabavan).withIcon(GoogleMaterial.Icon.gmd_event).withIdentifier(3).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_pareeksha_bhavan).withIcon(GoogleMaterial.Icon.gmd_notifications).withIdentifier(4).withCheckable(false),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_contact).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(5).withCheckable(false),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_airline_seat_legroom_normal).withIdentifier(6).withCheckable(false),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(7).withCheckable(false),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(8).withCheckable(false)
+
+
+
 
                 ) // add the items we want to use with our Drawer
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
@@ -71,8 +82,12 @@ public class HomeDrawer extends AppCompatActivity {
 
                         if (drawerItem != null) {
                             Intent intent = null;
-                            if (drawerItem.getIdentifier() == 4) {
-                                intent = new Intent(HomeDrawer.this, PareekshaBhavanActivity.class);
+                            if (drawerItem.getIdentifier() == 1) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new HomeFragment();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
                             } else if (drawerItem.getIdentifier() == 2) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
@@ -84,10 +99,37 @@ public class HomeDrawer extends AppCompatActivity {
                                 Fragment f = new PareekshaBhavanFragment();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
-                            } else if (drawerItem.getIdentifier() == 1) {
+                            } else if (drawerItem.getIdentifier() == 4) {
+
+
+                                intent = new Intent(HomeDrawer.this, PareekshaBhavanActivity.class);
+
+                            }
+                            else if (drawerItem.getIdentifier() == 5) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
-                                Fragment f = new HomeFragment();
+                                Fragment f = new Contact();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+                            }
+                            else if (drawerItem.getIdentifier() == 6) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new DistanceEducation();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+                            }
+                            else if (drawerItem.getIdentifier() == 7) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new OnlineRegistration();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+                            }
+                            else if (drawerItem.getIdentifier() == 8) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new PlacementPortal();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
                             }

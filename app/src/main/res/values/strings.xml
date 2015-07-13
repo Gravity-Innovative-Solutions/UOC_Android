@@ -7,7 +7,8 @@
     <string name="demo_fragment_title_one">Home</string>
     <string name="action_settings">Settings</string>
     <string name="demo_two">Notifications</string>
-    <string name="title_activity_pareeksha_bhavan">Pareeksha Bhavan</string>
+    <string name="title_activity_pareeksha_bhavan">Activity</string>
+    <string name="title_fragment_pareekshabavan">Pareeksha Bhavan</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -15,8 +16,29 @@
     <string name="home_desc">The University of Calicut is the largest University in Kerala. Established in the year 1968, it is the second university to be set up in Kerala. The University aims to nurture excellence in education and research in its catchment areas of Northern Kerala, historically consigned to the periphery of Kerala’s academic map. The University lays its emphasis on fostering quality human resource and promoting productive research that benefit both local communities and wider humanity.The University was created through a Government plan bifurcating Kerala University. As per the plan, the four post-graduate departments of the University of Kerala operating in Calicut were annexed to the new University along with fifty four constituent colleges spread across seven northern districts. With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to surmount all challenges and emerge as the largest residential cum affiliating University in Kerala. With 30 post graduate departments and 373 affiliated colleges it has become a beacon of hope and enlightenment for hundreds of thousands of young men and women in North Kerala.</string>
 
 
-    <string name="chancellor">"Chancellor \nSri.P Sathasivam \nHon.Kerala Governor"</string>
-    <string name="pro_chancellor">"Pro Chancellor \nSri Abdu Rabb \nHon. Minister for Education,\n Government of Kerala"</string>
-    <string name="vice_chancellor">"Vice – Chancellor\nDr.  M  Abdul  Salam"</string>
-    <string name="pro_vice_chancellor">"Pro -Vice-Chancellor\nProf . K. Raveendranath"</string>
+    <string name="chancellor">"Sri.P Sathasivam \nChancellor \nHon.Kerala Governor"</string>
+    <string name="pro_chancellor">"Sri Abdu Rabb \nPro Chancellor \nHon. Minister for Education,\n Government of Kerala"</string>
+    <string name="vice_chancellor">"Dr. M Abdul Salam\n Vice–Chancellor"</string>
+    <string name="pro_vice_chancellor">"Pro-Vice-Chancellor\n Prof.K.Raveendranath"</string>
+    <string name="title_activity_authorities">Authorities</string>
+    <string name="heading_authorities">Central Confidential and General Section</string>
+    <string name="gen_section">Mohanakrishnan C S\nContact:  0494-2407202\nEmail: jce1@universityofcalicut.info</string>
+    <string name="heading_authorities1">B.A. and Oriental Title Courses</string>
+    <string name="gen_section1">Anuja Balakrishnan\nContact:   0494-2407223, 2407229\nEmail: jce2@universityofcalicut.info</string>
+    <string name="heading_authorities2">B.Com and B.B.A</string>
+    <string name="gen_section2">P P Rajendran\nContact:   0494-2407284\nEmail: jce3@universityofcalicut.info</string>
+    <string name="heading_authorities3">B.Sc., B.C.A (EPR-1)</string>
+    <string name="gen_section3">E. P Pavithran\nContact:  0494-2407214\nEmail: jce4@universityofcalicut.info</string>
+    <string name="heading_authorities4">P.G. Courses and B.Ed. /M.Ed. Courses</string>
+    <string name="gen_section4">Suresh .K.K\nContact:  0494-2407206, 2401130\nEmail: jce5@universityofcalicut.info</string>
+    <string name="heading_authorities5">B.Tech. Courses</string>
+    <string name="gen_section5">Praveena R, O.B Jayanthi\nContact:  0494-2407234, 2407215\nEmail: jce6@universityofcalicut.info</string>
+    <string name="title_activity_syllabus">Syllabus</string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_contact">Contact</string>
+    <string name="title_activity_result">Result</string>
+    <string name="title_activity_time_table">Time Table</string>
+    <string name="title_activity_diedu">Distance Education</string>
+    <string name="title_activity_online_reg">Online Registration</string>
+    <string name="title_activity_plcmnt">Online Registration</string>
 </resources>

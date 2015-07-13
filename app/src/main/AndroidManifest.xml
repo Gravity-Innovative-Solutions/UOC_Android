@@ -19,13 +19,29 @@
         </activity>
         <activity
             android:name=".PareekshaBhavanActivity"
-            android:label="@string/title_activity_pareeksha_bhavan" ></activity>
+            android:label="@string/title_activity_pareeksha_bhavan" />
         <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeDrawer" />
+        </activity>
+        <activity
+            android:name=".Authorities"
+            android:label="@string/title_activity_authorities"></activity>
+        <activity
+            android:name=".Syllabus"
+            android:label="@string/title_activity_syllabus"></activity>
+        <activity
+            android:name=".Notification"
+            android:label="@string/title_activity_notification"></activity>
+        <activity
+            android:name=".Result"
+            android:label="@string/title_activity_result"></activity>
+        <activity
+            android:name=".TimeTable"
+            android:label="@string/title_activity_time_table">
         </activity>
     </application>
 
