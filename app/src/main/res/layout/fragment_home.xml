@@ -71,6 +71,14 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/chanc"
+                                android:id="@+id/textView21"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:text="@string/chancellor"
 
@@ -107,15 +115,30 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             android:layout_weight="1"
                             android:adjustViewBounds="true" />
 
-                        <TextView
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/pro_chancellor"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:id="@+id/textView"
-                            android:gravity="center"
-                            android:textColor="#000" />
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/pc"
+                                android:id="@+id/textView22"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/pro_chancellor"
+                                android:id="@+id/textView"
+                                android:gravity="center"
+                                android:textColor="#000" />
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -127,15 +150,31 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                         android:gravity="center"
                         android:background="#ff525dd4">
 
-                        <TextView
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/vice_chancellor"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:id="@+id/textView_vc"
-                            android:gravity="center"
-                            android:textColor="@color/white" />
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/vc"
+                                android:id="@+id/textView23"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/vice_chancellor"
+                                android:id="@+id/textView_vc"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
 
                         <ImageView
                             android:layout_width="0dp"
@@ -163,15 +202,31 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             android:scaleType="centerCrop"
                             android:layout_weight="1" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/pro_vice_chancellor"
-                            android:id="@+id/textView_pvc"
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="#000" />
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/pvc"
+                                android:id="@+id/textView24"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/pro_vice_chancellor"
+                                android:id="@+id/textView_pvc"
+
+                                android:gravity="center"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </LinearLayout>

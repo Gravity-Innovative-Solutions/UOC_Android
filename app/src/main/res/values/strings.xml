@@ -16,12 +16,18 @@
     <string name="home_desc">The University of Calicut is the largest University in Kerala. Established in the year 1968, it is the second university to be set up in Kerala. The University aims to nurture excellence in education and research in its catchment areas of Northern Kerala, historically consigned to the periphery of Kerala’s academic map. The University lays its emphasis on fostering quality human resource and promoting productive research that benefit both local communities and wider humanity.The University was created through a Government plan bifurcating Kerala University. As per the plan, the four post-graduate departments of the University of Kerala operating in Calicut were annexed to the new University along with fifty four constituent colleges spread across seven northern districts. With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to surmount all challenges and emerge as the largest residential cum affiliating University in Kerala. With 30 post graduate departments and 373 affiliated colleges it has become a beacon of hope and enlightenment for hundreds of thousands of young men and women in North Kerala.</string>
 
 
-    <string name="chancellor">"Sri.P Sathasivam \nChancellor \nHon.Kerala Governor"</string>
-    <string name="pro_chancellor">"Sri Abdu Rabb \nPro Chancellor \nHon. Minister for Education,Kerala"</string>
-    <string name="vice_chancellor">"Dr. M Abdul Salam\n Vice–Chancellor"</string>
-    <string name="pro_vice_chancellor">"Prof.K.Raveendranath\n Pro-Vice-Chancellor "</string>
+    <string name="chancellor">"Chancellor \nHon.Kerala Governor"</string>
+    <string name="chanc">"Sri.P Sathasivam"</string>
+    <string name="pro_chancellor">"Pro Chancellor \nHon. Minister for Education,Kerala"</string>
+    <string name="pc">"Sri Abdu Rabb"</string>
+    <string name="vice_chancellor">"Vice–Chancellor"</string>
+    <string name="vc">"Dr. M Abdul Salam"</string>
+    <string name="pro_vice_chancellor">"Pro-Vice-Chancellor "</string>
+    <string name="pvc">"Prof.K.Raveendranath"</string>
+
     <string name="title_activity_authorities">Authorities</string>
     <string name="heading_authorities">Central Confidential and General Section</string>
+    <string name="cntrl_exam">Dr. V V Georgekutty\nController of Examination:\nContact:0494–2400291</string>
     <string name="gen_section">Mohanakrishnan C S\nContact:  0494-2407202\nEmail: jce1@universityofcalicut.info</string>
     <string name="heading_authorities1">B.A. and Oriental Title Courses</string>
     <string name="gen_section1">Anuja Balakrishnan\nContact:   0494-2407223, 2407229\nEmail: jce2@universityofcalicut.info</string>
