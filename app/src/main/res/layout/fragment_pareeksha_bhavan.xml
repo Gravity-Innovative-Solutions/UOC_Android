@@ -47,7 +47,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="The Pareeksha Bhavan is the nerve centre of university examination. It conducts examinations for all courses of the University, arranges for the valuation of answer scripts, processes marks, and announces results and issues diplomas, degrees and certificates. The valuation of answer scripts of postgraduate semester courses and all degree courses is carried out at centralised valuation camps and results of all examinations are announced in time"
                         android:id="@+id/textView3"
                         android:textColor="#000"
@@ -56,7 +56,7 @@
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="150dp"
                         android:weightSum="2">
 
                         <LinearLayout
@@ -65,21 +65,22 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"
                             android:background="#ffb654c4"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:id="@+id/authorities">
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/imageView_feestructure"
-
-                                android:adjustViewBounds="true"
-                                android:src="@drawable/icon_pb_calendar" />
+                                android:id="@+id/imageView6"
+                                android:src="@drawable/icon_authorities"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:text="Fee Structure"
+                                android:text="Authorities"
                                 android:id="@+id/textView4"
                                 android:textColor="@color/white" />
                         </LinearLayout>
@@ -98,7 +99,7 @@
                                 android:id="@+id/imageView_calendar"
 
                                 android:adjustViewBounds="true"
-                                android:src="@drawable/icon_pb_calendar" />
+                                android:src="@drawable/icon_calendar" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -110,6 +111,53 @@
                                 android:gravity="center" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="#ff1c7f19"
+                        android:gravity="center"
+                        android:id="@+id/online_reg">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView7"
+                            android:src="@drawable/icon_online_reg"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Online Registration"
+                            android:id="@+id/textView17"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:id="@+id/online_payment"
+                        android:background="#ffcfd03c"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView8"
+                            android:src="@drawable/icon_online_payement" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Online Payment"
+                            android:id="@+id/textView18" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -128,6 +176,7 @@
         <!--android:layout_alignParentRight="true"-->
         <!--android:layout_alignParentEnd="true"-->
   <!--/>-->
+
 
     <net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/multiple_actions"
@@ -157,7 +206,7 @@
             android:layout_width="5dp"
             android:layout_height="5dp"
             fab:fab_colorNormal="@color/primary_dark"
-            fab:fab_title="Authorities"
+            fab:fab_title="Fee Structure"
 
 
             fab:fab_colorPressed="#fff"
@@ -235,10 +284,6 @@
             fab:fab_colorPressed="#fff"/>
 
     </net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu>
-
-
-
-
 
 
 </RelativeLayout>

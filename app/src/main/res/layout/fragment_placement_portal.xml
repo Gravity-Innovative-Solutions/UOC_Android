@@ -33,20 +33,26 @@
             android:layout_height="wrap_content"
             android:gravity="center">
 
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:id="@+id/button"
+
                 android:layout_marginRight="15dp"
-                style="@style/button_uoc" />
+                android:gravity="center"
+                style="@style/Button_" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Register"
+
                 android:id="@+id/button2"
-                style="@style/button_uoc" />
+
+                android:gravity="center"
+                style="@style/Button_" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

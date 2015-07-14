@@ -13,7 +13,7 @@
         <item name="colorAccent">@color/accent</item>
         <item name="selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
-        <item name="android:buttonStyle">@style/button_uoc</item>
+        <item name="android:buttonStyle">@style/Button_</item>
     </style>
 
     <style name="FabStyle">
@@ -23,6 +23,7 @@
         <item name="android:src">@drawable/ic_add_black</item>
         <item name="borderWidth">0dp</item>
         <item name="elevation">6dp</item>
+
         <item name="pressedTranslationZ">12dp</item>
         <item name="rippleColor">@android:color/white</item>
     </style>
@@ -39,14 +40,24 @@
     <color name="black">#000</color>
     <color name="white">#fff</color>
 
-    <style name="button_uoc" parent="Widget.AppCompat.ActionButton">
-        <item name="android:layout_width">75dp</item>
+    <style name="Button_" parent="Widget.AppCompat.ActionButton">
+        <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/primary_dark</item>
         <item name="android:textColor">@color/white</item>
         <!--<item name="android:textStyle">bold</item>-->
         <item name="android:padding">5dp</item>
         <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Button_material">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:layout_margin">3dp</item>
+
+        <item name="android:background">@drawable/primary_round</item>
     </style>
 
 </resources>

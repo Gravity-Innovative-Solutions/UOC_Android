@@ -46,12 +46,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="The University of Calicut is the largest University in Kerala. Established in the year 1968, it is the second university to be set up in Kerala. The University aims to nurture excellence in education and research in its catchment areas of Northern Kerala, historically consigned to the periphery of Kerala’s academic map. The University lays its emphasis on fostering quality human resource and promoting productive research that benefit both local communities and wider humanity. The University was created through a Government plan bifurcating Kerala University. As per the plan, the four post-graduate departments of the University of Kerala operating in Calicut were annexed to the new University along with fifty four constituent colleges spread across seven northern districts. With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to surmount all challenges and emerge as the largest residential cum affiliating University in Kerala. With 30 post graduate departments and 373 affiliated colleges it has become a beacon of hope and enlightenment for hundreds of thousands of young men and women in North Kerala."
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="The University of Calicut is the largest University in Kerala. Established in the year 1968, it is the second university to be set up in Kerala. The University aims to nurture excellence in education and research in its catchment areas of Northern Kerala, historically consigned to the periphery of Kerala’s academic map.
+With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to surmount all challenges and emerge as the largest residential cum affiliating University in Kerala. With 30 post graduate departments and 373 affiliated colleges it has become a beacon of hope and enlightenment for hundreds of thousands of young men and women in North Kerala.
+"
                         android:id="@+id/textView2"
                         android:textColor="#000"
-                        android:padding="10dp"
-                        android:gravity="center" />
+                        android:padding="10dp" />
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -75,7 +76,7 @@
 
                                 android:id="@+id/textView_chancellor"
                                 android:gravity="center"
-                                android:textColor="#000" />
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
                         <ImageView
@@ -134,7 +135,7 @@
                             android:layout_weight="1"
                             android:id="@+id/textView_vc"
                             android:gravity="center"
-                            android:textColor="#000" />
+                            android:textColor="@color/white" />
 
                         <ImageView
                             android:layout_width="0dp"
@@ -152,7 +153,7 @@
                         android:layout_height="wrap_content"
                         android:weightSum="2"
                         android:gravity="center"
-                        android:background="#ffb624d0">
+                        android:background="#ff1dfffc">
 
                         <ImageView
                             android:layout_width="0dp"

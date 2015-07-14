@@ -22,6 +22,7 @@ import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import in.gravitykerala.universityofcalicut.Fragment.Contact;
 import in.gravitykerala.universityofcalicut.Fragment.DemoFragment;
 import in.gravitykerala.universityofcalicut.Fragment.DistanceEducation;
+import in.gravitykerala.universityofcalicut.Fragment.OnlinePayment;
 import in.gravitykerala.universityofcalicut.Fragment.OnlineRegistration;
 import in.gravitykerala.universityofcalicut.Fragment.PareekshaBhavanFragment;
 import in.gravitykerala.universityofcalicut.Fragment.HomeFragment;
@@ -65,7 +66,8 @@ public class HomeDrawer extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(R.string.title_activity_contact).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(5).withCheckable(false),
                         new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_airline_seat_legroom_normal).withIdentifier(6).withCheckable(false),
                         new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(7).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(8).withCheckable(false)
+                        new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(8).withCheckable(false),
+                        new PrimaryDrawerItem().withName(R.string.online_payment).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(9).withCheckable(false)
 
 
 
@@ -130,6 +132,12 @@ public class HomeDrawer extends AppCompatActivity {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
                                 Fragment f = new PlacementPortal();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+                            } else if (drawerItem.getIdentifier() == 9) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new OnlinePayment();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
                             }

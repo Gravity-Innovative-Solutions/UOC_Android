@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import in.gravitykerala.universityofcalicut.Authorities;
 import in.gravitykerala.universityofcalicut.R;
@@ -22,6 +23,7 @@ import in.gravitykerala.universityofcalicut.Syllabus;
 public class PareekshaBhavanFragment extends Fragment {
     private View v;
     ImageView fee, acdmc_calndr;
+    LinearLayout authorities, online_payment, online_registration;
 
 
     public PareekshaBhavanFragment() {
@@ -35,20 +37,49 @@ public class PareekshaBhavanFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_pareeksha_bhavan, container, false);
         ShapeDrawable drawable = new ShapeDrawable(new OvalShape());
-        fee = (ImageView) v.findViewById(R.id.imageView_feestructure);
+//        fee = (ImageView) v.findViewById(R.id.imageView_feestructure);
         acdmc_calndr = (ImageView) v.findViewById(R.id.imageView_calendar);
-        drawable.getPaint().setColor(getResources().getColor(R.color.accent));
-        // ((FloatingActionButton) findViewById(R.id.setter_drawable)).setIconDrawable(drawable);
-        fee.setOnClickListener(new View.OnClickListener() {
+        authorities = (LinearLayout) v.findViewById(R.id.authorities);
+        online_payment = (LinearLayout) v.findViewById(R.id.online_payment);
+        online_registration = (LinearLayout) v.findViewById(R.id.online_reg);
+        online_registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/revised_feestructure_on29june2015.pdf"));
+                intent.setData(Uri.parse("http://202.88.252.18/CuPbOnline/online_portal/"));
                 startActivity(intent);
+
             }
         });
+        online_payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.uoc.ac.in/"));
+                startActivity(intent);
+
+            }
+        });
+        authorities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1 = new Intent(getActivity(), Authorities.class);
+                startActivity(i1);
+
+            }
+        });
+        drawable.getPaint().setColor(getResources().getColor(R.color.accent));
+        // ((FloatingActionButton) findViewById(R.id.setter_drawable)).setIconDrawable(drawable);
+//        fee.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
         acdmc_calndr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,8 +95,12 @@ public class PareekshaBhavanFragment extends Fragment {
         v.findViewById(R.id.a).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getActivity(), Authorities.class);
-                startActivity(i1);
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/revised_feestructure_on29june2015.pdf"));
+                startActivity(intent);
+
             }
         });
         v.findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
