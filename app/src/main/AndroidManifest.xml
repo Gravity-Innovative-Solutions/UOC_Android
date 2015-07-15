@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -46,11 +46,18 @@
             android:label="@string/title_activity_time_table" />
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about"></activity>
+            android:label="@string/title_activity_about" />
         <activity
             android:name=".VC"
             android:label="@string/title_activity_vc">
         </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:label="Noti">
+
+
+        </activity>
+
     </application>
 
 </manifest>

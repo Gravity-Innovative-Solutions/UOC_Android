@@ -63,7 +63,7 @@ public class HomeDrawer extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(R.string.about_fragment_title).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(2).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_fragment_pareekshabavan).withIcon(GoogleMaterial.Icon.gmd_event).withIdentifier(3).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_pareeksha_bhavan).withIcon(GoogleMaterial.Icon.gmd_notifications).withIdentifier(4).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_contact).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(9).withCheckable(false),
+                        new PrimaryDrawerItem().withName("Notifications").withIcon(GoogleMaterial.Icon.gmd_notifications_active).withIdentifier(9).withCheckable(false),
                         new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_airline_seat_legroom_normal).withIdentifier(6).withCheckable(false),
                         new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(5).withCheckable(false),
                         new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(7).withCheckable(false),
@@ -107,10 +107,7 @@ public class HomeDrawer extends AppCompatActivity {
                                 intent = new Intent(HomeDrawer.this, AboutActivity.class);
 
                             } else if (drawerItem.getIdentifier() == 9) {
-                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
-                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
-                                Fragment f = new Contact();
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+                                intent = new Intent(HomeDrawer.this, NotificationActivity.class);
 
                             }
                             else if (drawerItem.getIdentifier() == 6) {
