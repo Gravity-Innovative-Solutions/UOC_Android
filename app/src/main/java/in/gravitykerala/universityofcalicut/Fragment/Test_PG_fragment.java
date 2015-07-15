@@ -15,11 +15,11 @@ import in.gravitykerala.universityofcalicut.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TestFragment extends Fragment {
+public class Test_PG_fragment extends Fragment {
     Button withen, without, pros, reg, admi;
 
 
-    public TestFragment() {
+    public Test_PG_fragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +28,9 @@ public class TestFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_test, container, false);
+        View v = inflater.inflate(R.layout.fragment_test__pg_fragment, container, false);
+//        WebView myWebView = (WebView) v.findViewById(R.id.webview);
+//        myWebView.loadUrl("http://www.royalcet.in/about-us/");
         withen = (Button) v.findViewById(R.id.button_we);
         without = (Button) v.findViewById(R.id.button_wo);
         pros = (Button) v.findViewById(R.id.button_pros);
@@ -40,7 +42,7 @@ public class TestFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=111&action=listCourses&course_type_id=1&has_ent=1"));
+                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=111&action=listCourses&course_type_id=2&has_ent=1"));
                 startActivity(intent);
             }
         });
@@ -50,7 +52,7 @@ public class TestFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=111&action=listCourses&course_type_id=1&has_ent=0"));
+                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=111&action=listCourses&course_type_id=2&has_ent=0"));
                 startActivity(intent);
             }
         });
@@ -60,7 +62,7 @@ public class TestFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=258"));
+                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=111&action=listCourses&course_type_id=2&has_ent=1#"));
                 startActivity(intent);
             }
         });
@@ -70,23 +72,20 @@ public class TestFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=270"));
+                intent.setData(Uri.parse("http://www.cuonline.ac.in/?page_id=266"));
                 startActivity(intent);
             }
         });
-        admi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cuonline.ac.in/ugcap2015/capserver1/"));
-                startActivity(intent);
-            }
-        });
-
-//        WebView myWebView = (WebView) v.findViewById(R.id.webview);
-//        myWebView.loadUrl("http://www.royalcet.in/about-us/");
+//        admi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://www.cuonline.ac.in/ugcap2015/capserver1/"));
+//                startActivity(intent);
+//            }
+//        });
         return v;
     }
 

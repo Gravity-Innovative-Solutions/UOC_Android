@@ -39,6 +39,7 @@
     <color name="accent_bright">#FFF493</color>
     <color name="black">#000</color>
     <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
 
     <style name="Button_" parent="Widget.AppCompat.ActionButton">
         <item name="android:layout_width">100dp</item>
@@ -48,6 +49,7 @@
         <!--<item name="android:textStyle">bold</item>-->
         <item name="android:padding">5dp</item>
         <item name="android:gravity">center</item>
+
     </style>
 
     <style name="Button_material">

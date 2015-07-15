@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2">
+
+        <at.markushi.ui.RevealColorView
+            android:id="@+id/reveal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#212121" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="64dip"
+            android:fontFamily="sans-serif-light"
+            android:paddingBottom="16dip"
+            android:paddingLeft="72dip"
+            android:text="Directorate of Admission"
+            android:textColor="#DDFFFFFF"
+            android:textSize="36sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dip"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dip"
+            android:paddingLeft="72dip"
+            android:paddingRight="16dip">
+
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:tag="#8bc34a"
+                android:gravity="center"
+                android:layout_marginRight="8dip"
+                android:text="UG"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:tag="#3f51b5"
+                android:gravity="center"
+                android:layout_marginRight="8dip"
+                android:text="PG"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_3"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:tag="#00bcd4"
+                android:text="M.phill"
+                android:gravity="center"
+                android:layout_marginRight="8dip"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_4"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/abc_ab_share_pack_mtrl_alpha"
+                android:tag="#e91e63"
+                android:gravity="center"
+                android:text="Ph.D"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dip"-->
+    <!--android:layout_weight="3"-->
+    <!--android:paddingLeft="72dip"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:paddingTop="16dip"-->
+    <!--android:id="@+id/tv"/>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/fragment_lt">
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.gravitykerala.universityofcalicut" >
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,28 +22,31 @@
         <activity
             android:name=".PareekshaBhavanActivity"
             android:label="@string/title_activity_pareeksha_bhavan" />
-        <activity
-            android:name=".DetailActivity"
-            android:label="@string/title_activity_detail">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeDrawer" />
-        </activity>
+        <!-- <activity -->
+        <!-- android:name=".DetailActivity" -->
+        <!-- android:label="@string/title_activity_detail"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+        <!-- android:value=".HomeDrawer" /> -->
+        <!-- </activity> -->
         <activity
             android:name=".Authorities"
-            android:label="@string/title_activity_authorities"></activity>
+            android:label="@string/title_activity_authorities" />
         <activity
             android:name=".Syllabus"
-            android:label="@string/title_activity_syllabus"></activity>
+            android:label="@string/title_activity_syllabus" />
         <activity
             android:name=".Notification"
-            android:label="@string/title_activity_notification"></activity>
+            android:label="@string/title_activity_notification" />
         <activity
             android:name=".Result"
-            android:label="@string/title_activity_result"></activity>
+            android:label="@string/title_activity_result" />
         <activity
             android:name=".TimeTable"
-            android:label="@string/title_activity_time_table">
+            android:label="@string/title_activity_time_table"></activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about">
         </activity>
     </application>
 

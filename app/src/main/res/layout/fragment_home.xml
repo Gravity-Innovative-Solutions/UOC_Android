@@ -71,7 +71,7 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:text="@string/chanc"
                                 android:id="@+id/textView21"
                                 android:textColor="@color/white" />
@@ -79,7 +79,7 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:text="@string/chancellor"
 
                                 android:id="@+id/textView_chancellor"
@@ -125,15 +125,16 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:text="@string/pc"
                                 android:id="@+id/textView22"
-                                android:gravity="center" />
+                                android:gravity="center"
+                                android:textColor="#000" />
 
                             <TextView
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:text="@string/pro_chancellor"
                                 android:id="@+id/textView"
                                 android:gravity="center"
@@ -160,7 +161,7 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:text="@string/vc"
                                 android:id="@+id/textView23"
                                 android:gravity="center"
@@ -169,7 +170,7 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             <TextView
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:text="@string/vice_chancellor"
                                 android:id="@+id/textView_vc"
                                 android:gravity="center"
@@ -204,22 +205,24 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
 
                         <LinearLayout
                             android:orientation="vertical"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:gravity="center">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:text="@string/pvc"
                                 android:id="@+id/textView24"
-                                android:gravity="center" />
+                                android:gravity="center"
+                                android:textColor="@color/black" />
 
                             <TextView
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:text="@string/pro_vice_chancellor"
                                 android:id="@+id/textView_pvc"
 

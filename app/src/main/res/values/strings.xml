@@ -7,7 +7,7 @@
     <string name="demo_fragment_title_one">Home</string>
     <string name="action_settings">Settings</string>
     <string name="demo_two">Notifications</string>
-    <string name="title_activity_pareeksha_bhavan">Activity</string>
+    <string name="title_activity_pareeksha_bhavan">Directorate of Admission</string>
     <string name="title_fragment_pareekshabavan">Pareeksha Bhavan</string>
 
 <!-- TODO: Remove or change this placeholder text -->
@@ -55,4 +55,5 @@
 
     <string name="dist_edu_heading">School of distance education</string>
     <string name="dist_edu_desc">Established in 1981, the School has emerged as a major distance education provider in Kerala. Annually about 30 thousand students enrol for the programmes of the School available under two streams – Regular and Open. Regular Stream Courses are meant for those who wish to pursue their studies though distance education mode provided they satisfy the conditions prescribed for admission to the graduate and postgraduate programmes offered in colleges affiliated to the University.\nCurrently, the School offers 16 graduate courses, 13 postgraduate courses and two diploma courses. Students admitted to these courses are provided printed study materials. All students are expected to attend contact programmes and training sessions arranged regularly at notified centres. \nThe School has approved 18 educational institutions in different States of India to enrol students for various courses offered by the School. Also, the School has six approved overseas centres at Sharjah, Abu Dhabi , Doha , Kuwait and Bahrain</string>
+    <string name="title_activity_about">About</string>
 </resources>

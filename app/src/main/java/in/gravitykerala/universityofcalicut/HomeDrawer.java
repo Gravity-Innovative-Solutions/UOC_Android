@@ -104,10 +104,9 @@ public class HomeDrawer extends AppCompatActivity {
                             } else if (drawerItem.getIdentifier() == 4) {
 
 
-                                intent = new Intent(HomeDrawer.this, PareekshaBhavanActivity.class);
+                                intent = new Intent(HomeDrawer.this, AboutActivity.class);
 
-                            }
-                            else if (drawerItem.getIdentifier() == 5) {
+                            } else if (drawerItem.getIdentifier() == 9) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
                                 Fragment f = new Contact();
@@ -120,21 +119,19 @@ public class HomeDrawer extends AppCompatActivity {
                                 Fragment f = new DistanceEducation();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
-                            }
-                            else if (drawerItem.getIdentifier() == 7) {
+                            } else if (drawerItem.getIdentifier() == 5) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
                                 Fragment f = new OnlineRegistration();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
-                            }
-                            else if (drawerItem.getIdentifier() == 8) {
+                            } else if (drawerItem.getIdentifier() == 7) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
                                 Fragment f = new PlacementPortal();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
-                            } else if (drawerItem.getIdentifier() == 9) {
+                            } else if (drawerItem.getIdentifier() == 8) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
                                 Fragment f = new OnlinePayment();
