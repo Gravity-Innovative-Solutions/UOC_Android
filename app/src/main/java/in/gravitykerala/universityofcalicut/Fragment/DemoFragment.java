@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import in.gravitykerala.universityofcalicut.R;
+import in.gravitykerala.universityofcalicut.VC;
 
 
 /**
@@ -18,7 +19,7 @@ import in.gravitykerala.universityofcalicut.R;
  */
 public class DemoFragment extends Fragment {
     private static final String KEY_TITLE = "title";
-    LinearLayout news, uni_orders;
+    LinearLayout news, uni_orders, diary, vc;
 
 
     public DemoFragment() {
@@ -41,8 +42,19 @@ public class DemoFragment extends Fragment {
         // Inflate the layout for this fragment
         // don't look at this layout it's just a listView to show how to handle the keyboard
         View v = inflater.inflate(R.layout.fragment_about, container, false);
+        vc = (LinearLayout) v.findViewById(R.id.vc);
         news = (LinearLayout) v.findViewById(R.id.news);
         uni_orders = (LinearLayout) v.findViewById(R.id.uni_orders);
+        diary = (LinearLayout) v.findViewById(R.id.diary);
+        vc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), VC.class);
+                startActivity(i);
+
+            }
+        });
+
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +62,26 @@ public class DemoFragment extends Fragment {
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://www.cuonline.ac.in/?cat=5"));
+                startActivity(intent);
+            }
+        });
+        uni_orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=1020&Itemid=391"));
+                startActivity(intent);
+            }
+        });
+        uni_orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/diary_2015_revised_det_29jan2015.pdf"));
                 startActivity(intent);
             }
         });

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.gravitykerala.universityofcalicut" >
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -43,10 +43,13 @@
             android:label="@string/title_activity_result" />
         <activity
             android:name=".TimeTable"
-            android:label="@string/title_activity_time_table"></activity>
+            android:label="@string/title_activity_time_table" />
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about">
+            android:label="@string/title_activity_about"></activity>
+        <activity
+            android:name=".VC"
+            android:label="@string/title_activity_vc">
         </activity>
     </application>
 

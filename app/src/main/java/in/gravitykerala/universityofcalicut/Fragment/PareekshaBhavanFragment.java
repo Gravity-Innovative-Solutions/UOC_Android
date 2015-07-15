@@ -22,8 +22,8 @@ import in.gravitykerala.universityofcalicut.Syllabus;
  */
 public class PareekshaBhavanFragment extends Fragment {
     private View v;
-    ImageView fee, acdmc_calndr;
-    LinearLayout authorities, online_payment, online_registration;
+    ImageView fee;
+    LinearLayout authorities, online_payment, online_registration, acdmc_calndr;
 
 
     public PareekshaBhavanFragment() {
@@ -38,7 +38,7 @@ public class PareekshaBhavanFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_pareeksha_bhavan, container, false);
         ShapeDrawable drawable = new ShapeDrawable(new OvalShape());
 //        fee = (ImageView) v.findViewById(R.id.imageView_feestructure);
-        acdmc_calndr = (ImageView) v.findViewById(R.id.imageView_calendar);
+        acdmc_calndr = (LinearLayout) v.findViewById(R.id.layout_calendar);
         authorities = (LinearLayout) v.findViewById(R.id.authorities);
         online_payment = (LinearLayout) v.findViewById(R.id.online_payment);
         online_registration = (LinearLayout) v.findViewById(R.id.online_reg);
