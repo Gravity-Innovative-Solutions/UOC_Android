@@ -9,46 +9,20 @@
         layout="@layout/toolbar_default"
         android:id="@+id/include" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="2"
-        android:layout_below="@+id/include">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView6"
+        android:layout_below="@+id/include"
+        android:layout_alignRight="@+id/multiple_actions"
+        android:layout_alignEnd="@+id/multiple_actions">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView18"
-                android:src="@drawable/img_home_vc"
-                android:scaleType="centerInside"
-                android:adjustViewBounds="true"
-
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/vc"
-                android:id="@+id/textView30"
-                android:textColor="@color/black" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:weightSum="2"
+            android:layout_below="@+id/include">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -69,6 +43,46 @@
                     android:layout_alignParentStart="true" />
             </LinearLayout>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView18"
+                    android:src="@drawable/img_home_vc"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/vc_msg1"
+                    android:id="@+id/textView31"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/vc"
+                android:id="@+id/textView30"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,10 +90,12 @@
                 android:text="@string/vc_msg"
                 android:id="@+id/textView29"
                 android:textColor="@color/black"
-                android:padding="3dp" />
-        </LinearLayout>
+                android:padding="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="7dp" />
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <net.i2p.android.ext.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/multiple_actions"

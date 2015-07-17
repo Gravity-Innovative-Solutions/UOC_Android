@@ -40,6 +40,13 @@ public class HomeFragment extends Fragment {
 
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        timer.cancel();
+        timer.purge();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -52,7 +59,7 @@ public class HomeFragment extends Fragment {
 
         int period = 4000; // repeat every 4 sec.
 
-        Timer timer = new Timer();
+        timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             //
             public void run() {
