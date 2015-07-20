@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import in.gravitykerala.universityofcalicut.R;
 
@@ -17,6 +18,7 @@ import in.gravitykerala.universityofcalicut.R;
  */
 public class OnlineRegistration extends Fragment {
     private static final String KEY_TITLE = "title";
+    Button epayment;
 
     public OnlineRegistration() {
         // Required empty public constructor
@@ -38,11 +40,21 @@ public class OnlineRegistration extends Fragment {
         // Inflate the layout for this fragment
         // don't look at this layout it's just a listView to show how to handle the keyboard
         View v=inflater.inflate(R.layout.fragment_online_registration, container, false);
-        Intent intent = new Intent();
+        epayment = (Button) v.findViewById(R.id.button_epayment);
+        epayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("http://202.88.252.18/CuPbOnline/online_portal/"));
+                intent.setData(Uri.parse("https://www.uoc.ac.in/gen_epay/pay1.php"));
         startActivity(intent);
+//                WebView myWebView = (WebView) v.findViewById(R.id.webview);
+//                myWebView.loadUrl("http://www.royalcet.in/about-us/");
+
+            }
+        });
+//
         return v;
     }
 }

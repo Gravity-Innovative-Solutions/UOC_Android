@@ -43,15 +43,11 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".HomeDrawer"
             android:label="@string/app_name"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PareekshaBhavanActivity"
@@ -88,10 +84,64 @@
         <activity
             android:name=".NotificationActivity"
             android:label="Notifications">
-
-
         </activity>
+        <activity
+            android:name=".TalktoVC"
+            android:label="@string/title_activity_talkto_vc"></activity>
+        <activity
+            android:name=".VCsProgramme"
+            android:label="@string/title_activity_vcs_programme"></activity>
+        <activity
+            android:name=".VCsProfile"
+            android:label="@string/title_activity_vcs_profile"></activity>
+        <activity
+            android:name=".News"
+            android:label="@string/title_activity_news"></activity>
+        <activity
+            android:name=".UniversityOrders"
+            android:label="@string/title_activity_university_orders"></activity>
+        <activity
+            android:name=".PareekshaBhavan_Notifications"
+            android:label="@string/title_activity_pareeksha_bhavan__notifications"></activity>
+        <activity
+            android:name=".Dist_Edu_Notifications"
+            android:label="@string/title_activity_dist__edu__notifications"></activity>
+        <activity
+            android:name=".ContactClass"
+            android:label="@string/title_activity_contact_class"></activity>
+        <activity
+            android:name=".Contact"
+            android:label="@string/title_activity_contact"></activity>
+        <activity
+            android:name=".StudyMaterials"
+            android:label="@string/title_activity_study_materials"></activity>
+        <activity
+            android:name=".QuestionBank"
+            android:label="@string/title_activity_question_bank"></activity>
+        <activity
+            android:name=".Splash"
+            android:label="@string/title_activity_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Helpline"
+            android:label="@string/title_activity_helpline"></activity>
+        <activity
+            android:name=".AdministrativeNumbers"
+            android:label="@string/title_activity_administrative_numbers"></activity>
+        <activity
+            android:name=".AcademicSection"
+            android:label="@string/title_activity_academic_section"></activity>
+        <activity
+            android:name=".Registration"
+            android:label="@string/title_activity_registration"></activity>
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,9 @@
 package in.gravitykerala.universityofcalicut;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,31 +17,18 @@ public class VC extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vc);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        if (toolbar != null) {
-//            setSupportActionBar(toolbar);
-//        }
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
         findViewById(R.id.a).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/Vc_desk/talk/talk_to.php"));
-                startActivity(intent);
+                Intent intent = new Intent(VC.this, TalktoVC.class);
 
-            }
-        });
-        findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/Vc_desk/index.php?option=com_content&view=category&layout=blog&id=34&Itemid=218\n"));
                 startActivity(intent);
 
             }
@@ -49,10 +36,17 @@ public class VC extends AppCompatActivity {
         findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/Vc_desk/index.php?option=com_content&view=article&id=59&Itemid=151"));
+                Intent intent = new Intent(VC.this, VCsProgramme.class);
+
+                startActivity(intent);
+
+            }
+        });
+        findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VC.this, VCsProfile.class);
+
                 startActivity(intent);
             }
         });

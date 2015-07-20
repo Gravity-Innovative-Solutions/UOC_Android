@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context="in.gravitykerala.universityofcalicut.Authorities">
 
+    <include layout="@layout/toolbar_default" />
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -14,11 +16,13 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:paddingTop="15dp"
             android:layout_height="match_parent">
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+
                 app:cardElevation="@dimen/spacing_medium"
                 app:cardUseCompatPadding="true">
 
@@ -56,8 +60,9 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/spacing_large"
                             android:text="@string/cntrl_exam"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textSize="18sp" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textSize="18sp"
+                            android:autoLink="phone" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -94,42 +99,7 @@
                         android:text="@string/gen_section"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:autoText="false"
-                        android:autoLink="all" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                app:cardElevation="@dimen/spacing_medium"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/title2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/spacing_large"
-                        android:layout_marginRight="@dimen/spacing_large"
-                        android:layout_marginTop="@dimen/spacing_large"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                        android:text="@string/heading_authorities1"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/description2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_large"
-                        android:text="@string/gen_section1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:autoLink="phone|email" />
 
                 </LinearLayout>
 
@@ -163,7 +133,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:autoLink="phone|email" />
 
                 </LinearLayout>
 
@@ -197,7 +168,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section2"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:autoLink="phone|email" />
 
                 </LinearLayout>
 
@@ -231,7 +203,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section3"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:autoLink="phone|email" />
 
                 </LinearLayout>
 
@@ -265,7 +238,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section4"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:autoLink="phone|email" />
 
                 </LinearLayout>
 
@@ -299,7 +273,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section5"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:autoLink="phone|email" />
 
                 </LinearLayout>
 
@@ -307,6 +282,5 @@
         </LinearLayout>
     </ScrollView>
 
-    <include layout="@layout/toolbar_default" />
 
 </RelativeLayout>

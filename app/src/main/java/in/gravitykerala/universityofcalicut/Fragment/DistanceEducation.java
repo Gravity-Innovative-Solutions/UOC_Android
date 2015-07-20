@@ -9,7 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import in.gravitykerala.universityofcalicut.ContactClass;
+import in.gravitykerala.universityofcalicut.Dist_Edu_Notifications;
+import in.gravitykerala.universityofcalicut.QuestionBank;
 import in.gravitykerala.universityofcalicut.R;
+import in.gravitykerala.universityofcalicut.StudyMaterials;
 
 
 /**
@@ -49,10 +53,8 @@ public class DistanceEducation extends Fragment {
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=1567&Itemid=404"));
+                Intent intent = new Intent(getActivity(), Dist_Edu_Notifications.class);
+
                 startActivity(intent);
             }
         });
@@ -81,10 +83,8 @@ public class DistanceEducation extends Fragment {
         contact_class.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=368&Itemid=289"));
+                Intent intent = new Intent(getActivity(), ContactClass.class);
+
                 startActivity(intent);
 
             }
@@ -103,10 +103,8 @@ public class DistanceEducation extends Fragment {
         study_material.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=2366&Itemid=385"));
+                Intent intent = new Intent(getActivity(), StudyMaterials.class);
+
                 startActivity(intent);
 
             }
@@ -114,10 +112,8 @@ public class DistanceEducation extends Fragment {
         qbank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=1081&Itemid=395"));
+                Intent intent = new Intent(getActivity(), QuestionBank.class);
+
                 startActivity(intent);
 
             }
