@@ -1,4 +1,4 @@
-package in.gravitykerala.universityofcalicut;
+package in.gravitykerala.universityofcalicut.Models;
 
 /**
  * Created by Prakash on 20/06/2015.
@@ -9,27 +9,27 @@ public class newMobileNotification {
      * Item Id
      */
     @com.google.gson.annotations.SerializedName("id")
-    private String mId;
+    private String id;
 
     @com.google.gson.annotations.SerializedName("title")
-    public String mTitle;
+    public String title;
 
     @com.google.gson.annotations.SerializedName("content")
-    public String mcontent;
+    public String content;
 
     @com.google.gson.annotations.SerializedName("courseName")
-    public String mMessageType;
+    public String courseName;
 
     @com.google.gson.annotations.SerializedName("courseId")
-    public String mPushNeeded;
+    public String courseId;
 
     //Hours
 
-    public newMobileNotification(String title, String content, String messageType, String pushNeeded) {
-        this.mTitle = title;
-        this.mcontent = content;
-        this.mMessageType = messageType;
-        this.mPushNeeded = pushNeeded;
+    public newMobileNotification(String title, String content, String courseName, String courseId) {
+        this.title = title;
+        this.content = content;
+        this.courseName = courseName;
+        this.courseId = courseId;
         //this.mPushTimeToLive = pushTimeToLive;
     }
 }

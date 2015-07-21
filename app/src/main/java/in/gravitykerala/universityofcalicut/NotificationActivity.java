@@ -4,6 +4,7 @@ package in.gravitykerala.universityofcalicut;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -29,8 +29,14 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 
 import java.net.MalformedURLException;
 import java.util.List;
+import java.util.prefs.Preferences;
 
-public class NotificationActivity extends Activity {
+import in.gravitykerala.universityofcalicut.Adapters.NotificationItemAdapter;
+import in.gravitykerala.universityofcalicut.Models.newMobileNotification;
+
+public class NotificationActivity extends Activity implements GravitySupport {
+
+    SharedPreferences prefs;
 
     public static final String SENDER_ID = "555906940821";
 
@@ -68,12 +74,12 @@ public class NotificationActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-
+        prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         buttonRefresh = (Button) findViewById(R.id.button_refresh);
         // Initialize the progress bar
-        mProgressBar.setVisibility(ProgressBar.GONE);
+        //mProgressBar.setVisibility(ProgressBar.GONE);
 
         buttonRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,7 +139,7 @@ public class NotificationActivity extends Activity {
     public static void initializeMobileService(Context context) {
         if (NotificationActivity.mClient == null) {
             try {
-                NotificationActivity.mClient = new MobileServiceClient("https://universiyofcalicut.azure-mobile.net/", "QNMLrYyNYewFdwFMBNWXrlLFxkyqTl87", context);
+                NotificationActivity.mClient = new MobileServiceClient(CLOUD_SERVICE_URI, CLOUD_SERVICE_KEY, context);
                 Log.d("PushNotification:", "registering");
                 NotificationsManager.handleNotifications(context, SENDER_ID, PushNotificationHandler.class);
                 Log.d("PushNotification:", "registered");
@@ -243,9 +249,11 @@ public class NotificationActivity extends Activity {
             protected Void doInBackground(Void... params) {
                 try {
 //                    Toast.makeText(NotificationActivity.this, "Refreshing", Toast.LENGTH_SHORT).show();
-                    Log.d("NotificationRefresh", "Refreshing");
-                    final List<newMobileNotification> results =
-                            mToDoTable.execute().get();
+                    String selectedCourse = prefs.getString(KEY_SELECTED_COURSE_ID, "none");
+                    Log.d("NotificationRefresh:", "Course:" + selectedCourse);
+                    Log.d("NotificationRefresh:", "Refreshing");
+                    //final List<newMobileNotification> results =  mToDoTable.execute().get();
+                    final List<newMobileNotification> results = mToDoTable.where().field("courseId").eq(selectedCourse).or().field("courseId").eq((String) null).execute().get();
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -258,7 +266,7 @@ public class NotificationActivity extends Activity {
                         }
                     });
 
-                    Log.d("NotificationRefresh", "Refreshed Success");
+                    Log.d("NotificationRefresh:", "Refresh Success");
                 } catch (Exception e) {
                     e.printStackTrace();
                     Log.d("NotificationRefresh", "Refresh Fail");

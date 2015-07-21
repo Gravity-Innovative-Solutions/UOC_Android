@@ -1,4 +1,4 @@
-package in.gravitykerala.universityofcalicut;
+package in.gravitykerala.universityofcalicut.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import in.gravitykerala.universityofcalicut.Models.newMobileNotification;
+import in.gravitykerala.universityofcalicut.R;
 
 /**
  * Adapter to bind a ToDoItem List to a view
@@ -47,8 +50,8 @@ public class NotificationItemAdapter extends ArrayAdapter<newMobileNotification>
         row.setTag(currentItem);
         final TextView tvTitle = (TextView) row.findViewById(R.id.row_title);
         final TextView tvContent = (TextView) row.findViewById(R.id.row_content);
-        tvTitle.setText(currentItem.mTitle);
-        tvContent.setText(currentItem.mcontent);
+        tvTitle.setText(currentItem.title);
+        tvContent.setText(currentItem.content);
 
 
 //        checkBox.setOnClickListener(new View.OnClickListener() {
