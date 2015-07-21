@@ -5,5 +5,42 @@
     android:background="@color/light_primary_color"
     tools:context="in.gravitykerala.universityofcalicut.SetPrefrence">
 
-   
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/some_text"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/findSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find countries that are Selected" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+
+    </LinearLayout>
 </RelativeLayout>
