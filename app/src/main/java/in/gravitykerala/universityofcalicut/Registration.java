@@ -7,20 +7,43 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class Registration extends AppCompatActivity {
+    EditText name, email, phn;
+    String MobilePattern = "[0-9]{10}";
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         Button register = (Button) findViewById(R.id.button_register);
+        name = (EditText) findViewById(R.id.name);
+////        final String name_s = name.toString();
+//
+        email = (EditText) findViewById(R.id.email);
+//        final String email_s = email.toString();
+        phn = (EditText) findViewById(R.id.phn_no);
+//
+//        final String phn_s = phn.toString();
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Registration.this, HomeDrawer.class);
-                startActivity(i);
+                if (name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || phn.getText().toString().isEmpty()) {
+                    Toast.makeText(Registration.this, "fill all the fields", Toast.LENGTH_SHORT).show();
+//
+                } else if (!email.getText().toString().matches(emailPattern)) {
+                    Toast.makeText(getApplicationContext(), "Enter valid email address", Toast.LENGTH_SHORT).show();
+                } else if (!phn.getText().toString().matches(MobilePattern)) {
+                    Toast.makeText(getApplicationContext(), "Please enter valid number", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent i = new Intent(Registration.this, HomeDrawer.class);
+                    startActivity(i);
+                }
             }
         });
 

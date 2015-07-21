@@ -115,6 +115,7 @@ His dreams, vision, mission and actions are currently focused to transform Unive
     <string name="title_activity_academic_section">Academic Section</string>
     <string name="title_activity_registration">Registration</string>
     <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_set_prefrence">Set Your Preference</string>
 
 
 </resources>

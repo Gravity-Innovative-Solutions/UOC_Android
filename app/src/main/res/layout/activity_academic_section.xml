@@ -209,8 +209,8 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7210"
                         android:id="@+id/textView134"
-                        android:autoLink="phone"
-                        android:layout_marginLeft="5dp" />
+                        android:layout_marginLeft="5dp"
+                        android:autoLink="phone" />
                 </TableRow>
 
                 <TableRow
@@ -981,8 +981,8 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7401"
                         android:id="@+id/textView196"
-                        android:autoLink="phone"
-                        android:layout_marginRight="5dp" />
+                        android:layout_marginRight="5dp"
+                        android:autoLink="phone" />
                 </TableRow>
 
                 <TableRow
@@ -1359,7 +1359,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7225"
-                        android:id="@+id/textView207" />
+                        android:id="@+id/textView207"
+                        android:autoLink="phone" />
                 </TableRow>
 
                 <TableRow
@@ -1382,7 +1383,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7462"
-                        android:id="@+id/textView61" />
+                        android:id="@+id/textView61"
+                        android:autoLink="phone" />
                 </TableRow>
 
                 <TableRow
@@ -1526,7 +1528,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7437"
-                        android:id="@+id/textView209" />
+                        android:id="@+id/textView209"
+                        android:autoLink="phone" />
                 </TableRow>
 
                 <TableRow
@@ -1549,7 +1552,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7433"
-                        android:id="@+id/textView209" />
+                        android:id="@+id/textView209"
+                        android:autoLink="phone" />
 
                 </TableRow>
 

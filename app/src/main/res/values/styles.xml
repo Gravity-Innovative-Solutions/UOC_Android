@@ -11,7 +11,7 @@
         <item name="colorPrimaryDark">@color/primary_dark</item> 
         <!--<item name="colorControlHighlight">@color/accent_translucent</item> -->
         <!--<item name="colorAccent">@color/accent</item>-->
-        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:textColor">@color/text_color</item>
         <item name="selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:buttonStyle">@style/Button_</item>
@@ -33,8 +33,10 @@
         <item name="android:textColor">#fff</item>
     </style>
 
-    <color name="primary">#00BCD4</color>
-    <color name="primary_dark">#0097A7</color>
+    <color name="primary">#8BC34A</color>
+    <color name="primary_dark">#689F38</color>
+    <color name="light_primary_color">#DCEDC8</color>
+    <color name="text_color">#212121</color>
     <color name="accent">#FFEB3B</color>
     <color name="accent_translucent">#80FFEB3B</color>
     <color name="accent_bright">#FFF493</color>

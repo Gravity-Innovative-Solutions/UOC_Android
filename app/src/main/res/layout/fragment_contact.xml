@@ -72,7 +72,8 @@
                                 android:text="@string/contact_enquiry"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                 android:autoLink="phone"
-                                android:drawableLeft="@android:drawable/stat_sys_vp_phone_call" />
+                                android:drawableLeft="@android:drawable/stat_sys_vp_phone_call"
+                                android:phoneNumber="false" />
 
                         </LinearLayout>
 
