@@ -62,6 +62,7 @@
                             android:text="@string/cntrl_exam"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textSize="18sp"
+                            android:textIsSelectable="true"
                             android:autoLink="phone" />
                     </LinearLayout>
 
@@ -87,6 +88,7 @@
                         android:layout_marginLeft="@dimen/spacing_large"
                         android:layout_marginRight="@dimen/spacing_large"
                         android:layout_marginTop="@dimen/spacing_large"
+                        android:textIsSelectable="true"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:text="@string/heading_authorities"
                         android:textSize="15sp" />
@@ -99,6 +101,7 @@
                         android:text="@string/gen_section"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:autoText="false"
+                        android:textIsSelectable="true"
                         android:autoLink="phone|email" />
 
                 </LinearLayout>
@@ -125,7 +128,8 @@
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:text="@string/heading_authorities1"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/description3"
@@ -134,7 +138,8 @@
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:autoLink="phone|email" />
+                        android:autoLink="phone|email"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -160,7 +165,8 @@
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:text="@string/heading_authorities2"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/description4"
@@ -169,7 +175,8 @@
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section2"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:autoLink="phone|email" />
+                        android:autoLink="phone|email"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -195,7 +202,8 @@
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:text="@string/heading_authorities3"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/description5"
@@ -230,7 +238,8 @@
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:text="@string/heading_authorities4"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/description6"
@@ -265,7 +274,8 @@
                         android:layout_marginTop="@dimen/spacing_large"
                         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                         android:text="@string/heading_authorities5"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/description7"
@@ -274,7 +284,8 @@
                         android:layout_margin="@dimen/spacing_large"
                         android:text="@string/gen_section5"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:autoLink="phone|email" />
+                        android:autoLink="phone|email"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 

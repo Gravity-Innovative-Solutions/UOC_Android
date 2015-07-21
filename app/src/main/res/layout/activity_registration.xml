@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
 
     tools:context="in.gravitykerala.universityofcalicut.Registration"
-    android:background="@drawable/bg_three">
+    android:background="@color/light_primary_color">
 
     <LinearLayout
         android:orientation="vertical"
@@ -20,13 +20,14 @@
             android:scaleType="matrix"
             android:adjustViewBounds="true" />
 
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+                android:layout_height="wrap_content"
             android:background="@drawable/border_transparent"
 
-            android:gravity="center"
+                android:gravity="center"
 
             android:layout_margin="10dp"
             android:layout_marginBottom="15dp"
@@ -37,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/name"
                 android:hint="Name"
 
                 android:gravity="center"
@@ -50,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText2"
+                android:id="@+id/email"
                 android:hint="Email"
 
                 android:gravity="center"
@@ -61,8 +62,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
-                android:ems="10"
-                android:id="@+id/editText3"
+                android:maxLength="10"
+                android:id="@+id/phn_no"
                 android:hint="Phone "
 
                 android:gravity="center"
@@ -71,6 +72,7 @@
                 android:paddingBottom="15dp" />
 
         </LinearLayout>
+
 
         <Button
             android:layout_width="fill_parent"

@@ -87,37 +87,37 @@
         </activity>
         <activity
             android:name=".TalktoVC"
-            android:label="@string/title_activity_talkto_vc"></activity>
+            android:label="@string/title_activity_talkto_vc" />
         <activity
             android:name=".VCsProgramme"
-            android:label="@string/title_activity_vcs_programme"></activity>
+            android:label="@string/title_activity_vcs_programme" />
         <activity
             android:name=".VCsProfile"
-            android:label="@string/title_activity_vcs_profile"></activity>
+            android:label="@string/title_activity_vcs_profile" />
         <activity
             android:name=".News"
-            android:label="@string/title_activity_news"></activity>
+            android:label="@string/title_activity_news" />
         <activity
             android:name=".UniversityOrders"
-            android:label="@string/title_activity_university_orders"></activity>
+            android:label="@string/title_activity_university_orders" />
         <activity
             android:name=".PareekshaBhavan_Notifications"
-            android:label="@string/title_activity_pareeksha_bhavan__notifications"></activity>
+            android:label="@string/title_activity_pareeksha_bhavan__notifications" />
         <activity
             android:name=".Dist_Edu_Notifications"
-            android:label="@string/title_activity_dist__edu__notifications"></activity>
+            android:label="@string/title_activity_dist__edu__notifications" />
         <activity
             android:name=".ContactClass"
-            android:label="@string/title_activity_contact_class"></activity>
+            android:label="@string/title_activity_contact_class" />
         <activity
             android:name=".Contact"
-            android:label="@string/title_activity_contact"></activity>
+            android:label="@string/title_activity_contact" />
         <activity
             android:name=".StudyMaterials"
-            android:label="@string/title_activity_study_materials"></activity>
+            android:label="@string/title_activity_study_materials" />
         <activity
             android:name=".QuestionBank"
-            android:label="@string/title_activity_question_bank"></activity>
+            android:label="@string/title_activity_question_bank" />
         <activity
             android:name=".Splash"
             android:label="@string/title_activity_splash">
@@ -129,27 +129,27 @@
         </activity>
         <activity
             android:name=".Helpline"
-            android:label="@string/title_activity_helpline"></activity>
+            android:label="@string/title_activity_helpline" />
         <activity
             android:name=".AdministrativeNumbers"
-            android:label="@string/title_activity_administrative_numbers"></activity>
+            android:label="@string/title_activity_administrative_numbers" />
         <activity
             android:name=".AcademicSection"
-            android:label="@string/title_activity_academic_section"></activity>
+            android:label="@string/title_activity_academic_section" />
         <activity
             android:name=".Registration"
-            android:label="@string/title_activity_registration"></activity>
+            android:label="@string/title_activity_registration" />
         <activity
             android:name=".Feedback"
+            android:label="@string/title_activity_feedback" />
+        <activity
+            android:name=".SetPrefrence"
+            android:label="@string/title_activity_set_prefrence"></activity>
             android:label="@string/title_activity_feedback"></activity>
         <activity
             android:name=".CourseSelectActivity"
             android:label="@string/title_activity_course_select">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
     
     </application>
