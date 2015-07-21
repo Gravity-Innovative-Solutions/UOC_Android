@@ -1,15 +1,13 @@
 package in.gravitykerala.universityofcalicut;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class TimeTable extends ActionBarActivity {
+public class TimeTable extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +18,7 @@ public class TimeTable extends ActionBarActivity {
             setSupportActionBar(toolbar);
         }
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=745&Itemid=325"));
-        startActivity(intent);
+
     }
 
     @Override

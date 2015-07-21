@@ -9,11 +9,11 @@
     <string name="demo_two">Notifications</string>
     <string name="title_activity_pareeksha_bhavan">Directorate of Admission</string>
     <string name="title_fragment_pareekshabavan">Pareeksha Bhavan</string>
+    <string name="title_fragment_admission_portal">Admission Portal</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_detail">DetailActivity</string>
-    <string name="vc_msg1">University of Calicut is a prestigious educational organisation. It has created a niche of its own among the universities around the globe. This University, as you know is the second oldest and the largest of all the other universities of Kerala.</string>
     <string name="home_desc">The University of Calicut is the largest University in Kerala. Established in the year 1968, it is the second university to be set up in Kerala. The University aims to nurture excellence in education and research in its catchment areas of Northern Kerala, historically consigned to the periphery of Kerala’s academic map. The University lays its emphasis on fostering quality human resource and promoting productive research that benefit both local communities and wider humanity.The University was created through a Government plan bifurcating Kerala University. As per the plan, the four post-graduate departments of the University of Kerala operating in Calicut were annexed to the new University along with fifty four constituent colleges spread across seven northern districts. With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to surmount all challenges and emerge as the largest residential cum affiliating University in Kerala. With 30 post graduate departments and 373 affiliated colleges it has become a beacon of hope and enlightenment for hundreds of thousands of young men and women in North Kerala.</string>
 
 
@@ -28,18 +28,19 @@
 
     <string name="title_activity_authorities">Authorities</string>
     <string name="heading_authorities">Central Confidential and General Section</string>
-    <string name="cntrl_exam">Dr. V V Georgekutty\nController of Examination:\nContact:0494–2400291</string>
-    <string name="gen_section">Mohanakrishnan C S\nContact:  0494-2407202\nEmail: jce1@universityofcalicut.info</string>
+    <string name="cntrl_exam">Dr. V V Georgekutty\nController of Examination:\nContact: 04942400291</string>
+    <string name="gen_section">Mohanakrishnan C S\nContact: 04942407202\nEmail: jce1@universityofcalicut.info</string>
     <string name="heading_authorities1">B.A. and Oriental Title Courses</string>
-    <string name="gen_section1">Anuja Balakrishnan\nContact:   0494-2407223, 2407229\nEmail: jce2@universityofcalicut.info</string>
+    <string name="gen_section1">Anuja Balakrishnan\nContact:04942407223, 04942407229\nEmail: jce2@universityofcalicut.info</string>
     <string name="heading_authorities2">B.Com and B.B.A</string>
-    <string name="gen_section2">P P Rajendran\nContact:   0494-2407284\nEmail: jce3@universityofcalicut.info</string>
+    <string name="gen_section2">P P Rajendran\nContact:04942407284\nEmail: jce3@universityofcalicut.info</string>
     <string name="heading_authorities3">B.Sc., B.C.A (EPR-1)</string>
-    <string name="gen_section3">E. P Pavithran\nContact:  0494-2407214\nEmail: jce4@universityofcalicut.info</string>
+    <string name="gen_section3">E. P Pavithran\nContact:  04942407214\nEmail: jce4@universityofcalicut.info</string>
     <string name="heading_authorities4">P.G. Courses and B.Ed. /M.Ed. Courses</string>
-    <string name="gen_section4">Suresh .K.K\nContact:  0494-2407206, 2401130\nEmail: jce5@universityofcalicut.info</string>
+    <string name="gen_section4">Suresh .K.K\nContact:04942407206, 04942401130\nEmail: jce5@universityofcalicut.info</string>
     <string name="heading_authorities5">B.Tech. Courses</string>
-    <string name="gen_section5">Praveena R, O.B Jayanthi\nContact:  0494-2407234, 2407215\nEmail: jce6@universityofcalicut.info</string>
+    <string name="gen_section5">Praveena R, O.B Jayanthi\nContact:04942407234,
+        04942407215\nEmail: jce6@universityofcalicut.info</string>
     <string name="title_activity_syllabus">Syllabus</string>
     <string name="title_activity_notification">Notification</string>
     <string name="title_activity_contact">Contact</string>
@@ -49,6 +50,7 @@
     <string name="title_activity_online_reg">Online Registration</string>
     <string name="title_activity_plcmnt">Placement Portal</string>
     <string name="online_payment">Online Payment</string>
+    <string name="online_application">Online Application</string>
     <string name="plcmnt_heading">Placement portal</string>
     <string name="plcmnt_desc">This web portal is an initiative of the University of Calicut to help all its students to search for jobs and manage their careers. It also helps recruiters to identify the right candidates for their manpower requirements. The University turns out a large pool of talent every year. Over a hundred thousand students pass out each year in diverse branches of learning like engineering, IT/computer science, management, core sciences, humanities, Commerce, health care, pharmacy, media, travel and tourism, economics, hotel management, catering science, etc.\nThis portal offers free registration to recruiters and job aspirants. Since, the web portal enables registered recruiters to access a large database of registered candidates (graduates, post graduates and Doctorates of the University and its 380 affiliated colleges), the recruiters can search availability of candidates with the required competence and schedule their visits to the campus for recruitment and selection. \nThe University believes in creating lasting relationships with corporate and other recruiters based on trust and mutuality. The Placement Cell of the University is entrusted with the responsibility of serving both the job seekers and job givers
 
@@ -58,12 +60,62 @@
     <string name="dist_edu_desc">Established in 1981, the School has emerged as a major distance education provider in Kerala. Annually about 30 thousand students enrol for the programmes of the School available under two streams – Regular and Open. Regular Stream Courses are meant for those who wish to pursue their studies though distance education mode provided they satisfy the conditions prescribed for admission to the graduate and postgraduate programmes offered in colleges affiliated to the University.\nCurrently, the School offers 16 graduate courses, 13 postgraduate courses and two diploma courses. Students admitted to these courses are provided printed study materials. All students are expected to attend contact programmes and training sessions arranged regularly at notified centres. \nThe School has approved 18 educational institutions in different States of India to enrol students for various courses offered by the School. Also, the School has six approved overseas centres at Sharjah, Abu Dhabi , Doha , Kuwait and Bahrain</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_vc">VC\'s Desk</string>
-    <string name="vc_msg">University of Calicut is a prestigious educational organisation. It has created a niche of its own among the universities around the globe. This University, as you know is the second oldest and the largest of all the other universities of Kerala.
-
-Our university is mighty enough to satisfy the educational aspirations of a large number of rural, semi-urban and urban students of the state. Students from many countries of the world, far and near, are now attracted to our university, and the pride they take in getting associated with our University gives us immense reasons to be proud ourselves. Students, scholars, researchers, techno-savvy men who crave for excellence in pursuing newer horizons of learning do swarm around this centre of higher education, not for no reasons.
+    <string name="vc_msg1">University of Calicut is a prestigious educational organisation. It has created a niche of its own among the universities around the globe. This University, as you know is the second oldest and the largest of all the other universities of Kerala.</string>
+    <string name="vc_msg">Our university is mighty enough to satisfy the educational aspirations of a large number of rural, semi-urban and urban students of the state. Students from many countries of the world, far and near, are now attracted to our university, and the pride they take in getting associated with our University gives us immense reasons to be proud ourselves. Students, scholars, researchers, techno-savvy men who crave for excellence in pursuing newer horizons of learning do swarm around this centre of higher education, not for no reasons.
 
 I feel delighted, exhilarated rather, in assuming office as the Vice Chancellor of this coveted centre of higher learning. I assumed office on 12th August 2011. I am well aware of the increased responsibilities came along naturally, with this assumption. I promise you I will strive hard to bring in excellence in every administrative, academic and other associated aspects of the everyday functioning of our university.
 </string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_talkto_vc">Talk to VC</string>
+    <string-array name="how_can_i_help_u">
+        <item>How can I help u?</item>
+        <item>Messages</item>
+        <item>Compliants</item>
+        <item>Suggestions</item>
+    </string-array>
+    <string name="title_activity_vc_programme">VC\'s Programme</string>
+    <string name="title_activity_vcs_profile">VC\'s Profile</string>
+    <string name="profile_name">Vice Chancellor\nUniversity of Calicut, Kerala, India</string>
+    <string name="profile_desc">Dr M Abdul Salam, the present Vice Chancellor of University of Calicut, is a renowned educationist, scientist and administrator. In a career of more than three decades spanning across four continents, Dr. Salam has established a reputation as a tireless academic and scientist. Besides, he has been recognised as one of the most authoritative voices in the area of tropical farming and dry-land agriculture. He is an internationally acclaimed consultant on cashew cultivation, dry-land farming and irrigated agriculture.   His expertise has been heavily utilised by many institutions in Indian and nation and all over the world. As a technical consultant, advisor and educationist, he has worked in Suriname, Brazil, Kuwait, Mozambique, Malawi, Kenya, Democratic Republic of Congo, Tanzania, Angola, KSA, UAE, Liberia, UK and USA.
+
+\nBesides being an esteemed scientist of international repute, Dr. Salam is a widely acknowledged academician. He has published more than hundred and fifty research papers and 13 books so far. In the last three decades, he has served many institutions in various capacities as a teacher, researcher, scientist and administrator. Before assuming charge as the Vice Chancellor of University of Calicut, he had served as the head of the Cashew Research Station at Kerala Agricultural University (KAU), Head of the Department  of Agronomy and  Associate Dean of KAU.
+
+\nAs a scientist and academic, Dr. Salam has won several national and international awards and fellowships. These include the Commonwealth Academic Fellowship, Krishi Vijnan Award, Vice President GS Pathak Prize, Ponnuswami Chetiar Medal and a host of other recognitions. His doctoral thesis won the Foreign Examiners’ Donation Award.  Subsequently he won the Commonwealth Academic Staff Fellowship to undergo postdoctoral training and research at University of Aberdeen, Scotland. UK.
+
+\nHaving championed the cause of food security and being a firm believer in sustainable agriculture and development, Abdul Salam has made several positive contributions to our understanding of water management, tropical farming, and increased production of cashew nuts through the use of hybrid and drought- resistant varieties of plants.
+
+\nDr. Salam is also a member of various national and international bodies that include New York Academy of Sciences, Indian Society of Plantation Crops, etc.  Currently he is on the editorial panel of international journals like Journal of Agro Meteorology, Kuwait Journal of science and Engineering, Asian Journal of Water, Environment and Pollution, etc.
+
+\nDr. Salam’s appointment as the Vice Chancellor of University of Calicut has brought about several qualitative changes in the campus. Besides ensuring a more disciplined , academically active and creatively inspiring ambience for studies and research, the Vice Chancellor has been responsible for setting up  the Directorate of Research and the Directorate of Self-financing Institutions. These academic bodies have, within a short span, made their presence felt by pioneering some novel projects and programmes. Introduction of e-governance and the ambitious plans to build state of art facilities for academics and sports are expected to catapult the University to the forefront of higher education institutions in the country. A local institution with global standards is what University of Calicut aims to be under the captaincy of this able scientist and visionary.
+
+\nRecognizing his contributions in his term as Vice-Chancellor of University of Calicut, he is awarded with the Amity Academic Excellence Award (2012) for educational excellence, Moulana Azad  Puraskar (2012) for Educational Upliftment and Dwang Mehta Business School Award (2012) for Outstanding Contribution to Education.
+
+His dreams, vision, mission and actions are currently focused to transform University of Calicut to the status of a Cambridge of Malabar.</string>
+    <string name="title_activity_vcs_programme">VC\'s Programme</string>
+    <string name="title_activity_news">News</string>
+    <string name="title_activity_university_orders">University Orders</string>
+    <string name="title_activity_pareeksha_bhavan__notifications">Notifications</string>
+    <string name="title_activity_dist__edu__notifications">Notifications</string>
+    <string name="title_activity_contact_class">Contact Class</string>
+    <string name="title_activity_study_materials">Study Materials</string>
+    <string name="title_activity_question_bank">Question Bank</string>
+    <string name="title_activity_splash">University Of Calicut</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_admission_portal">Admission Portal</string>
+
+
+    <string name="contact_enquiry">"Enquiry:\n0494-2407227 \n0494-2400816\n"</string>
+    <string name="contact_dig_wing">"Digital Wing (Only for technical issues related to Pareeksha Bhavan Online Process) :\n0494-2407204\n0494-2407485"</string>
+    <string name="contact_centralized_admission">"For Centralized Admission,\n 0494-2407152\n 0494-2407540\n 0494-2407016"</string>
+    <string name="contact_sms_complnt">"SMS Complaint No :  \n9447649200 "</string>
+    <string name="contact_students_helpline">" Student HelpLine Numbers    :\n155300 ( BSNL Landline)\n0471-155300 (BSNL Mobile)\n0471-2115054 (Other Mobile Services)\n0471-2115098  (Other Mobile Services)"</string>
+    <string name="contact_postal_adrs">"University Of Calicut,\nMalappuram (District), PIN 673 635\nCalicut University PO, \nKerala  India"</string>
+    <string name="title_activity_helpline">Helpline</string>
+    <string name="title_activity_administrative_numbers">Administrative Numbers</string>
+    <string name="title_activity_academic_section">Academic Section</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_feedback">Feedback</string>
+
+
     <string name="title_activity_course_select">CourseSelectActivity</string>
 </resources>

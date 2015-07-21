@@ -2,7 +2,6 @@ package in.gravitykerala.universityofcalicut.Fragment;
 
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import in.gravitykerala.universityofcalicut.News;
 import in.gravitykerala.universityofcalicut.R;
+import in.gravitykerala.universityofcalicut.UniversityOrders;
 import in.gravitykerala.universityofcalicut.VC;
 
 
@@ -58,33 +59,27 @@ public class DemoFragment extends Fragment {
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cuonline.ac.in/?cat=5"));
+                Intent intent = new Intent(getActivity(), News.class);
+
                 startActivity(intent);
             }
         });
         uni_orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=1020&Itemid=391"));
+                Intent intent = new Intent(getActivity(), UniversityOrders.class);
+
                 startActivity(intent);
             }
         });
-        uni_orders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/diary_2015_revised_det_29jan2015.pdf"));
-                startActivity(intent);
-            }
-        });
+//        diary.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//
+//                startActivity(intent);
+//            }
+//        });
         return v;
 
     }

@@ -1,5 +1,7 @@
 package in.gravitykerala.universityofcalicut;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,13 +21,14 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
+import in.gravitykerala.universityofcalicut.Fragment.AdmissionPortal;
 import in.gravitykerala.universityofcalicut.Fragment.Contact;
 import in.gravitykerala.universityofcalicut.Fragment.DemoFragment;
 import in.gravitykerala.universityofcalicut.Fragment.DistanceEducation;
-import in.gravitykerala.universityofcalicut.Fragment.OnlinePayment;
+import in.gravitykerala.universityofcalicut.Fragment.HomeFragment;
+import in.gravitykerala.universityofcalicut.Fragment.OnlineApplication;
 import in.gravitykerala.universityofcalicut.Fragment.OnlineRegistration;
 import in.gravitykerala.universityofcalicut.Fragment.PareekshaBhavanFragment;
-import in.gravitykerala.universityofcalicut.Fragment.HomeFragment;
 import in.gravitykerala.universityofcalicut.Fragment.PlacementPortal;
 
 
@@ -59,15 +62,18 @@ public class HomeDrawer extends AppCompatActivity {
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult) //set the AccountHeader we created earlier for the header
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(1).withCheckable(false),
+                        new PrimaryDrawerItem().withName(R.string.home).withIcon(GoogleMaterial.Icon.gmd_home).withIdentifier(1).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.about_fragment_title).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(2).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_fragment_pareekshabavan).withIcon(GoogleMaterial.Icon.gmd_event).withIdentifier(3).withCheckable(true),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_pareeksha_bhavan).withIcon(GoogleMaterial.Icon.gmd_notifications).withIdentifier(4).withCheckable(false),
-                        new PrimaryDrawerItem().withName("Notifications").withIcon(GoogleMaterial.Icon.gmd_notifications_active).withIdentifier(9).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_airline_seat_legroom_normal).withIdentifier(6).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(5).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(7).withCheckable(false),
-                        new PrimaryDrawerItem().withName(R.string.online_payment).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(8).withCheckable(false)
+                        new PrimaryDrawerItem().withName(R.string.title_fragment_admission_portal).withIcon(GoogleMaterial.Icon.gmd_card_giftcard).withIdentifier(4).withCheckable(true),
+                        new PrimaryDrawerItem().withName("Notifiations").withIcon(GoogleMaterial.Icon.gmd_notifications_active).withIdentifier(9).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_people).withIdentifier(6).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(5).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_business).withIdentifier(7).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.online_application).withIcon(GoogleMaterial.Icon.gmd_perm_identity).withIdentifier(8).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_feedback).withIcon(GoogleMaterial.Icon.gmd_feedback).withIdentifier(10).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_contact).withIcon(GoogleMaterial.Icon.gmd_contact_phone).withIdentifier(11).withCheckable(true)
+
 
 
 
@@ -104,23 +110,26 @@ public class HomeDrawer extends AppCompatActivity {
                             } else if (drawerItem.getIdentifier() == 4) {
 
 
-                                intent = new Intent(HomeDrawer.this, AboutActivity.class);
+//                                intent = new Intent(HomeDrawer.this, AboutActivity.class);
 
-                            } else if (drawerItem.getIdentifier() == 9) {
-                                intent = new Intent(HomeDrawer.this, NotificationActivity.class);
-
-                            }
-                            else if (drawerItem.getIdentifier() == 6) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
-                                Fragment f = new DistanceEducation();
+                                Fragment f = new AdmissionPortal();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
-
                             } else if (drawerItem.getIdentifier() == 5) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
                                 Fragment f = new OnlineRegistration();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+
+                            } else if (drawerItem.getIdentifier() == 6) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new DistanceEducation();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+
 
                             } else if (drawerItem.getIdentifier() == 7) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
@@ -131,8 +140,19 @@ public class HomeDrawer extends AppCompatActivity {
                             } else if (drawerItem.getIdentifier() == 8) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
-                                Fragment f = new OnlinePayment();
+                                Fragment f = new OnlineApplication();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+                            } else if (drawerItem.getIdentifier() == 9) {
+                                intent = new Intent(HomeDrawer.this, NotificationActivity.class);
+                            } else if (drawerItem.getIdentifier() == 11) {
+                                getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
+                                //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard
+                                Fragment f = new Contact();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
+
+
+                            } else if (drawerItem.getIdentifier() == 10) {
+                                intent = new Intent(HomeDrawer.this, Feedback.class);
 
                             }
 
@@ -180,4 +200,22 @@ public class HomeDrawer extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("mUniversity")
+                .setMessage("Are you sure you want to Exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+
 }

@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="in.gravitykerala.universityofcalicut.Registration"
+    android:background="@drawable/bg_three">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView20"
+            android:src="@drawable/ic_launcher"
+            android:scaleType="matrix"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_transparent"
+
+            android:gravity="center"
+
+            android:layout_margin="10dp"
+            android:layout_marginBottom="15dp"
+            android:padding="25dp">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:hint="Name"
+
+                android:gravity="center"
+
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:hint="Email"
+
+                android:gravity="center"
+
+                android:paddingBottom="15dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:hint="Phone "
+
+                android:gravity="center"
+
+                android:layout_marginBottom="15dp"
+                android:paddingBottom="15dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/button_register"
+
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            style="@style/Button_"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>

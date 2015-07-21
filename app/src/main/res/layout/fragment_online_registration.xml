@@ -4,5 +4,103 @@
     tools:context="in.gravitykerala.universityofcalicut.Fragment.OnlineRegistration">
 
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView9">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:paddingBottom="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="INSTRUCTIONS FOR GETTING HALLTICKETS"
+                android:id="@+id/textView35"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="For supplementary candidates,Please select Halltickets from the menu items and select your course from the Courses list"
+                android:id="@+id/textView36"
+                android:paddingTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Click on your link and enter your register number and date of birth and click submit button"
+                android:id="@+id/textView37"
+                android:paddingTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="INSTRUCTIONS FOR REGISTRATION/REVALUATION"
+                android:id="@+id/textView38"
+                android:paddingTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Step 01 : Remit the fee through Calicut University Instant payment System which can be accessed by clicking the E-Payment Button. The purpose of remittance may be selected from the list. Payment can be made through SBT online payment System, SBT E-challan System and E-Challans through Friends Janasevana Kendras and Akshaya Kendras."
+                android:id="@+id/textView39"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Step 02 : After the successful Payment, the candidate will get a Barcode/Chalan Number and a Security Code by sms or by email."
+                android:id="@+id/textView40"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Step 03 : Click on your Course and select your link."
+                android:id="@+id/textView41"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Step 04 : Type your Barcode/Chalan Number and Security Code in the Space Provided."
+                android:id="@+id/textView42"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Step 05 : After the successful completion of Registration, you will get print-out of the application."
+                android:id="@+id/textView43"
+                android:layout_marginBottom="3dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-PAYMENT"
+                android:id="@+id/button_epayment"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dp"
+                android:paddingTop="4dp"
+                style="@style/Button_"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
