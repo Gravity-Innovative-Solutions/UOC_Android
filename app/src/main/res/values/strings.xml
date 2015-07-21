@@ -118,4 +118,5 @@ His dreams, vision, mission and actions are currently focused to transform Unive
     <string name="title_activity_set_prefrence">Set Your Preference</string>
 
 
+    <string name="title_activity_course_select">CourseSelectActivity</string>
 </resources>

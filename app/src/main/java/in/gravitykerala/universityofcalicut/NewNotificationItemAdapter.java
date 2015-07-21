@@ -11,7 +11,7 @@ import android.widget.TextView;
 /**
  * Adapter to bind a ToDoItem List to a view
  */
-public class NotificationItemAdapter extends ArrayAdapter<newMobileNotification> {
+public class NewNotificationItemAdapter extends ArrayAdapter<MobileNotification> {
 
     /**
      * Adapter context
@@ -23,7 +23,7 @@ public class NotificationItemAdapter extends ArrayAdapter<newMobileNotification>
      */
     int mLayoutResourceId;
 
-    public NotificationItemAdapter(Context context, int layoutResourceId) {
+    public NewNotificationItemAdapter(Context context, int layoutResourceId) {
         super(context, layoutResourceId);
 
         mContext = context;
@@ -37,7 +37,7 @@ public class NotificationItemAdapter extends ArrayAdapter<newMobileNotification>
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
 
-        final newMobileNotification currentItem = getItem(position);
+        final MobileNotification currentItem = getItem(position);
 
         if (row == null) {
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
@@ -47,8 +47,10 @@ public class NotificationItemAdapter extends ArrayAdapter<newMobileNotification>
         row.setTag(currentItem);
         final TextView tvTitle = (TextView) row.findViewById(R.id.row_title);
         final TextView tvContent = (TextView) row.findViewById(R.id.row_content);
+        final TextView tvurl = (TextView) row.findViewById(R.id.row_url);
         tvTitle.setText(currentItem.mTitle);
         tvContent.setText(currentItem.mcontent);
+        tvurl.setText(currentItem.url);
 
 
 //        checkBox.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +59,8 @@ public class NotificationItemAdapter extends ArrayAdapter<newMobileNotification>
 //            public void onClick(View arg0) {
 //                if (checkBox.isChecked()) {
 //                    checkBox.setEnabled(false);
-//                    if (mContext instanceof NotificationActivity) {
-//                        NotificationActivity activity = (NotificationActivity) mContext;
+//                    if (mContext instanceof NewNotificationActivity) {
+//                        NewNotificationActivity activity = (NewNotificationActivity) mContext;
 //                        activity.checkItem(currentItem);
 //                    }
 //                }

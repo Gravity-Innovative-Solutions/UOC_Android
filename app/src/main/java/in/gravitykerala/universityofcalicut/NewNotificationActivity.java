@@ -4,10 +4,8 @@ package in.gravitykerala.universityofcalicut;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,16 +27,10 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 
 import java.net.MalformedURLException;
 import java.util.List;
-import java.util.prefs.Preferences;
 
-import in.gravitykerala.universityofcalicut.Adapters.NotificationItemAdapter;
-import in.gravitykerala.universityofcalicut.Models.newMobileNotification;
+public class NewNotificationActivity extends Activity {
 
-public class NotificationActivity extends Activity implements GravitySupport {
-
-    SharedPreferences prefs;
-
-    public static final String SENDER_ID = "555906940821";
+    public static final String SENDER_ID = "387718248282";
 
     /**
      * Mobile Service Client reference
@@ -48,12 +40,12 @@ public class NotificationActivity extends Activity implements GravitySupport {
     /**
      * Mobile Service Table used to access data
      */
-    private MobileServiceTable<newMobileNotification> mToDoTable;
+    private MobileServiceTable<MobileNotification> mToDoTable;
 
     /**
      * Adapter to sync the items list with the view
      */
-    private NotificationItemAdapter mAdapter;
+    private NewNotificationItemAdapter mAdapter;
 
     /**
      * EditText containing the "New To Do" text
@@ -66,20 +58,19 @@ public class NotificationActivity extends Activity implements GravitySupport {
     private ProgressBar mProgressBar;
 
     Button buttonRefresh;
-
     /**
      * Initializes the activity
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
-        prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
+        setContentView(R.layout.activity_new_notification);
+
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         buttonRefresh = (Button) findViewById(R.id.button_refresh);
         // Initialize the progress bar
-        //mProgressBar.setVisibility(ProgressBar.GONE);
+        mProgressBar.setVisibility(ProgressBar.GONE);
 
         buttonRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,14 +86,46 @@ public class NotificationActivity extends Activity implements GravitySupport {
             initializeMobileService(this);
             mClient.withFilter(new ProgressFilter());
 
+String api=null;
+           if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_ORDERS")){
+               api="MobileUniversityOrders";
+           }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_VC_DESK")){
+                api="MobileVcDesk";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_NEWS")){
+                api="MobileNews";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_NOTIFICATIONS")){
+                api="MobilePareekshabhavanNotification";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_RESULT")){
+                api="MobileResult";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_TIMETABLE")){
+                api="MobileTimeTable";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_NOTIFICATION")){
+                api="MobileDistanceEducationNotification";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_CONTACT_CLASS")){
+                api="MobileContactClass";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_STUDY_MATERIAL")){
+                api="MobileStudyMaterials";
+            }
+            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_QUESTION_BANK")){
+                api="MobileQuestionBank";
+            }
+
 
             // Get the Mobile Service Table instance to use
-            mToDoTable = mClient.getTable("newMobileNotification", newMobileNotification.class);
+            mToDoTable = mClient.getTable(api,MobileNotification.class);
 
             //mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
-            mAdapter = new NotificationItemAdapter(this, R.layout.row_list_notification);
+            mAdapter = new NewNotificationItemAdapter(this, R.layout.row_list_notification);
             ListView listViewToDo = (ListView) findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
@@ -136,13 +159,12 @@ public class NotificationActivity extends Activity implements GravitySupport {
         return true;
     }
 
-    public static void initializeMobileService(Context context) {
-        if (NotificationActivity.mClient == null) {
+    public static void initializeMobileService(Context context)
+    {
+        if(mClient ==null) {
             try {
-                NotificationActivity.mClient = new MobileServiceClient(CLOUD_SERVICE_URI, CLOUD_SERVICE_KEY, context);
-                Log.d("PushNotification:", "registering");
+                mClient = new MobileServiceClient("https://universityofcalicut.azure-mobile.net/", "XWXXhaCoiYqzzERpfsqnhpJuQBgCAw42", context);
                 NotificationsManager.handleNotifications(context, SENDER_ID, PushNotificationHandler.class);
-                Log.d("PushNotification:", "registered");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 //TODO check for Netowrk connectivity and add Exception handling
@@ -152,6 +174,7 @@ public class NotificationActivity extends Activity implements GravitySupport {
     }
 
 
+
     /**
      * Mark an item as completed
      *
@@ -159,7 +182,7 @@ public class NotificationActivity extends Activity implements GravitySupport {
      *            The item to mark
      */
     /*
-    public void checkItem(final newMobileNotification item) {
+    public void checkItem(final MobileNotification item) {
         if (mClient == null) {
             return;
         }
@@ -244,33 +267,24 @@ public class NotificationActivity extends Activity implements GravitySupport {
         // Get the items that weren't marked as completed and add them in the
         // adapter
 
-        new AsyncTask<Void, Void, Void>() {
+        new AsyncTask<Void, Void, Void>(){
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-//                    Toast.makeText(NotificationActivity.this, "Refreshing", Toast.LENGTH_SHORT).show();
-                    String selectedCourse = prefs.getString(KEY_SELECTED_COURSE_ID, "none");
-                    Log.d("NotificationRefresh:", "Course:" + selectedCourse);
-                    Log.d("NotificationRefresh:", "Refreshing");
-                    //final List<newMobileNotification> results =  mToDoTable.execute().get();
-                    final List<newMobileNotification> results = mToDoTable.where().field("courseId").eq(selectedCourse).or().field("courseId").eq((String) null).execute().get();
+                    final List<MobileNotification> results =
+                            mToDoTable.execute().get();
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             mAdapter.clear();
 
-                            for (newMobileNotification item : results) {
+                            for(MobileNotification item : results){
                                 mAdapter.add(item);
                             }
-
                         }
                     });
-
-                    Log.d("NotificationRefresh:", "Refresh Success");
-                } catch (Exception e) {
+                } catch (Exception e){
                     e.printStackTrace();
-                    Log.d("NotificationRefresh", "Refresh Fail");
-//                    Toast.makeText(NotificationActivity.this, "Refresh Failed, Check Network Connection!!!", Toast.LENGTH_LONG).show();
                     createAndShowDialog(e, "Error");
 
                 }
@@ -284,13 +298,15 @@ public class NotificationActivity extends Activity implements GravitySupport {
     /**
      * Creates a dialog and shows it
      *
-     * @param exception The exception to show in the dialog
-     * @param title     The dialog title
+     * @param exception
+     *            The exception to show in the dialog
+     * @param title
+     *            The dialog title
      */
 
     private void createAndShowDialog(Exception exception, String title) {
         Throwable ex = exception;
-        if (exception.getCause() != null) {
+        if(exception.getCause() != null){
             ex = exception.getCause();
         }
         createAndShowDialog(ex.getMessage(), title);
@@ -299,8 +315,10 @@ public class NotificationActivity extends Activity implements GravitySupport {
     /**
      * Creates a dialog and shows it
      *
-     * @param message The dialog message
-     * @param title   The dialog title
+     * @param message
+     *            The dialog message
+     * @param title
+     *            The dialog title
      */
     private void createAndShowDialog(final String message, final String title) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);

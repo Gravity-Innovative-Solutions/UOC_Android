@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     tools:context="in.gravitykerala.universityofcalicut.VC">
 
-    <include
-        layout="@layout/toolbar_default" />
+    <include layout="@layout/toolbar_default" />
 
     <ScrollView
         android:layout_width="wrap_content"
