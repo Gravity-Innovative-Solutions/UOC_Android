@@ -9,7 +9,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
 
         <Spinner
             android:layout_width="wrap_content"
@@ -20,7 +21,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout2">
 
         <TextView
             android:layout_width="fill_parent"
@@ -34,7 +36,8 @@
             android:id="@+id/findSelected"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Find countries that are Selected" />
+            android:text="Select notifications You need"
+            android:gravity="center" />
 
         <ListView
             android:id="@+id/listView1"
