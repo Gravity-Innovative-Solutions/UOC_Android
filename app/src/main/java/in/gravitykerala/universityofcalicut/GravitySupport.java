@@ -19,6 +19,9 @@ public interface GravitySupport {
     String KEY_UOC_NEWS_NEEDED = "uoc_news";
     String KEY_UOC_ORDERS_NEEDED = "uoc_orders";
 
+    String KEY_FIRST_LAUNCH_COURSE_PREF = "course_pref_firstlaunch";
+    String KEY_FIRST_LAUNCH_REGISTRATION = "registration_firstlaunch";
+
 
 
     String TAG_NOTIFICATION_COMMON = "NOTIFICATION_UOC_COMMON";//"NOTIFICATION_UOC_COMMON";

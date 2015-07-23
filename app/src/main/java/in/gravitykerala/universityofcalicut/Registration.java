@@ -1,6 +1,8 @@
 package in.gravitykerala.universityofcalicut;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -11,16 +13,20 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class Registration extends AppCompatActivity {
+public class Registration extends AppCompatActivity implements GravitySupport {
     EditText name, email, phn;
     String MobilePattern = "[0-9]{10}";
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
+    //    Context currentContext;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
+//        currentContext = this;
         Button register = (Button) findViewById(R.id.button_register);
         name = (EditText) findViewById(R.id.name);
 ////        final String name_s = name.toString();
@@ -41,7 +47,15 @@ public class Registration extends AppCompatActivity {
                 } else if (!phn.getText().toString().matches(MobilePattern)) {
                     Toast.makeText(getApplicationContext(), "Please enter valid number", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent i = new Intent(Registration.this, CourseSelectActivity.class);
+
+
+                    Intent i;
+                    if (prefs.getBoolean(KEY_FIRST_LAUNCH_COURSE_PREF, true)) {
+                        i = new Intent(Registration.this, CourseSelectActivity.class);
+                    } else {
+                        i = new Intent(Registration.this, HomeDrawer.class);
+                    }
+
                     startActivity(i);
                 }
             }

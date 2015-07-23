@@ -1,18 +1,22 @@
 package in.gravitykerala.universityofcalicut;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Splash extends AppCompatActivity {
+public class Splash extends AppCompatActivity implements GravitySupport {
 
+    SharedPreferences prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
         Thread timer = new Thread() {
             public void run() {
                 try {
@@ -23,16 +27,16 @@ public class Splash extends AppCompatActivity {
                     e.printStackTrace();
                 } finally {
                     Intent in;
-                    in = new Intent(Splash.this, Registration.class);
-//
-//                    if ("none".equals(selectedCourse)) {
-//                        //Stream not selected
-//                        in = new Intent(Splash.this, Selection.class);
-//                    } else {
-//                        //Stream selected previously
-//                        in = new Intent(Splash.this, FragmentManagerActivity.class);
-//                    }
-//                    in = new Intent(Splash.this, Selection_Activity_main.class);
+
+                    if (prefs.getBoolean(KEY_FIRST_LAUNCH_REGISTRATION, true)) { //Registration needs to be shown
+                        in = new Intent(Splash.this, Registration.class);
+                    } else {
+                        if (prefs.getBoolean(KEY_FIRST_LAUNCH_COURSE_PREF, true)) {//Push Notification Preferences needs to be shown
+                            in = new Intent(Splash.this, CourseSelectActivity.class);
+                        } else { //Home drawer is shown
+                            in = new Intent(Splash.this, HomeDrawer.class);
+                        }
+                    }
                     startActivity(in);
 
 

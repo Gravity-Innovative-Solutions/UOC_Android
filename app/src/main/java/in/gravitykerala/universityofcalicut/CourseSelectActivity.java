@@ -202,6 +202,8 @@ public class CourseSelectActivity extends AppCompatActivity implements GravitySu
                     prefs.edit().putBoolean(KEY_UOC_NEWS_NEEDED, false).apply();
                 }
 
+                prefs.edit().putBoolean(KEY_FIRST_LAUNCH_COURSE_PREF, false).apply(); //Dont load this activity again
+
                 NotificationsManager.handleNotifications(CourseSelectActivity.this, GCM_PUSH_SENDER_ID, PushNotificationHandler.class);
 
                 Intent i = new Intent(CourseSelectActivity.this, HomeDrawer.class);
