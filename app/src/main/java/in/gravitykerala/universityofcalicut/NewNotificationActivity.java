@@ -28,14 +28,9 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 import java.net.MalformedURLException;
 import java.util.List;
 
+import in.gravitykerala.universityofcalicut.Models.MobileNotification;
+
 public class NewNotificationActivity extends Activity {
-
-    public static final String SENDER_ID = "387718248282";
-
-    /**
-     * Mobile Service Client reference
-     */
-    public static MobileServiceClient mClient;
 
     /**
      * Mobile Service Table used to access data
@@ -83,44 +78,44 @@ public class NewNotificationActivity extends Activity {
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL and key
 
-            initializeMobileService(this);
-            mClient.withFilter(new ProgressFilter());
+            NotificationActivity.initializeMobileService(this);
+            NotificationActivity.mClient.withFilter(new ProgressFilter());
 
-String api=null;
-           if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_ORDERS")){
+            String api = "MobileNews";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("NOTIFICATION_ORDERS")) {
                api="MobileUniversityOrders";
            }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_VC_DESK")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("NOTIFICATION_VC_DESK")) {
                 api="MobileVcDesk";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_NEWS")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("NOTIFICATION_NEWS")) {
                 api="MobileNews";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_NOTIFICATIONS")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("EXAM_NOTIFICATIONS")) {
                 api="MobilePareekshabhavanNotification";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_RESULT")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("EXAM_RESULT")) {
                 api="MobileResult";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_TIMETABLE")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("EXAM_TIMETABLE")) {
                 api="MobileTimeTable";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_NOTIFICATION")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_NOTIFICATION")) {
                 api="MobileDistanceEducationNotification";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_CONTACT_CLASS")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_CONTACT_CLASS")) {
                 api="MobileContactClass";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_STUDY_MATERIAL")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_STUDY_MATERIAL")) {
                 api="MobileStudyMaterials";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_QUESTION_BANK")){
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_QUESTION_BANK")) {
                 api="MobileQuestionBank";
             }
 
 
             // Get the Mobile Service Table instance to use
-            mToDoTable = mClient.getTable(api,MobileNotification.class);
+            mToDoTable = NotificationActivity.mClient.getTable(api, MobileNotification.class);
 
             //mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
 
@@ -159,19 +154,7 @@ String api=null;
         return true;
     }
 
-    public static void initializeMobileService(Context context)
-    {
-        if(mClient ==null) {
-            try {
-                mClient = new MobileServiceClient("https://universityofcalicut.azure-mobile.net/", "XWXXhaCoiYqzzERpfsqnhpJuQBgCAw42", context);
-                NotificationsManager.handleNotifications(context, SENDER_ID, PushNotificationHandler.class);
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                //TODO check for Netowrk connectivity and add Exception handling
 
-            }
-        }
-    }
 
 
 

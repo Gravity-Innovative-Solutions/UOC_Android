@@ -72,7 +72,7 @@ public class CourseItemAdapter extends ArrayAdapter<CourseItemDTO> implements Gr
             public void onClick(View v) {
 
                 Log.d("PushNotification:", "registering");
-                NotificationsManager.handleNotifications(mContext, NotificationActivity.SENDER_ID, PushNotificationHandler.class);
+                NotificationsManager.handleNotifications(mContext, GCM_PUSH_SENDER_ID, PushNotificationHandler.class);
                 Log.d("PushNotification:", "registered");
 
                 CourseItemDTO clickedCourse = (CourseItemDTO) v.getTag();

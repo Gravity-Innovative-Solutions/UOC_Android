@@ -41,7 +41,7 @@ public class Registration extends AppCompatActivity {
                 } else if (!phn.getText().toString().matches(MobilePattern)) {
                     Toast.makeText(getApplicationContext(), "Please enter valid number", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent i = new Intent(Registration.this, SetPrefrence.class);
+                    Intent i = new Intent(Registration.this, CourseSelectActivity.class);
                     startActivity(i);
                 }
             }

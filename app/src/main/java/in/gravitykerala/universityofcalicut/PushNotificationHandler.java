@@ -46,10 +46,10 @@ public class PushNotificationHandler extends NotificationsHandler implements Gra
 
             protected Void doInBackground(Void... params) {
                 try {
-                    prefs = currentContext.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
-                    String selectedCourse = prefs.getString(KEY_SELECTED_COURSE_ID, "none");
+//                    prefs = currentContext.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
+//                    String selectedCourse = prefs.getString(KEY_SELECTED_COURSE_ID, "none");
 
-                    String[] tags = {TAG_NOTIFICATION_COMMON, selectedCourse};
+                    String[] tags = getSubscribedNotifications(currentContext);
                     for (String tag : tags) {
                         Log.d("IncludedTag:", tag);
                     }
@@ -98,24 +98,28 @@ public class PushNotificationHandler extends NotificationsHandler implements Gra
         prefs = context.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
         String selectedCourse = prefs.getString(KEY_SELECTED_COURSE_ID, "none");
         String selectedDepartment = prefs.getString(KEY_SELECTED_DEPARTMENT_ID, "none");
-        if (!selectedCourse.equals("none")) {
-            subscribedNotiificationsList.add(TAG_COMMON_EXAM + selectedCourse);
-            subscribedNotiificationsList.add(TAG_COMMON_EXAM + selectedDepartment);
+        if (prefs.getBoolean(KEY_EXAM_NOTIFICATION_NEEDED, false)) {
+            if (!"none".equals(selectedCourse))
+                subscribedNotiificationsList.add(TAG_COMMON_EXAM + selectedCourse);
+            if (!"none".equals(selectedDepartment))
+                subscribedNotiificationsList.add(TAG_COMMON_EXAM + selectedDepartment);
 
             subscribedNotiificationsList.add(TAG_NOTIFICATION_EXAM_NOTIFICATIONS);
             subscribedNotiificationsList.add(TAG_NOTIFICATION_EXAM_RESULT);
             subscribedNotiificationsList.add(TAG_NOTIFICATION_EXAM_TIMETABLE);
 
-            Boolean distanceEducationNeeded = prefs.getBoolean(KEY_DISTANCE_EDUCATION_NEEDED, false);
-            if (distanceEducationNeeded) {
+
+        }
+        if (prefs.getBoolean(KEY_DISTANCE_EDUCATION_NEEDED, false)) {
+            if (!"none".equals(selectedCourse))
                 subscribedNotiificationsList.add(TAG_COMMON_DISTANCE + selectedCourse);
+            if (!"none".equals(selectedDepartment))
                 subscribedNotiificationsList.add(TAG_COMMON_DISTANCE + selectedDepartment);
 
-                subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_CONTACT_CLASS);
-                subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_NOTIFICATIONS);
-                subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_QUESTION_BANK);
-                subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_STUDY_MATERIAL);
-            }
+            subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_CONTACT_CLASS);
+            subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_NOTIFICATIONS);
+            subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_QUESTION_BANK);
+            subscribedNotiificationsList.add(TAG_NOTIFICATION_DISTANCE_STUDY_MATERIAL);
         }
         if (prefs.getBoolean(KEY_VC_DESK_NEEDED, false)) {
             subscribedNotiificationsList.add(TAG_NOTIFICATION_VC_DESK);

@@ -13,6 +13,9 @@ public class CourseItemDTO {
     @com.google.gson.annotations.SerializedName("courseName")
     public String courseName;
 
+    @com.google.gson.annotations.SerializedName("departmentName")
+    public String departmentName;
+
     @com.google.gson.annotations.SerializedName("courseInfo")
     public String courseInfo;
 

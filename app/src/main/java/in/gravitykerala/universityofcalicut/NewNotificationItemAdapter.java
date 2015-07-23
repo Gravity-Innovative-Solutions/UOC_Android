@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import in.gravitykerala.universityofcalicut.Models.MobileNotification;
+
 /**
  * Adapter to bind a ToDoItem List to a view
  */

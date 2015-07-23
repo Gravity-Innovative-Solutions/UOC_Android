@@ -8,19 +8,24 @@ import java.util.Set;
  * Created by Prakash on 18/07/2015.
  */
 public interface GravitySupport {
+
+    String KEY_PREFERENCE_ID = "in.gravitykerala.universityofcalicut";
+
     String KEY_SELECTED_COURSE_ID = "selected_course";
     String KEY_SELECTED_DEPARTMENT_ID = "selected_department";
+    String KEY_EXAM_NOTIFICATION_NEEDED = "exam_notification";
     String KEY_DISTANCE_EDUCATION_NEEDED = "distance_status";
     String KEY_VC_DESK_NEEDED = "vc_desk_status";
     String KEY_UOC_NEWS_NEEDED = "uoc_news";
     String KEY_UOC_ORDERS_NEEDED = "uoc_orders";
-    String KEY_PREFERENCE_ID = "in.gravitykerala.universityofcalicut";
+
 
 
     String TAG_NOTIFICATION_COMMON = "NOTIFICATION_UOC_COMMON";//"NOTIFICATION_UOC_COMMON";
 
     String CLOUD_SERVICE_URI = "https://universityofcalicut.azure-mobile.net/";
     String CLOUD_SERVICE_KEY = "XWXXhaCoiYqzzERpfsqnhpJuQBgCAw42";
+    String GCM_PUSH_SENDER_ID = "555906940821";
 //      MobileServiceClient mClient = null;
 
     String TAG_COMMON_DISTANCE = "DISTANCE:"; //Should be put before all distance related tags

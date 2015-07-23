@@ -39,7 +39,7 @@ public class NotificationActivity extends Activity implements GravitySupport {
 
     SharedPreferences prefs;
 
-    public static final String SENDER_ID = "555906940821";
+
 
     /**
      * Mobile Service Client reference
@@ -142,7 +142,7 @@ public class NotificationActivity extends Activity implements GravitySupport {
             try {
                 NotificationActivity.mClient = new MobileServiceClient(CLOUD_SERVICE_URI, CLOUD_SERVICE_KEY, context);
                 Log.d("PushNotification:", "registering");
-                NotificationsManager.handleNotifications(context, SENDER_ID, PushNotificationHandler.class);
+                NotificationsManager.handleNotifications(context, GCM_PUSH_SENDER_ID, PushNotificationHandler.class);
                 Log.d("PushNotification:", "registered");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
