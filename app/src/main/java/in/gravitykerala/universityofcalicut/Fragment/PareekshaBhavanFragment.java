@@ -14,11 +14,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import in.gravitykerala.universityofcalicut.Authorities;
+import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.PareekshaBhavan_Notifications;
 import in.gravitykerala.universityofcalicut.R;
-import in.gravitykerala.universityofcalicut.Result;
 import in.gravitykerala.universityofcalicut.Syllabus;
-import in.gravitykerala.universityofcalicut.TimeTable;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -124,16 +123,18 @@ public class PareekshaBhavanFragment extends Fragment {
         v.findViewById(R.id.d).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getActivity(), Result.class);
-                startActivity(i1);
+                Intent i4 = new Intent(getActivity(), NewNotificationActivity.class);
+                i4.putExtra("NOTIFICATION_TYPE", "EXAM_RESULT");
+                startActivity(i4);
 
             }
         });
         v.findViewById(R.id.e).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getActivity(), TimeTable.class);
-                startActivity(i1);
+                Intent i5 = new Intent(getActivity(), NewNotificationActivity.class);
+                i5.putExtra("NOTIFICATION_TYPE", "EXAM_TIMETABLE");
+                startActivity(i5);
 
             }
         });

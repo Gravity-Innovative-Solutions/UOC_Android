@@ -1,8 +1,10 @@
 package in.gravitykerala.universityofcalicut;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,12 +24,27 @@ import java.util.ArrayList;
 
 public class SetPrefrence extends AppCompatActivity {
     MyCustomAdapter dataAdapter = null;
+    Button go;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_prefrence);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        go = (Button) findViewById(R.id.button_go);
+        go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
         //Generate list View from ArrayList
         displayListView();
 
@@ -69,6 +86,7 @@ public class SetPrefrence extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         "Clicked on Row: " + pref.getName(),
                         Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -136,25 +154,27 @@ public class SetPrefrence extends AppCompatActivity {
     private void checkButtonClick() {
 
 
-        Button myButton = (Button) findViewById(R.id.findSelected);
+        Button myButton = (Button) findViewById(R.id.button_go);
         myButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                StringBuffer responseText = new StringBuffer();
-                responseText.append("The following were selected...\n");
-
-                ArrayList<YourPreference> prefList = dataAdapter.prefList;
-                for (int i = 0; i < prefList.size(); i++) {
-                    YourPreference pref = prefList.get(i);
-                    if (pref.isSelected()) {
-                        responseText.append("\n" + pref.getName());
-                    }
-                }
-
-                Toast.makeText(getApplicationContext(),
-                        responseText, Toast.LENGTH_LONG).show();
+//                StringBuffer responseText = new StringBuffer();
+//                responseText.append("The following were selected...\n");
+//
+//                ArrayList<YourPreference> prefList = dataAdapter.prefList;
+//                for (int i = 0; i < prefList.size(); i++) {
+//                    YourPreference pref = prefList.get(i);
+//                    if (pref.isSelected()) {
+//                        responseText.append("\n" + pref.getName());
+//                    }
+//                }
+//
+//                Toast.makeText(getApplicationContext(),
+//                        responseText, Toast.LENGTH_LONG).show();
+                Intent i = new Intent(SetPrefrence.this, HomeDrawer.class);
+                startActivity(i);
 
             }
         });

@@ -40,6 +40,7 @@ public class NewNotificationActivity extends Activity {
     /**
      * Adapter to sync the items list with the view
      */
+
     private NewNotificationItemAdapter mAdapter;
 
     /**
@@ -53,6 +54,7 @@ public class NewNotificationActivity extends Activity {
     private ProgressBar mProgressBar;
 
     Button buttonRefresh;
+
     /**
      * Initializes the activity
      */
@@ -60,7 +62,7 @@ public class NewNotificationActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_notification);
-
+//        mClient=NotificationActivity.mClient;
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         buttonRefresh = (Button) findViewById(R.id.button_refresh);
@@ -120,7 +122,7 @@ public class NewNotificationActivity extends Activity {
             //mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
-            mAdapter = new NewNotificationItemAdapter(this, R.layout.row_list_notification);
+            mAdapter = new NewNotificationItemAdapter(this, R.layout.single_row_list_notification);
             ListView listViewToDo = (ListView) findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
@@ -153,7 +155,6 @@ public class NewNotificationActivity extends Activity {
 
         return true;
     }
-
 
 
 
@@ -250,7 +251,7 @@ public class NewNotificationActivity extends Activity {
         // Get the items that weren't marked as completed and add them in the
         // adapter
 
-        new AsyncTask<Void, Void, Void>(){
+        new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
@@ -261,12 +262,12 @@ public class NewNotificationActivity extends Activity {
                         public void run() {
                             mAdapter.clear();
 
-                            for(MobileNotification item : results){
+                            for (MobileNotification item : results) {
                                 mAdapter.add(item);
                             }
                         }
                     });
-                } catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                     createAndShowDialog(e, "Error");
 
@@ -281,15 +282,13 @@ public class NewNotificationActivity extends Activity {
     /**
      * Creates a dialog and shows it
      *
-     * @param exception
-     *            The exception to show in the dialog
-     * @param title
-     *            The dialog title
+     * @param exception The exception to show in the dialog
+     * @param title     The dialog title
      */
 
     private void createAndShowDialog(Exception exception, String title) {
         Throwable ex = exception;
-        if(exception.getCause() != null){
+        if (exception.getCause() != null) {
             ex = exception.getCause();
         }
         createAndShowDialog(ex.getMessage(), title);
@@ -298,10 +297,8 @@ public class NewNotificationActivity extends Activity {
     /**
      * Creates a dialog and shows it
      *
-     * @param message
-     *            The dialog message
-     * @param title
-     *            The dialog title
+     * @param message The dialog message
+     * @param title   The dialog title
      */
     private void createAndShowDialog(final String message, final String title) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);

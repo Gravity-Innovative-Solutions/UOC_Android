@@ -31,10 +31,9 @@ public class MobileNotification {
     @com.google.gson.annotations.SerializedName("courseId")
     public String mPushNeeded;
 
-   //Hours
+    //Hours
 
-    public MobileNotification(String title, String content, String messageType, String pushNeeded)
-    {
+    public MobileNotification(String title, String content, String messageType, String pushNeeded) {
         this.mTitle = title;
         this.mcontent = content;
         this.mMessageType = messageType;

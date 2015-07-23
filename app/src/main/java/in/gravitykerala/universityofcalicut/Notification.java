@@ -1,7 +1,5 @@
 package in.gravitykerala.universityofcalicut;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -20,11 +18,11 @@ public class Notification extends AppCompatActivity {
             setSupportActionBar(toolbar);
         }
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=744&Itemid=324"));
-        startActivity(intent);
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//        intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=744&Itemid=324"));
+//        startActivity(intent);
 
 
 

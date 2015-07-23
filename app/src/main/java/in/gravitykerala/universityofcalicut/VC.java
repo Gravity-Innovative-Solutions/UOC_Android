@@ -36,7 +36,8 @@ public class VC extends AppCompatActivity {
         findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VC.this, VCsProgramme.class);
+                Intent intent = new Intent(VC.this, NewNotificationActivity.class);
+                intent.putExtra("NOTIFICATION_TYPE", "NOTIFICATION_VC_DESK");
 
                 startActivity(intent);
 

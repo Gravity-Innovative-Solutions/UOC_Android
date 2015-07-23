@@ -121,4 +121,10 @@ His dreams, vision, mission and actions are currently focused to transform Unive
     <string name="title_activity_course_select">CourseSelectActivity</string>
 
     <string name="spinner_department_prompt">"Prof.K.Raveendranath"</string>
+
+    <string-array name="department">
+        <item>Select your Department</item>
+        <item>Engineering</item>
+        <item>Medical</item>
+    </string-array>
 </resources>

@@ -9,11 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import in.gravitykerala.universityofcalicut.ContactClass;
-import in.gravitykerala.universityofcalicut.Dist_Edu_Notifications;
-import in.gravitykerala.universityofcalicut.QuestionBank;
+import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.R;
-import in.gravitykerala.universityofcalicut.StudyMaterials;
 
 
 /**
@@ -53,9 +50,9 @@ public class DistanceEducation extends Fragment {
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Dist_Edu_Notifications.class);
-
-                startActivity(intent);
+                Intent i6 = new Intent(getActivity(), NewNotificationActivity.class);
+                i6.putExtra("NOTIFICATION_TYPE", "DISTANCE_NOTIFICATION");
+                startActivity(i6);
             }
         });
         onlineidcard.setOnClickListener(new View.OnClickListener() {
@@ -83,9 +80,9 @@ public class DistanceEducation extends Fragment {
         contact_class.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ContactClass.class);
-
-                startActivity(intent);
+                Intent i7 = new Intent(getActivity(), NewNotificationActivity.class);
+                i7.putExtra("NOTIFICATION_TYPE", "DISTANCE_CONTACT_CLASS");
+                startActivity(i7);
 
             }
         });
@@ -103,19 +100,18 @@ public class DistanceEducation extends Fragment {
         study_material.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), StudyMaterials.class);
-
-                startActivity(intent);
+                Intent i8 = new Intent(getActivity(), NewNotificationActivity.class);
+                i8.putExtra("NOTIFICATION_TYPE", "DISTANCE_STUDY_MATERIAL");
+                startActivity(i8);
 
             }
         });
         qbank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), QuestionBank.class);
-
-                startActivity(intent);
-
+                Intent i9 = new Intent(getActivity(), NewNotificationActivity.class);
+                i9.putExtra("NOTIFICATION_TYPE", "DISTANCE_QUESTION_BANK");
+                startActivity(i9);
             }
         });
 
