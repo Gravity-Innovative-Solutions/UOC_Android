@@ -59,7 +59,8 @@ public class DemoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), NewNotificationActivity.class);
-                intent.putExtra("NOTIFICATION_TYPE", "NOTIFICATION_NEWS");
+                intent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_NOTIFICATION_NEWS);
+
 
                 startActivity(intent);
             }
@@ -68,7 +69,8 @@ public class DemoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), NewNotificationActivity.class);
-                intent.putExtra("NOTIFICATION_TYPE", "NOTIFICATION_ORDERS");
+                intent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_NOTIFICATION_ORDERS);
+
 
                 startActivity(intent);
             }

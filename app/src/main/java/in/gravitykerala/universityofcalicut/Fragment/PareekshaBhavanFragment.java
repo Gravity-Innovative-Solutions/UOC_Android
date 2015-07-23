@@ -124,7 +124,7 @@ public class PareekshaBhavanFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i4 = new Intent(getActivity(), NewNotificationActivity.class);
-                i4.putExtra("NOTIFICATION_TYPE", "EXAM_RESULT");
+                i4.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_EXAM_RESULT);
                 startActivity(i4);
 
             }
@@ -133,7 +133,7 @@ public class PareekshaBhavanFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i5 = new Intent(getActivity(), NewNotificationActivity.class);
-                i5.putExtra("NOTIFICATION_TYPE", "EXAM_TIMETABLE");
+                i5.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_EXAM_TIMETABLE);
                 startActivity(i5);
 
             }

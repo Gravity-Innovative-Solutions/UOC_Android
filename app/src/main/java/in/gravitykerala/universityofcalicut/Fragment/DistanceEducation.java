@@ -51,7 +51,8 @@ public class DistanceEducation extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i6 = new Intent(getActivity(), NewNotificationActivity.class);
-                i6.putExtra("NOTIFICATION_TYPE", "DISTANCE_NOTIFICATION");
+                i6.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_NOTIFICATION);
+
                 startActivity(i6);
             }
         });
@@ -81,7 +82,7 @@ public class DistanceEducation extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i7 = new Intent(getActivity(), NewNotificationActivity.class);
-                i7.putExtra("NOTIFICATION_TYPE", "DISTANCE_CONTACT_CLASS");
+                i7.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_CONTACT_CLASS);
                 startActivity(i7);
 
             }
@@ -101,7 +102,7 @@ public class DistanceEducation extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i8 = new Intent(getActivity(), NewNotificationActivity.class);
-                i8.putExtra("NOTIFICATION_TYPE", "DISTANCE_STUDY_MATERIAL");
+                i8.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_STUDY_MATERIAL);
                 startActivity(i8);
 
             }
@@ -110,7 +111,7 @@ public class DistanceEducation extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i9 = new Intent(getActivity(), NewNotificationActivity.class);
-                i9.putExtra("NOTIFICATION_TYPE", "DISTANCE_QUESTION_BANK");
+                i9.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_QUESTION_BANK);
                 startActivity(i9);
             }
         });

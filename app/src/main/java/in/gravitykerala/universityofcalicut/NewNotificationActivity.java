@@ -32,6 +32,20 @@ import in.gravitykerala.universityofcalicut.Models.MobileNotification;
 
 public class NewNotificationActivity extends Activity {
 
+    final public static String KEY_NOTIFICATION_TYPE = "NOTIFICATION_TYPE";
+
+    final public static String NOTIFICATION_NOTIFICATION_ORDERS = "NOTIFICATION_ORDERS";
+    final public static String NOTIFICATION_VC_DESK = "NOTIFICATION_VC_DESK";
+    final public static String NOTIFICATION_NOTIFICATION_NEWS = "NOTIFICATION_NEWS";
+    final public static String NOTIFICATION_EXAM_NOTIFICATIONS = "EXAM_NOTIFICATIONS";
+    final public static String NOTIFICATION_EXAM_RESULT = "EXAM_RESULT";
+    final public static String NOTIFICATION_EXAM_TIMETABLE = "EXAM_TIMETABLE";
+    final public static String NOTIFICATION_DISTANCE_NOTIFICATION = "DISTANCE_NOTIFICATION";
+    final public static String NOTIFICATION_DISTANCE_CONTACT_CLASS = "DISTANCE_CONTACT_CLASS";
+    final public static String NOTIFICATION_DISTANCE_STUDY_MATERIAL = "DISTANCE_STUDY_MATERIAL";
+    final public static String NOTIFICATION_DISTANCE_QUESTION_BANK = "DISTANCE_QUESTION_BANK";
+    final public static String NOTIFICATION_COMMON = "NOTIFICATION_COMMON";
+
     /**
      * Mobile Service Table used to access data
      */
@@ -84,36 +98,36 @@ public class NewNotificationActivity extends Activity {
             NotificationActivity.mClient.withFilter(new ProgressFilter());
 
             String api = "MobileNews";
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("NOTIFICATION_ORDERS")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_NOTIFICATION_ORDERS)) {
                api="MobileUniversityOrders";
            }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("NOTIFICATION_VC_DESK")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_VC_DESK)) {
                 api="MobileVcDesk";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("NOTIFICATION_NEWS")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_NOTIFICATION_NEWS)) {
                 api="MobileNews";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("EXAM_NOTIFICATIONS")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_EXAM_NOTIFICATIONS)) {
                 api="MobilePareekshabhavanNotification";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("EXAM_RESULT")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_EXAM_RESULT)) {
                 api="MobileResult";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("EXAM_TIMETABLE")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_EXAM_TIMETABLE)) {
                 api="MobileTimeTable";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_NOTIFICATION")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_DISTANCE_NOTIFICATION)) {
                 api="MobileDistanceEducationNotification";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_CONTACT_CLASS")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_DISTANCE_CONTACT_CLASS)) {
                 api="MobileContactClass";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_STUDY_MATERIAL")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_DISTANCE_STUDY_MATERIAL)) {
                 api="MobileStudyMaterials";
             }
-            if (getIntent().getStringExtra("NOTIFICATION_TYPE").equals("DISTANCE_QUESTION_BANK")) {
+            if (getIntent().getStringExtra(KEY_NOTIFICATION_TYPE).equals(NOTIFICATION_DISTANCE_QUESTION_BANK)) {
                 api="MobileQuestionBank";
-            }
+            } //TODO: Add NOTIFICATION_COMMON
 
 
             // Get the Mobile Service Table instance to use
