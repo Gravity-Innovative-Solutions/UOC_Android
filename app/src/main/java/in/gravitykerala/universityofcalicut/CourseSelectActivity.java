@@ -208,8 +208,7 @@ public class CourseSelectActivity extends AppCompatActivity implements GravitySu
 
                 Intent i = new Intent(CourseSelectActivity.this, HomeDrawer.class);
                 startActivity(i);
-
-
+                finish();
             }
         });
 

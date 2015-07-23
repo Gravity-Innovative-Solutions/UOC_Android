@@ -55,8 +55,9 @@ public class Registration extends AppCompatActivity implements GravitySupport {
                     } else {
                         i = new Intent(Registration.this, HomeDrawer.class);
                     }
-
+                    prefs.edit().putBoolean(KEY_FIRST_LAUNCH_REGISTRATION, false).apply(); //Dont load this activity again
                     startActivity(i);
+                    finish();
                 }
             }
         });

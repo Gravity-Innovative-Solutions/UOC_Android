@@ -38,8 +38,6 @@ public class Splash extends AppCompatActivity implements GravitySupport {
                         }
                     }
                     startActivity(in);
-
-
                 }
             }
 
