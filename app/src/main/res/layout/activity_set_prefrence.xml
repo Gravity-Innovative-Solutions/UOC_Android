@@ -5,45 +5,82 @@
     android:background="@color/light_primary_color"
     tools:context="in.gravitykerala.universityofcalicut.SetPrefrence">
 
+    <include layout="@layout/toolbar_default" />
 
-    <LinearLayout
-        android:orientation="vertical"
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:entries="@array/department"
+        android:layout_below="@+id/toolbar" />
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Notifications U need"
+        android:id="@+id/button4"
+        android:layout_below="@+id/spinner2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="News"
+        android:id="@+id/checkBox_news"
+        android:layout_below="@+id/button4" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VC&apos;s Programmes"
+        android:id="@+id/checkBox_vc_prgrm"
+        android:layout_below="@+id/checkBox_news" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance Education"
+        android:id="@+id/checkBox_dist_edu"
+        android:layout_below="@+id/checkBox_vc_prgrm" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="University Orders"
+        android:id="@+id/checkBox_uni_orders"
+        android:layout_below="@+id/checkBox_dist_edu" />
+
+    <Button
+        android:id="@+id/findSelected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
+        android:text="Select Courses "
+        android:gravity="center"
+        android:layout_below="@+id/checkBox_uni_orders" />
 
-        <Spinner
-            android:layout_width="wrap_content"
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="false"
+        android:cacheColorHint="#ff6a00"
+        android:divider="#ff8f40"
+        android:dividerHeight="1px"
+        android:layout_below="@+id/findSelected" />
+
+
+    <Button
+        android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner2" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayout2">
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Text"
-            android:textSize="20sp" />
+        android:text="GO"
+        android:id="@+id/button_go"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
-        <Button
-            android:id="@+id/findSelected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Select notifications You need"
-            android:gravity="center" />
 
-        <ListView
-            android:id="@+id/listView1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
-
-
-    </LinearLayout>
 </RelativeLayout>

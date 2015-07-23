@@ -29,7 +29,6 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 
 import java.net.MalformedURLException;
 import java.util.List;
-import java.util.prefs.Preferences;
 
 import in.gravitykerala.universityofcalicut.Adapters.NotificationItemAdapter;
 import in.gravitykerala.universityofcalicut.Models.newMobileNotification;

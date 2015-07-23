@@ -145,9 +145,12 @@
         <activity
             android:name=".SetPrefrence"
             android:label="@string/title_activity_set_prefrence"></activity>
-        android:label="@string/title_activity_feedback"/>
+        <!--android:label="@string/title_activity_feedback"/>-->
         <activity
             android:name=".CourseSelectActivity"
+            android:label="@string/title_activity_course_select" />
+        <activity
+            android:name=".NewNotificationActivity"
             android:label="@string/title_activity_course_select" />
 
     </application>

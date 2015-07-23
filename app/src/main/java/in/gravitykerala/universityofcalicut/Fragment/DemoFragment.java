@@ -9,9 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import in.gravitykerala.universityofcalicut.News;
+import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.R;
-import in.gravitykerala.universityofcalicut.UniversityOrders;
 import in.gravitykerala.universityofcalicut.VC;
 
 
@@ -59,7 +58,8 @@ public class DemoFragment extends Fragment {
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), News.class);
+                Intent intent = new Intent(getActivity(), NewNotificationActivity.class);
+                intent.putExtra("NOTIFICATION_TYPE", "NOTIFICATION_NEWS");
 
                 startActivity(intent);
             }
@@ -67,7 +67,8 @@ public class DemoFragment extends Fragment {
         uni_orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UniversityOrders.class);
+                Intent intent = new Intent(getActivity(), NewNotificationActivity.class);
+                intent.putExtra("NOTIFICATION_TYPE", "NOTIFICATION_ORDERS");
 
                 startActivity(intent);
             }

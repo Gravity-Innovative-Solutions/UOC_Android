@@ -28,6 +28,8 @@ import com.microsoft.windowsazure.notifications.NotificationsManager;
 import java.net.MalformedURLException;
 import java.util.List;
 
+import in.gravitykerala.universityofcalicut.Models.MobileNotification;
+
 public class NewNotificationActivity extends Activity {
 
     public static final String SENDER_ID = "387718248282";
@@ -45,6 +47,7 @@ public class NewNotificationActivity extends Activity {
     /**
      * Adapter to sync the items list with the view
      */
+
     private NewNotificationItemAdapter mAdapter;
 
     /**
@@ -58,6 +61,7 @@ public class NewNotificationActivity extends Activity {
     private ProgressBar mProgressBar;
 
     Button buttonRefresh;
+
     /**
      * Initializes the activity
      */
@@ -65,7 +69,7 @@ public class NewNotificationActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_notification);
-
+//        mClient=NotificationActivity.mClient;
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         buttonRefresh = (Button) findViewById(R.id.button_refresh);
@@ -78,6 +82,7 @@ public class NewNotificationActivity extends Activity {
                 refreshItemsFromTable();
 
             }
+
         });
         try {
             // Create the Mobile Service Client instance, using the provided
@@ -86,46 +91,46 @@ public class NewNotificationActivity extends Activity {
             initializeMobileService(this);
             mClient.withFilter(new ProgressFilter());
 
-String api=null;
-           if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_ORDERS")){
-               api="MobileUniversityOrders";
-           }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_VC_DESK")){
-                api="MobileVcDesk";
+            String api = null;
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_ORDERS")) {
+                api = "MobileUniversityOrders";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_NEWS")){
-                api="MobileNews";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_VC_DESK")) {
+                api = "MobileVcDesk";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_NOTIFICATIONS")){
-                api="MobilePareekshabhavanNotification";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("NOTIFICATION_NEWS")) {
+                api = "MobileNews";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_RESULT")){
-                api="MobileResult";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_NOTIFICATIONS")) {
+                api = "MobilePareekshabhavanNotification";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_TIMETABLE")){
-                api="MobileTimeTable";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_RESULT")) {
+                api = "MobileResult";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_NOTIFICATION")){
-                api="MobileDistanceEducationNotification";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("EXAM_TIMETABLE")) {
+                api = "MobileTimeTable";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_CONTACT_CLASS")){
-                api="MobileContactClass";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_NOTIFICATION")) {
+                api = "MobileDistanceEducationNotification";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_STUDY_MATERIAL")){
-                api="MobileStudyMaterials";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_CONTACT_CLASS")) {
+                api = "MobileContactClass";
             }
-            if(getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_QUESTION_BANK")){
-                api="MobileQuestionBank";
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_STUDY_MATERIAL")) {
+                api = "MobileStudyMaterials";
+            }
+            if (getIntent().getStringExtra("NOTIFICATION_TYPE").toString().equals("DISTANCE_QUESTION_BANK")) {
+                api = "MobileQuestionBank";
             }
 
 
             // Get the Mobile Service Table instance to use
-            mToDoTable = mClient.getTable(api,MobileNotification.class);
+            mToDoTable = mClient.getTable(api, MobileNotification.class);
 
             //mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
 
             // Create an adapter to bind the items with the view
-            mAdapter = new NewNotificationItemAdapter(this, R.layout.row_list_notification);
+            mAdapter = new NewNotificationItemAdapter(this, R.layout.single_row_list_notification);
             ListView listViewToDo = (ListView) findViewById(R.id.listViewToDo);
             listViewToDo.setAdapter(mAdapter);
 
@@ -159,9 +164,8 @@ String api=null;
         return true;
     }
 
-    public static void initializeMobileService(Context context)
-    {
-        if(mClient ==null) {
+    public static void initializeMobileService(Context context) {
+        if (mClient == null) {
             try {
                 mClient = new MobileServiceClient("https://universityofcalicut.azure-mobile.net/", "XWXXhaCoiYqzzERpfsqnhpJuQBgCAw42", context);
                 NotificationsManager.handleNotifications(context, SENDER_ID, PushNotificationHandler.class);
@@ -172,7 +176,6 @@ String api=null;
             }
         }
     }
-
 
 
     /**
@@ -267,7 +270,7 @@ String api=null;
         // Get the items that weren't marked as completed and add them in the
         // adapter
 
-        new AsyncTask<Void, Void, Void>(){
+        new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
@@ -278,12 +281,12 @@ String api=null;
                         public void run() {
                             mAdapter.clear();
 
-                            for(MobileNotification item : results){
+                            for (MobileNotification item : results) {
                                 mAdapter.add(item);
                             }
                         }
                     });
-                } catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                     createAndShowDialog(e, "Error");
 
@@ -298,15 +301,13 @@ String api=null;
     /**
      * Creates a dialog and shows it
      *
-     * @param exception
-     *            The exception to show in the dialog
-     * @param title
-     *            The dialog title
+     * @param exception The exception to show in the dialog
+     * @param title     The dialog title
      */
 
     private void createAndShowDialog(Exception exception, String title) {
         Throwable ex = exception;
-        if(exception.getCause() != null){
+        if (exception.getCause() != null) {
             ex = exception.getCause();
         }
         createAndShowDialog(ex.getMessage(), title);
@@ -315,10 +316,8 @@ String api=null;
     /**
      * Creates a dialog and shows it
      *
-     * @param message
-     *            The dialog message
-     * @param title
-     *            The dialog title
+     * @param message The dialog message
+     * @param title   The dialog title
      */
     private void createAndShowDialog(final String message, final String title) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
