@@ -59,7 +59,7 @@ public class AdmissionPortal extends Fragment {
         mainWebView.setWebViewClient(new MyCustomWebViewClient());
         mainWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
-        mainWebView.loadUrl("http://gravitykerala.in/");
+        mainWebView.loadUrl("http://www.cuonline.ac.in/");
 
 
 //

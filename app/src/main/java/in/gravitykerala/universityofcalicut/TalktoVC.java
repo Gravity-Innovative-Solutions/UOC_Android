@@ -41,7 +41,7 @@ public class TalktoVC extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (name_s.isEmpty() || email_s.isEmpty() || phn_s.isEmpty() || messages.getText().toString().isEmpty()) {
+                if (name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || phn.getText().toString().isEmpty() || messages.getText().toString().isEmpty()) {
                     Toast.makeText(TalktoVC.this, "fill all the fields", Toast.LENGTH_SHORT).show();
 
                 } else if (!email.getText().toString().matches(emailPattern)) {

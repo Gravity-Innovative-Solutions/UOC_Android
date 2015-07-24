@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
 
     tools:context="in.gravitykerala.universityofcalicut.Registration"
-    android:background="@color/light_primary_color">
+    android:background="@drawable/doodle_five">
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,79 +12,96 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView20"
-            android:src="@drawable/ic_launcher"
-            android:scaleType="matrix"
-            android:adjustViewBounds="true" />
-
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-            android:background="@drawable/border_transparent"
-
-                android:gravity="center"
-
-            android:layout_margin="10dp"
-            android:layout_marginBottom="15dp"
-            android:padding="25dp">
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/name"
-                android:hint="Name"
-
-                android:gravity="center"
-
-                android:paddingBottom="15dp"
-                android:layout_marginTop="10dp" />
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/email"
-                android:hint="Email"
-
-                android:gravity="center"
-
-                android:paddingBottom="15dp" />
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:maxLength="10"
-                android:id="@+id/phn_no"
-                android:hint="Phone "
-
-                android:gravity="center"
-
-                android:layout_marginBottom="15dp"
-                android:paddingBottom="15dp" />
-
-        </LinearLayout>
-
-
-        <Button
+        <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
-            android:id="@+id/button_register"
+            android:id="@+id/scrollView12">
 
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            style="@style/Button_"
-            android:layout_margin="10dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+
+                    android:gravity="center"
+
+                    android:layout_margin="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:padding="25dp">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/name"
+                        android:hint="Name"
+
+                        android:gravity="center"
+
+                        android:paddingBottom="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:background="@drawable/border_transparent"
+                        android:layout_marginBottom="15dp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/email"
+                        android:hint="Email"
+
+                        android:gravity="center"
+
+                        android:paddingBottom="15dp"
+                        android:textColorHint="@color/white"
+                        android:textColor="@color/white"
+                        android:background="@drawable/border_transparent"
+                        android:layout_marginBottom="15dp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:id="@+id/phn_no"
+                        android:hint="Phone "
+
+                        android:gravity="center"
+
+                        android:layout_marginBottom="15dp"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:background="@drawable/border_transparent" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:id="@+id/button_register"
+
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    style="@style/Button_"
+                    android:layout_margin="10dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 </RelativeLayout>

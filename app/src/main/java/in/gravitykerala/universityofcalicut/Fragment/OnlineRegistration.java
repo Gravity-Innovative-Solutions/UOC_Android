@@ -2,7 +2,6 @@ package in.gravitykerala.universityofcalicut.Fragment;
 
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import in.gravitykerala.universityofcalicut.OnlineReg_epayment;
 import in.gravitykerala.universityofcalicut.R;
 
 
@@ -44,11 +44,11 @@ public class OnlineRegistration extends Fragment {
         epayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://www.uoc.ac.in/gen_epay/pay1.php"));
-        startActivity(intent);
+                Intent intent = new Intent(getActivity(), OnlineReg_epayment.class);
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("https://www.uoc.ac.in/gen_epay/pay1.php"));
+                startActivity(intent);
 //                WebView myWebView = (WebView) v.findViewById(R.id.webview);
 //                myWebView.loadUrl("http://www.royalcet.in/about-us/");
 

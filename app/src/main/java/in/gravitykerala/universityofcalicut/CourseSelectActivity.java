@@ -126,10 +126,13 @@ public class CourseSelectActivity extends AppCompatActivity implements GravitySu
         sp_Department.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 selectedDepartmentId = (String) view.getTag();
                 if ("none".equals(selectedDepartmentId)) {
                     if (courseAsyncTask != null) {
                         courseAsyncTask.cancel(true);
+
+
                     }
                     sp_Course.setVisibility(Spinner.GONE);
                     selectedCourseId = "none";

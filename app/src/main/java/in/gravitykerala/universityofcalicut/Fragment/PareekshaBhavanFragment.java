@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 
 import in.gravitykerala.universityofcalicut.Authorities;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
-import in.gravitykerala.universityofcalicut.PareekshaBhavan_Notifications;
 import in.gravitykerala.universityofcalicut.R;
 import in.gravitykerala.universityofcalicut.Syllabus;
 
@@ -112,14 +111,14 @@ public class PareekshaBhavanFragment extends Fragment {
                 startActivity(i1);
             }
         });
-        v.findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i1 = new Intent(getActivity(), PareekshaBhavan_Notifications.class);
-                startActivity(i1);
-
-            }
-        });
+//        v.findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i1 = new Intent(getActivity(), PareekshaBhavan_Notifications.class);
+//                startActivity(i1);
+//
+//            }
+//        });
         v.findViewById(R.id.d).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

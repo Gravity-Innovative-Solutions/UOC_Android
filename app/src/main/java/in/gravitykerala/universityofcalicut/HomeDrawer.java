@@ -66,7 +66,7 @@ public class HomeDrawer extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(R.string.about_fragment_title).withIcon(GoogleMaterial.Icon.gmd_contacts).withIdentifier(2).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_fragment_pareekshabavan).withIcon(GoogleMaterial.Icon.gmd_event).withIdentifier(3).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_fragment_admission_portal).withIcon(GoogleMaterial.Icon.gmd_card_giftcard).withIdentifier(4).withCheckable(true),
-                        new PrimaryDrawerItem().withName("Notifiations").withIcon(GoogleMaterial.Icon.gmd_notifications_active).withIdentifier(9).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.title_activity_notification).withIcon(GoogleMaterial.Icon.gmd_notifications_active).withIdentifier(9).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_people).withIdentifier(6).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(5).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_business).withIdentifier(7).withCheckable(true),
@@ -152,7 +152,7 @@ public class HomeDrawer extends AppCompatActivity {
 
 
                             } else if (drawerItem.getIdentifier() == 10) {
-                                intent = new Intent(HomeDrawer.this, Feedback.class);
+                                intent = new Intent(HomeDrawer.this, TalktoVC.class);
 
                             }
 

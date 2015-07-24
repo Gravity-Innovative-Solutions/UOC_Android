@@ -42,7 +42,7 @@
     <string name="gen_section5">Praveena R, O.B Jayanthi\nContact:04942407234,
         04942407215\nEmail: jce6@universityofcalicut.info</string>
     <string name="title_activity_syllabus">Syllabus</string>
-    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_notification">Notifications</string>
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_result">Result</string>
     <string name="title_activity_time_table">Time Table</string>
@@ -114,11 +114,11 @@ His dreams, vision, mission and actions are currently focused to transform Unive
     <string name="title_activity_administrative_numbers">Administrative Numbers</string>
     <string name="title_activity_academic_section">Academic Section</string>
     <string name="title_activity_registration">Registration</string>
-    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_feedback">Compliant Forum</string>
     <string name="title_activity_set_prefrence">Set Your Preference</string>
 
 
-    <string name="title_activity_course_select">CourseSelectActivity</string>
+    <string name="title_activity_course_select">University Of Calicut</string>
 
     <string name="spinner_department_prompt">"Prof.K.Raveendranath"</string>
 
@@ -127,4 +127,5 @@ His dreams, vision, mission and actions are currently focused to transform Unive
         <item>Engineering</item>
         <item>Medical</item>
     </string-array>
+    <string name="title_activity_online_reg_epayment">E-Payment</string>
 </resources>
