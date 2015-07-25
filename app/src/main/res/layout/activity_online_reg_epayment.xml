@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="in.gravitykerala.universityofcalicut.OnlineReg_epayment">
-
     <include layout="@layout/toolbar_default" />
 
     <ProgressBar

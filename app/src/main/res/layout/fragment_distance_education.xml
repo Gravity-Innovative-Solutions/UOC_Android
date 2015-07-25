@@ -32,13 +32,24 @@
                 android:textColor="@color/black"
                 android:layout_margin="8dp" />
 
+            <com.andexert.library.RippleView
+                android:id="@+id/notification_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="#ffe95d94"
+
+
+                rv_centered="true"
+                android:gravity="center">
+
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:gravity="center"
-                android:background="#ffe95d94"
-                android:id="@+id/notification_layout">
+
+                >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -54,6 +65,7 @@
                     android:id="@+id/textView10"
                     android:textColor="@color/white" />
             </LinearLayout>
+            </com.andexert.library.RippleView>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -62,14 +74,25 @@
                 android:weightSum="2"
                 android:gravity="center">
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                <com.andexert.library.RippleView
+                    android:id="@+id/online_idcard"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:background="#ffc0b548"
-                    android:gravity="center"
-                    android:id="@+id/online_idcard">
+
+
+                    rv_centered="true"
+                    android:gravity="center">
+
+
+                    <LinearLayout
+                    android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -87,15 +110,27 @@
                         android:gravity="center|clip_vertical"
                         android:textColor="@color/white" />
                 </LinearLayout>
+                </com.andexert.library.RippleView>
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                <com.andexert.library.RippleView
+                    android:id="@+id/courses"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:background="#ff3ea83b"
-                    android:gravity="center"
-                    android:id="@+id/courses">
+
+
+                    rv_centered="true"
+                    android:gravity="center">
+
+
+                    <LinearLayout
+                    android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -113,16 +148,29 @@
                         android:gravity="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
+                </com.andexert.library.RippleView>
 
             </LinearLayout>
 
-            <LinearLayout
+            <com.andexert.library.RippleView
+                android:id="@+id/contact_class"
+                android:layout_width="fill_parent"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="#ff6535e2"
+
+
+                rv_centered="true"
+                android:gravity="center">
+
+
+                <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:gravity="center"
-                android:background="#ff6535e2"
-                android:id="@+id/contact_class">
+
+                    >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -139,6 +187,7 @@
                     android:gravity="center"
                     android:textColor="@color/white" />
             </LinearLayout>
+            </com.andexert.library.RippleView>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -146,14 +195,26 @@
                 android:layout_height="150dp"
                 android:weightSum="2">
 
-                <LinearLayout
+                <com.andexert.library.RippleView
+                    android:id="@+id/stdy_materials"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="#ffa65795"
+
+
+                    rv_centered="true"
+                    android:gravity="center">
+
+
+                    <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="0dp"
+                        android:layout_width="fill_parent"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:background="#ffa65795"
-                    android:id="@+id/stdy_materials">
+
+                        >
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -169,15 +230,27 @@
                         android:id="@+id/textView15"
                         android:textColor="#fff" />
                 </LinearLayout>
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/qustn_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="#ffd11b00"
+
+
+                    rv_centered="true"
+                    android:gravity="center">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:background="#ffd11b00"
-                    android:id="@+id/qustn_bank">
+
+                    >
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -193,6 +266,7 @@
                         android:id="@+id/textView16"
                         android:textColor="@color/white" />
                 </LinearLayout>
+                </com.andexert.library.RippleView>
             </LinearLayout>
 
             <LinearLayout

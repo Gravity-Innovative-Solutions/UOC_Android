@@ -121,7 +121,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
                                         prefs.edit().putBoolean(KEY_FIRST_LAUNCH_REGISTRATION, false).apply(); //Dont load this activity again
                                         startActivity(i);
                                         finish();
-                                    }
+                                        }
                                 });
                             } catch (Exception e) {
                                 // createAndShowDialog(e, "Error");
@@ -129,7 +129,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
                             }
 
                             return null;
-                        }
+                            }
                     }.execute();
 
                     name.setText("");

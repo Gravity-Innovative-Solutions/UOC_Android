@@ -47,11 +47,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7102"
+                        android:text="04942407102"
                         android:id="@+id/textView71"
-                        android:phoneNumber="true"
-                        android:autoLink="phone" />
+                        android:linksClickable="true"
+                        android:clickable="true"
+
+
+                        android:autoLink="all" />
                 </TableRow>
+
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -68,9 +72,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7150"
+                        android:text="04942407150"
                         android:id="@+id/textView73"
-                        android:autoLink="phone" />
+                        android:autoLink="all" />
                 </TableRow>
 
                 <TableRow
@@ -90,7 +94,7 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7103"
                         android:id="@+id/textView75"
-                        android:autoLink="phone" />
+                        android:autoLink="all" />
                 </TableRow>
 
                 <TableRow
@@ -463,14 +467,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="General &amp; Academic II AR I&amp; II"
-                        android:id="@+id/textView113" />
+                        android:id="@+id/textView913" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7124"
-                        android:id="@+id/textView114"
+                        android:id="@+id/textView914"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -483,14 +487,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="General &amp; Academic I AR I&amp;II"
-                        android:id="@+id/textView113" />
+                        android:id="@+id/textView813" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7121"
-                        android:id="@+id/textView114"
+                        android:id="@+id/textView714"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -503,14 +507,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="GA I&amp;IV Joint Registrar"
-                        android:id="@+id/textView113" />
+                        android:id="@+id/textView613" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7119"
-                        android:id="@+id/textView114"
+                        android:id="@+id/textView614"
                         android:autoLink="phone" />
                 </TableRow>
 

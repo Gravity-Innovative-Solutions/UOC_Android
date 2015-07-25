@@ -7,7 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+
+import com.andexert.library.RippleView;
 
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.R;
@@ -18,7 +19,7 @@ import in.gravitykerala.universityofcalicut.R;
  */
 public class DistanceEducation extends Fragment {
     private static final String KEY_TITLE = "title";
-    LinearLayout notification, onlineidcard, course, contact_class, affltd_clgs, study_material, qbank;
+    RippleView notification, onlineidcard, course, contact_class, affltd_clgs, study_material, qbank;
 
     public DistanceEducation() {
         // Required empty public constructor
@@ -40,22 +41,36 @@ public class DistanceEducation extends Fragment {
         // Inflate the layout for this fragment
         // don't look at this layout it's just a listView to show how to handle the keyboard
         View v = inflater.inflate(R.layout.fragment_distance_education, container, false);
-        notification = (LinearLayout) v.findViewById(R.id.notification_layout);
-        onlineidcard = (LinearLayout) v.findViewById(R.id.online_idcard);
-        course = (LinearLayout) v.findViewById(R.id.courses);
-        contact_class = (LinearLayout) v.findViewById(R.id.contact_class);
-        affltd_clgs = (LinearLayout) v.findViewById(R.id.affil_clgs);
-        study_material = (LinearLayout) v.findViewById(R.id.stdy_materials);
-        qbank = (LinearLayout) v.findViewById(R.id.qustn_bank);
-        notification.setOnClickListener(new View.OnClickListener() {
+        notification = (RippleView) v.findViewById(R.id.notification_layout);
+        onlineidcard = (RippleView) v.findViewById(R.id.online_idcard);
+        course = (RippleView) v.findViewById(R.id.courses);
+        contact_class = (RippleView) v.findViewById(R.id.contact_class);
+//        affltd_clgs = (RippleView) v.findViewById(R.id.affil_clgs);
+        study_material = (RippleView) v.findViewById(R.id.stdy_materials);
+        qbank = (RippleView) v.findViewById(R.id.qustn_bank);
+//        notification.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i6 = new Intent(getActivity(), NewNotificationActivity.class);
+//                i6.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_NOTIFICATION);
+//
+//                startActivity(i6);
+//            }
+//        });
+        notification.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
                 Intent i6 = new Intent(getActivity(), NewNotificationActivity.class);
                 i6.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_NOTIFICATION);
 
                 startActivity(i6);
             }
+
         });
+
+
         onlineidcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,17 +102,17 @@ public class DistanceEducation extends Fragment {
 
             }
         });
-        affltd_clgs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/SDE/councelling_centres/inside_kerala.pdf"));
-                startActivity(intent);
-
-            }
-        });
+//        affltd_clgs.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://www.universityofcalicut.info/SDE/councelling_centres/inside_kerala.pdf"));
+//                startActivity(intent);
+//
+//            }
+//        });
         study_material.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

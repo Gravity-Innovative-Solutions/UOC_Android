@@ -131,8 +131,6 @@ public class CourseSelectActivity extends AppCompatActivity implements GravitySu
                 if ("none".equals(selectedDepartmentId)) {
                     if (courseAsyncTask != null) {
                         courseAsyncTask.cancel(true);
-
-
                     }
                     sp_Course.setVisibility(Spinner.GONE);
                     selectedCourseId = "none";

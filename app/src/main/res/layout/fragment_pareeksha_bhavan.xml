@@ -4,8 +4,7 @@
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="in.gravitykerala.universityofcalicut.Fragment.PareekshaBhavanFragment"
-    >
+    tools:context="in.gravitykerala.universityofcalicut.Fragment.PareekshaBhavanFragment">
 
 
     <ScrollView
@@ -56,43 +55,75 @@
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="125dp"
                         android:weightSum="2">
 
-                        <LinearLayout
+                        <com.andexert.library.RippleView
+                            android:id="@+id/authorities_ripple"
+                            android:layout_width="fill_parent"
+                            android:layout_height="125dp"
+                            android:layout_weight="1"
+                            android:background="@color/primary"
+
+
+                            rv_centered="true"
+                            android:gravity="center">
+
+
+                            <LinearLayout
                             android:orientation="vertical"
-                            android:layout_width="0dp"
+                                android:layout_width="fill_parent"
                             android:layout_weight="1"
                             android:layout_height="match_parent"
-                            android:background="#ffb654c4"
-                            android:gravity="center"
-                            android:id="@+id/authorities">
 
-                            <ImageView
+
+                                android:id="@+id/authorities"
+                                android:gravity="center">
+
+
+                                <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/imageView6"
                                 android:src="@drawable/icon_authorities"
                                 android:scaleType="center"
-                                android:adjustViewBounds="true" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:layout_gravity="center" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:text="Authorities"
                                 android:id="@+id/textView4"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
 
-                        <LinearLayout
+                                    android:textColor="@color/white"
+                                    android:gravity="center" />
+
+                            </LinearLayout>
+                        </com.andexert.library.RippleView>
+
+                        <com.andexert.library.RippleView
+                            android:id="@+id/calandar_ripple"
+                            android:layout_width="fill_parent"
+                            android:layout_height="125dp"
+                            android:layout_weight="1"
+                            android:background="#ffc8181c"
+
+
+                            rv_centered="true"
+                            android:gravity="center">
+
+                            <LinearLayout
                             android:orientation="vertical"
-                            android:layout_width="0dp"
+                                android:layout_width="fill_parent"
                             android:layout_weight="1"
                             android:layout_height="match_parent"
-                            android:background="#ff8c95c8"
+
                             android:gravity="center"
                             android:id="@+id/layout_calendar">
+
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -110,15 +141,28 @@
                                 android:id="@+id/textView5"
                                 android:textColor="@color/white"
                                 android:gravity="center" />
+
                         </LinearLayout>
+                        </com.andexert.library.RippleView>
 
                     </LinearLayout>
 
-                    <LinearLayout
+                    <com.andexert.library.RippleView
+                        android:id="@+id/online_reg_ripple"
+                        android:layout_width="fill_parent"
+                        android:layout_height="125dp"
+                        android:layout_weight="1"
+
+
+                        rv_centered="true"
+                        android:gravity="center">
+
+
+                        <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:background="#ff1c7f19"
+                            android:layout_height="fill_parent"
+                            android:background="#ffe18b1d"
                         android:gravity="center"
                         android:id="@+id/online_reg">
 
@@ -137,15 +181,28 @@
                             android:text="Online Registration"
                             android:id="@+id/textView17"
                             android:textColor="@color/white" />
-                    </LinearLayout>
 
-                    <LinearLayout
+                    </LinearLayout>
+                    </com.andexert.library.RippleView>
+
+                    <com.andexert.library.RippleView
+                        android:id="@+id/online_pay_ripple"
+                        android:layout_width="fill_parent"
+                        android:layout_height="125dp"
+                        android:layout_weight="1"
+
+
+                        rv_centered="true"
+                        android:gravity="center">
+
+                        <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:id="@+id/online_payment"
-                        android:background="#ffcfd03c"
+                            android:background="#ffce57d0"
                         android:gravity="center">
+
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -158,8 +215,11 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:text="Online Payment"
-                            android:id="@+id/textView18" />
-                    </LinearLayout>
+                            android:id="@+id/textView18"
+                            android:textColor="@color/white" />
+
+                        </LinearLayout>
+                    </com.andexert.library.RippleView>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

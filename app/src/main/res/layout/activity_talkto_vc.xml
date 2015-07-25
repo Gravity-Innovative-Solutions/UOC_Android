@@ -12,107 +12,115 @@
     <!--</android.support.v7.widget.Toolbar>-->
     <include layout="@layout/toolbar_default" />
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView7"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="20dp"
         android:layout_below="@+id/toolbar">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/view"
-            android:layout_margin="10dp"
-            android:background="@drawable/border">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView7"
+            android:layout_below="@+id/toolbar">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp">
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Name"
-                    android:singleLine="true"
-                    android:id="@+id/name" />
-
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp">
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email"
-                    android:singleLine="true"
-                    android:lines="1"
-                    android:id="@+id/email"
-                    android:inputType="textEmailAddress" />
-
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp">
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Phone Number"
-                    android:singleLine="true"
-                    android:maxLength="10"
-
-
-
-                    android:id="@+id/phn_no"
-                    android:inputType="phone" />
-
-
-            </android.support.design.widget.TextInputLayout>
-
-            <Spinner
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner"
-                android:entries="@array/how_can_i_help_u"
-                android:layout_margin="20dp" />
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view"
+                android:layout_margin="10dp"
+                android:background="@drawable/border">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
 
-                <EditText
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:singleLine="true"
+                        android:id="@+id/name"
+                        android:paddingLeft="5dp" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:id="@+id/email"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5dp" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:singleLine="true"
+                        android:maxLength="10"
+
+
+                        android:id="@+id/phn_no"
+                        android:inputType="phone"
+                        android:paddingLeft="5dp" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:ems="10"
-                    android:id="@+id/msg"
-                    android:layout_gravity="center_horizontal"
-                    android:hint="Messages"
+                    android:id="@+id/spinner"
+                    android:entries="@array/how_can_i_help_u"
                     android:layout_margin="20dp" />
-            </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:id="@+id/button_submit"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:id="@+id/msg"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Messages"
+                        android:layout_margin="20dp"
+                        android:paddingLeft="5dp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:id="@+id/button_submit"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
 
 
-        </LinearLayout>
-    </ScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

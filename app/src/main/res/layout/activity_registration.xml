@@ -10,7 +10,9 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ScrollView
             android:layout_width="fill_parent"
@@ -21,20 +23,19 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="15dp">
 
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/border_white"
 
                     android:gravity="center"
 
                     android:layout_margin="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:padding="25dp">
+                    android:layout_marginBottom="15dp">
 
                     <EditText
                         android:layout_width="fill_parent"
@@ -46,12 +47,13 @@
 
                         android:gravity="center"
 
-                        android:paddingBottom="15dp"
-                        android:layout_marginTop="10dp"
+                        android:paddingBottom="7dp"
+                        android:layout_marginTop="15dp"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:background="@drawable/border_transparent"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginBottom="15dp"
+                        android:paddingTop="7dp" />
 
                     <EditText
                         android:layout_width="fill_parent"
@@ -63,11 +65,13 @@
 
                         android:gravity="center"
 
-                        android:paddingBottom="15dp"
+                        android:paddingBottom="7dp"
                         android:textColorHint="@color/white"
                         android:textColor="@color/white"
                         android:background="@drawable/border_transparent"
-                        android:layout_marginBottom="15dp" />
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:paddingTop="7dp" />
 
                     <EditText
                         android:layout_width="fill_parent"
@@ -80,24 +84,23 @@
                         android:gravity="center"
 
                         android:layout_marginBottom="15dp"
-                        android:paddingBottom="15dp"
+                        android:paddingBottom="7dp"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
-                        android:background="@drawable/border_transparent" />
+                        android:background="@drawable/border_transparent"
+                        android:layout_marginTop="15dp"
+                        android:paddingTop="7dp" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Register"
+                        android:id="@+id/button_register"
+
+                        android:gravity="center"
+                        style="@style/Button_" />
 
                 </LinearLayout>
-
-                <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Register"
-                    android:id="@+id/button_register"
-
-                    android:gravity="center"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="15dp"
-                    style="@style/Button_"
-                    android:layout_margin="10dp" />
 
 
             </LinearLayout>

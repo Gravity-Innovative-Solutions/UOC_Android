@@ -1722,7 +1722,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7261"
+                        android:text="+4942407261"
                         android:id="@+id/textView211"
                         android:autoLink="phone"
                         android:paddingBottom="25dp" />

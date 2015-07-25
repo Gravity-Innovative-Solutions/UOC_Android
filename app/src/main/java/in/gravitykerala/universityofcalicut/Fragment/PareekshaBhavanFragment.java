@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.andexert.library.RippleView;
+
 import in.gravitykerala.universityofcalicut.Authorities;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.R;
@@ -25,6 +27,7 @@ public class PareekshaBhavanFragment extends Fragment {
     private View v;
     ImageView fee;
     LinearLayout authorities, online_payment, online_registration, acdmc_calndr;
+    RippleView authorities_ripple, online_pay_ripple, online_reg_ripple, calandar_ripple;
 
 
     public PareekshaBhavanFragment() {
@@ -43,9 +46,25 @@ public class PareekshaBhavanFragment extends Fragment {
         authorities = (LinearLayout) v.findViewById(R.id.authorities);
         online_payment = (LinearLayout) v.findViewById(R.id.online_payment);
         online_registration = (LinearLayout) v.findViewById(R.id.online_reg);
-        online_registration.setOnClickListener(new View.OnClickListener() {
+        authorities_ripple = (RippleView) v.findViewById(R.id.authorities_ripple);
+        online_pay_ripple = (RippleView) v.findViewById(R.id.online_pay_ripple);
+        online_reg_ripple = (RippleView) v.findViewById(R.id.online_reg_ripple);
+        calandar_ripple = (RippleView) v.findViewById(R.id.calandar_ripple);
+//        online_registration.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://202.88.252.18/CuPbOnline/online_portal/"));
+//                startActivity(intent);
+//
+//            }
+//        });
+        online_reg_ripple.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -53,10 +72,25 @@ public class PareekshaBhavanFragment extends Fragment {
                 startActivity(intent);
 
             }
+
         });
-        online_payment.setOnClickListener(new View.OnClickListener() {
+
+
+//        online_payment.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("https://www.uoc.ac.in/"));
+//                startActivity(intent);
+//
+//            }
+//        });
+        online_pay_ripple.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -64,15 +98,30 @@ public class PareekshaBhavanFragment extends Fragment {
                 startActivity(intent);
 
             }
+
         });
-        authorities.setOnClickListener(new View.OnClickListener() {
+
+
+//        authorities.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i1 = new Intent(getActivity(), Authorities.class);
+//                startActivity(i1);
+//
+//            }
+//        });
+        authorities_ripple.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
                 Intent i1 = new Intent(getActivity(), Authorities.class);
                 startActivity(i1);
 
             }
+
         });
+
+
         drawable.getPaint().setColor(getResources().getColor(R.color.accent));
         // ((FloatingActionButton) findViewById(R.id.setter_drawable)).setIconDrawable(drawable);
 //        fee.setOnClickListener(new View.OnClickListener() {
@@ -81,15 +130,29 @@ public class PareekshaBhavanFragment extends Fragment {
 //
 //            }
 //        });
-        acdmc_calndr.setOnClickListener(new View.OnClickListener() {
+//        acdmc_calndr.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/academic_calender_2015-16_29april2015.pdf"));
+//                startActivity(intent);
+//            }
+//        });
+
+        calandar_ripple.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://www.universityofcalicut.info/news/academic_calender_2015-16_29april2015.pdf"));
                 startActivity(intent);
+
             }
+
         });
 
 
