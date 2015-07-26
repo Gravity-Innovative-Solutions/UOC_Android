@@ -1,927 +1,1104 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<?xml version="1.0"?>
+
+<RelativeLayout
+    tools:context="in.gravitykerala.universityofcalicut.AdministrativeNumbers"
     android:layout_height="match_parent"
-    tools:context="in.gravitykerala.universityofcalicut.AdministrativeNumbers">
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <include layout="@layout/toolbar_default" />
 
+
+    -
+
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/toolbar">
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+
+        -
 
         <ScrollView
-            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
             android:id="@+id/scrollView10">
 
+
+            -
+
             <TableLayout
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:clickable="false"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
+                android:layout_width="match_parent"
+                android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
-                android:paddingBottom="5dp">
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:clickable="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal">
+
+
+                -
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView67"
                         android:text="Vice Chancellor"
-                        android:id="@+id/textView67" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="04942407102"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView71"
-                        android:linksClickable="true"
                         android:clickable="true"
+                        android:text="0494-2407102"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="all"
+                        android:linksClickable="true" />
 
-
-                        android:autoLink="all" />
                 </TableRow>
 
 
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView72"
                         android:text="P.S to Vice Chancellor"
-                        android:id="@+id/textView72" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="04942407150"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView73"
+                        android:text="04942407150"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="all" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView74"
                         android:text="Pro-Vice-Chancellor"
-                        android:id="@+id/textView74" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7103"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView75"
+                        android:text="0494-240-7103"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="all" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView76"
                         android:text="Registrar"
-                        android:id="@+id/textView76" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7104"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView77"
+                        android:text="0494-240-7104"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView78"
                         android:text="Recruitment Section"
-                        android:id="@+id/textView78" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7106"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView79"
+                        android:text="0494-240-7106"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView80"
                         android:text="Legal Cell"
-                        android:id="@+id/textView80" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7105"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView81"
+                        android:text="0494-240-7105"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView82"
                         android:text="Asst. Registrar (Admn.)"
-                        android:id="@+id/textView82" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7108"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView83"
+                        android:text="0494-240-7108"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView84"
                         android:text="Dy. Registrar (Admn.)"
-                        android:id="@+id/textView84" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7107"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView85"
+                        android:text="0494-240-7107"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView86"
                         android:text="Administration (Section)"
-                        android:id="@+id/textView86" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7142"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView87"
+                        android:text="0494-240-7142"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView88"
                         android:text="Joint Registrar (Pl.D)"
-                        android:id="@+id/textView88" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7109"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView89"
+                        android:text="0494-240-7109"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView90"
                         android:text="UGC (Special Cell)"
-                        android:id="@+id/textView90" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7112"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView92"
+                        android:text="0494-240-7112"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
 
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Planning &amp; Development"
-                        android:id="@+id/textView93" />
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView93"
+                        android:text="Planning and Development"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7110"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView94"
+                        android:text="0494-240-7110"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView95"
                         android:text="Asst. Registrar (Pl.D)"
-                        android:id="@+id/textView95" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7111"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView96"
+                        android:text="0494-240-7111"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView97"
                         android:text="Finance Officer"
-                        android:id="@+id/textView97" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7123"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView98"
+                        android:text="0494-240-7123"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView99"
                         android:text="Finance (Audit)"
-                        android:id="@+id/textView99" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7114"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView100"
+                        android:text="0494-240-7114"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView101"
                         android:text="Finance (Dy Registrar)"
-                        android:id="@+id/textView101" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7133"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView102"
+                        android:text="0494-240-7133"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView103"
                         android:text="Finance (Section)"
-                        android:id="@+id/textView103" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7125"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView104"
+                        android:text="0494-240-7125"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView105"
                         android:text="Finance (Computer)"
-                        android:id="@+id/textView105" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7127"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView106"
+                        android:text="0494-240-7127"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView107"
                         android:text="Joint Registrar (Finance)"
-                        android:id="@+id/textView107" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7116"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView108"
+                        android:text="0494-240-7116"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView109"
                         android:text="Asst. Registrar (Cheque)"
-                        android:id="@+id/textView109" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7115"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView110"
+                        android:text="0494-240-7115"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView111"
                         android:text="Exam Account’s(AD)"
-                        android:id="@+id/textView111" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7209"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView112"
+                        android:text="0494-240-7209"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone" />
+
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="General &amp; Academic II AR I&amp; II"
-                        android:id="@+id/textView913" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7124"
-                        android:id="@+id/textView914"
-                        android:autoLink="phone" />
-                </TableRow>
+                -
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="General &amp; Academic I AR I&amp;II"
-                        android:id="@+id/textView813" />
-
-                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7121"
-                        android:id="@+id/textView714"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="GA I&amp;IV Joint Registrar"
-                        android:id="@+id/textView613" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7119"
-                        android:id="@+id/textView614"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="GA (Section)"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7126"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="GAII&amp;III Dy. Registrar"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7122"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="GA III (Section)"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7136"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Security Officer"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7100"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="AD (Store)"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7132"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Election"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7131"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="CDC Office"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7128"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="CDC Director"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7138"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Purchase Branch"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7130"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Government Audit Section"
-                        android:id="@+id/textView113" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7117"
-                        android:id="@+id/textView114"
-                        android:autoLink="phone" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Security Officer"
                         android:id="@+id/textView113"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:text="General and Academic II AR I and II"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7444"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView114"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:text="0494-240-7124"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Seminar Complex Office"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView115"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:text="General and Academic I AR I and II"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7316"
+                        android:layout_width="wrap_content"
                         android:id="@+id/textView116"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:text="0494-240-7121"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView117"
+                        android:text="GA I and IV Joint Registrar"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView118"
+                        android:text="0494-240-7119"
                         android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView119"
+                        android:text="GA (Section)"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView120"
+                        android:text="0494-240-7126"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView121"
+                        android:text="GAII and III Dy. Registrar"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView122"
+                        android:text="0494-240-7122"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView123"
+                        android:text="GA III (Section)"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView124"
+                        android:text="0494-240-7136"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView125"
+                        android:text="Security Officer"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView126"
+                        android:text="0494-240-7100"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView127"
+                        android:text="AD (Store)"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView128"
+                        android:text="0494-240-7132"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView129"
+                        android:text="Election"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView130"
+                        android:text="0494-240-7131"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView131"
+                        android:text="CDC Office"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView132"
+                        android:text="0494-240-7128"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView133"
+                        android:text="CDC Director"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView134"
+                        android:text="0494-240-7138"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView135"
+                        android:text="Purchase Branch"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView136"
+                        android:text="0494-240-7130"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView137"
+                        android:text="Government Audit Section"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView138"
+                        android:text="0494-240-7117"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView139"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Security Officer"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView140"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="0494-240-7444"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView141"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Seminar Complex Office"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView142"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="0494-240-7316"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
+                </TableRow>
+
+
+                -
+
+                <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView143"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="Senate House"
-                        android:id="@+id/textView117"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView144"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="0494-240-7500"
-                        android:id="@+id/textView118"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView145"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="USIC Office(USIC)"
-                        android:id="@+id/textView117"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView146"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="0494-240-7401"
-                        android:id="@+id/textView118"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView147"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="Working Women’s Hostel"
-                        android:id="@+id/textView119"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView148"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="0494-240-7546"
-                        android:id="@+id/textView120"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView149"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="Tagore Nikethan Chalan Counter"
-                        android:id="@+id/textView119"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView150"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
                         android:text="0494-240-7233"
-                        android:id="@+id/textView120"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
 
+
+                -
+
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView151"
                         android:text="Tagore Nikethan Front Office"
-                        android:id="@+id/textView119" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7227"
-                        android:id="@+id/textView120"
-                        android:autoLink="phone"
-                        android:paddingTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView152"
                         android:paddingBottom="5dp"
-                        android:layout_marginRight="5dp" />
+                        android:paddingTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="0494-240-7227"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:autoLink="phone" />
+
                 </TableRow>
+
+
+                -
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView153"
                         android:text="I.Q.A.C - Asst. Registrar"
-                        android:id="@+id/textView119"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:layout_marginBottom="25dp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView154"
                         android:text="0494-240-7152"
-                        android:id="@+id/textView120"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:autoLink="phone"
                         android:layout_marginBottom="25dp" />
+
                 </TableRow>
+
             </TableLayout>
+
         </ScrollView>
 
     </LinearLayout>
-
 
 </RelativeLayout>
