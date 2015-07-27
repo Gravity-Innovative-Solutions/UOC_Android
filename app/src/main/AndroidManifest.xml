@@ -157,9 +157,12 @@
             android:name=".OnlineReg_epayment"
             android:label="@string/title_activity_online_reg_epayment" />
         <activity
+            android:name=".RegularSyllabusActivity"
+            android:label="@string/title_activity_syllabus" />
+        <activity
             android:name=".CoursesOffered"
             android:label="@string/title_activity_courses_offered"></activity>
-            android:label="@string/title_activity_online_reg_epayment" />
+
 
     </application>
 

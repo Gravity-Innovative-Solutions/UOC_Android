@@ -18,7 +18,7 @@ import com.andexert.library.RippleView;
 import in.gravitykerala.universityofcalicut.Authorities;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.R;
-import in.gravitykerala.universityofcalicut.Syllabus;
+import in.gravitykerala.universityofcalicut.RegularSyllabusActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -170,7 +170,7 @@ public class PareekshaBhavanFragment extends Fragment {
         v.findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getActivity(), Syllabus.class);
+                Intent i1 = new Intent(getActivity(), RegularSyllabusActivity.class);
                 startActivity(i1);
             }
         });
