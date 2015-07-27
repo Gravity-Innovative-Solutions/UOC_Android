@@ -143,7 +143,7 @@ public class HomeDrawer extends AppCompatActivity {
                                 Fragment f = new OnlineApplication();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
                             } else if (drawerItem.getIdentifier() == 9) {
-                                intent = new Intent(HomeDrawer.this, NotificationActivity.class);
+                                intent = new Intent(HomeDrawer.this, NewCommonNotificationActivity.class);
                             } else if (drawerItem.getIdentifier() == 11) {
                                 getSupportActionBar().setTitle(((Nameable) drawerItem).getNameRes());
                                 //ignore the DemoFragment and it's layout it's just to showcase the handle with an keyboard

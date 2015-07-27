@@ -1,36 +1,35 @@
 package in.gravitykerala.universityofcalicut;
 
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.NextServiceFilterCallback;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
-import com.microsoft.windowsazure.notifications.NotificationsManager;
 
-import java.net.MalformedURLException;
 import java.util.List;
 
 import in.gravitykerala.universityofcalicut.Models.MobileNotification;
 
-public class NewNotificationActivity extends Activity {
+public class NewNotificationActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     final public static String KEY_NOTIFICATION_TYPE = "NOTIFICATION_TYPE";
 
@@ -45,6 +44,7 @@ public class NewNotificationActivity extends Activity {
     final public static String NOTIFICATION_DISTANCE_STUDY_MATERIAL = "DISTANCE_STUDY_MATERIAL";
     final public static String NOTIFICATION_DISTANCE_QUESTION_BANK = "DISTANCE_QUESTION_BANK";
     final public static String NOTIFICATION_COMMON = "NOTIFICATION_COMMON";
+    private SwipeRefreshLayout mSwipeLayout;
 
     /**
      * Mobile Service Table used to access data
@@ -78,18 +78,29 @@ public class NewNotificationActivity extends Activity {
         setContentView(R.layout.activity_new_notification);
 //        mClient=NotificationActivity.mClient;
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        buttonRefresh = (Button) findViewById(R.id.button_refresh);
+//        buttonRefresh = (Button) findViewById(R.id.button_refresh);
         // Initialize the progress bar
-        mProgressBar.setVisibility(ProgressBar.GONE);
+//        mProgressBar.setVisibility(ProgressBar.GONE);
+        mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        mSwipeLayout.setOnRefreshListener(this);
+        mSwipeLayout.setColorSchemeResources(android.R.color.holo_red_light,
+                android.R.color.holo_green_light, android.R.color.holo_orange_light,
+                android.R.color.holo_blue_light);
 
-        buttonRefresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                refreshItemsFromTable();
 
-            }
-        });
+//        buttonRefresh.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                refreshItemsFromTable();
+//
+//            }
+//        });
         try {
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL and key
@@ -320,6 +331,19 @@ public class NewNotificationActivity extends Activity {
         builder.setMessage(message);
         builder.setTitle(title);
         builder.create().show();
+    }
+
+    @Override
+    public void onRefresh() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeLayout.setRefreshing(false);
+                Toast.makeText(getApplicationContext(), "No new Notifications!",
+                        Toast.LENGTH_LONG).show();
+                refreshItemsFromTable();
+            }
+        }, 5000);
     }
 
     private class ProgressFilter implements ServiceFilter {

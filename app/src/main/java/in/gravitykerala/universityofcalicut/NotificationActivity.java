@@ -1,13 +1,13 @@
 package in.gravitykerala.universityofcalicut;
 
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Looper;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,7 +34,7 @@ import java.util.List;
 import in.gravitykerala.universityofcalicut.Adapters.NotificationItemAdapter;
 import in.gravitykerala.universityofcalicut.Models.newMobileNotification;
 
-public class NotificationActivity extends Activity implements GravitySupport {
+public class NotificationActivity extends AppCompatActivity implements GravitySupport {
 
     SharedPreferences prefs;
 
@@ -74,6 +74,13 @@ public class NotificationActivity extends Activity implements GravitySupport {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setIcon(R.drawable.back_icon);
+
         prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 

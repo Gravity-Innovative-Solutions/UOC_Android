@@ -15,10 +15,11 @@ import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
 
-import in.gravitykerala.universityofcalicut.Authorities;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
+import in.gravitykerala.universityofcalicut.News;
+import in.gravitykerala.universityofcalicut.QuestionPaperActivity;
 import in.gravitykerala.universityofcalicut.R;
-import in.gravitykerala.universityofcalicut.Syllabus;
+import in.gravitykerala.universityofcalicut.RegularSyllabusActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -114,7 +115,7 @@ public class PareekshaBhavanFragment extends Fragment {
 
             @Override
             public void onComplete(RippleView rippleView) {
-                Intent i1 = new Intent(getActivity(), Authorities.class);
+                Intent i1 = new Intent(getActivity(), News.class);
                 startActivity(i1);
 
             }
@@ -159,10 +160,10 @@ public class PareekshaBhavanFragment extends Fragment {
         v.findViewById(R.id.a).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/revised_feestructure_on29june2015.pdf"));
+                Intent intent = new Intent(getActivity(), QuestionPaperActivity.class);
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/revised_feestructure_on29june2015.pdf"));
                 startActivity(intent);
 
             }
@@ -170,18 +171,18 @@ public class PareekshaBhavanFragment extends Fragment {
         v.findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getActivity(), Syllabus.class);
+                Intent i1 = new Intent(getActivity(), RegularSyllabusActivity.class);
                 startActivity(i1);
             }
         });
-//        v.findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i1 = new Intent(getActivity(), PareekshaBhavan_Notifications.class);
-//                startActivity(i1);
-//
-//            }
-//        });
+        v.findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i4 = new Intent(getActivity(), NewNotificationActivity.class);
+                i4.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_EXAM_NOTIFICATIONS);
+                startActivity(i4);
+            }
+        });
         v.findViewById(R.id.d).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

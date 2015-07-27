@@ -1,40 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <include layout="@layout/toolbar_default" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/swipe_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#71BCFA"
-
-        android:padding="6dip">
-
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_weight="0.12"
-            android:text="Notifications"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Refresh"
-            android:id="@+id/button_refresh" />
-
-        <ProgressBar
-            android:id="@+id/loadingProgressBar"
-            android:layout_width="28dp"
-            android:layout_height="fill_parent" />
-
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
     <ListView
         android:id="@+id/listViewToDo"
@@ -44,5 +24,6 @@
         android:padding="6dip">
 
     </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

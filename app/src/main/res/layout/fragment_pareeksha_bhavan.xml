@@ -302,19 +302,19 @@
 
             fab:fab_colorPressed="#fff"/>
 
-        <!--<net.i2p.android.ext.floatingactionbutton.FloatingActionButton-->
-        <!--android:id="@+id/c"-->
+        <net.i2p.android.ext.floatingactionbutton.FloatingActionButton
+            android:id="@+id/c"
 
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--fab:fab_size="mini"-->
-
-
-        <!--fab:fab_colorNormal="@color/primary_dark"-->
-        <!--fab:fab_title="Notifications"-->
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
 
 
-        <!--fab:fab_colorPressed="#fff"/>-->
+            fab:fab_colorNormal="@color/primary_dark"
+            fab:fab_title="Notifications"
+
+
+            fab:fab_colorPressed="#fff" />
 
         <net.i2p.android.ext.floatingactionbutton.FloatingActionButton
             android:id="@+id/d"

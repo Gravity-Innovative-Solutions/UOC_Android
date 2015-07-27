@@ -5,21 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include layout="@layout/toolbar_default" />
+
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#71BCFA"
-
-        android:padding="6dip">
-
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_weight="0.12"
-            android:text="Notifications"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="wrap_content">
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -31,15 +22,14 @@
         <ProgressBar
             android:id="@+id/loadingProgressBar"
             android:layout_width="28dp"
-            android:layout_height="fill_parent" />
-
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
     <ListView
         android:id="@+id/listViewToDo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         tools:listitem="@layout/row_list_notification"
         android:padding="6dip">
 
