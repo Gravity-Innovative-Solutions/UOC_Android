@@ -129,4 +129,14 @@ His dreams, vision, mission and actions are currently focused to transform Unive
     </string-array>
     <string name="title_activity_online_reg_epayment">E-Payment</string>
     <string name="title_activity_courses_offered">Courses Offered</string>
+    <string-array name="spinner_select_previous">
+        <item>Select above field first</item>
+    </string-array>
+    <string-array name="spinner_select_questionPaper">
+        <item>Select Question Paper</item>
+        <item>QP 2011</item>
+        <item>QP 2014</item>
+        <item>SM 2011</item>
+        <item>SM 2014</item>
+    </string-array>
 </resources>
