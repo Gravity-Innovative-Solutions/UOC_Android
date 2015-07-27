@@ -29,16 +29,9 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Student Help Line Numbers"
-                android:id="@+id/textView53"
-                android:gravity="center" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/textView53" />
 
 
-                app:cardElevation="@dimen/spacing_medium"
-                app:cardUseCompatPadding="true">
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -140,7 +133,7 @@
                     </TableRow>
 
                 </TableLayout>
-            </android.support.v7.widget.CardView>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -148,16 +141,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Digital Wing"
                 android:id="@+id/textView55"
-                android:layout_column="0"
-                android:gravity="center" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_column="0" />
 
 
-                app:cardElevation="@dimen/spacing_medium"
-                app:cardUseCompatPadding="true">
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -213,7 +199,7 @@
                     </TableRow>
 
                 </TableLayout>
-            </android.support.v7.widget.CardView>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -221,15 +207,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="For Centralized Admission"
                 android:id="@+id/textView63"
-                android:gravity="center" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" />
 
 
-                app:cardElevation="@dimen/spacing_medium"
-                app:cardUseCompatPadding="true">
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -309,15 +289,7 @@
 
                 </TableLayout>
 
-            </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-
-                app:cardElevation="@dimen/spacing_medium"
-                app:cardUseCompatPadding="true">
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -339,7 +311,6 @@
 
                 </TableLayout>
 
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

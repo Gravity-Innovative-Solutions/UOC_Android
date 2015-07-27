@@ -45,7 +45,7 @@ public class DistanceEducation extends Fragment {
         onlineidcard = (RippleView) v.findViewById(R.id.online_idcard);
         course = (RippleView) v.findViewById(R.id.courses);
         contact_class = (RippleView) v.findViewById(R.id.contact_class);
-//        affltd_clgs = (RippleView) v.findViewById(R.id.affil_clgs);
+        affltd_clgs = (RippleView) v.findViewById(R.id.affil_clgs);
         study_material = (RippleView) v.findViewById(R.id.stdy_materials);
         qbank = (RippleView) v.findViewById(R.id.qustn_bank);
 //        notification.setOnClickListener(new View.OnClickListener() {
@@ -71,37 +71,80 @@ public class DistanceEducation extends Fragment {
         });
 
 
-        onlineidcard.setOnClickListener(new View.OnClickListener() {
+//        onlineidcard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://202.88.252.18/distance/sdeent_enrno_entry1.php"));
+//                startActivity(intent);
+//
+//            }
+//        });
+        onlineidcard.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://202.88.252.18/distance/sdeent_enrno_entry1.php"));
                 startActivity(intent);
-
             }
+
         });
-        course.setOnClickListener(new View.OnClickListener() {
+
+
+//        course.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=2152&Itemid=286"));
+//                startActivity(intent);
+//
+//            }
+//        });
+        course.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=2152&Itemid=286"));
                 startActivity(intent);
-
             }
+
         });
-        contact_class.setOnClickListener(new View.OnClickListener() {
+
+
+//        contact_class.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i7 = new Intent(getActivity(), NewNotificationActivity.class);
+//                i7.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_CONTACT_CLASS);
+//                startActivity(i7);
+//
+//            }
+//        });
+        contact_class.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
                 Intent i7 = new Intent(getActivity(), NewNotificationActivity.class);
                 i7.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_CONTACT_CLASS);
                 startActivity(i7);
-
             }
+
         });
+
+
 //        affltd_clgs.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -113,23 +156,69 @@ public class DistanceEducation extends Fragment {
 //
 //            }
 //        });
-        study_material.setOnClickListener(new View.OnClickListener() {
+
+
+        affltd_clgs.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.universityofcalicut.info/SDE/councelling_centres/inside_kerala.pdf"));
+                startActivity(intent);
+
+            }
+
+        });
+
+
+//        study_material.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i8 = new Intent(getActivity(), NewNotificationActivity.class);
+//                i8.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_STUDY_MATERIAL);
+//                startActivity(i8);
+//
+//            }
+//        });
+
+
+        study_material.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
+            @Override
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
                 Intent i8 = new Intent(getActivity(), NewNotificationActivity.class);
                 i8.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_STUDY_MATERIAL);
                 startActivity(i8);
 
             }
+
         });
-        qbank.setOnClickListener(new View.OnClickListener() {
+
+
+//        qbank.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i9 = new Intent(getActivity(), NewNotificationActivity.class);
+//                i9.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_QUESTION_BANK);
+//                startActivity(i9);
+//            }
+//        });
+        qbank.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onComplete(RippleView rippleView) {
+//                Log.d("Sample", "Ripple completed");
                 Intent i9 = new Intent(getActivity(), NewNotificationActivity.class);
                 i9.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_QUESTION_BANK);
                 startActivity(i9);
             }
+
         });
+
 
         return v;
     }
