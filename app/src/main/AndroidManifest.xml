@@ -46,6 +46,26 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
+            android:name=".Splash"
+            android:label="@string/title_activity_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegularSyllabusActivity"
+            android:label="Syllabus Regular">
+
+        </activity>
+        <activity
+            android:name=".QuestionPaperActivity"
+            android:label="Question Papers">
+
+        </activity>
+
+        <activity
             android:name=".HomeDrawer"
             android:label="@string/app_name"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus">
@@ -119,15 +139,7 @@
         <activity
             android:name=".QuestionBank"
             android:label="@string/title_activity_question_bank" />
-        <activity
-            android:name=".Splash"
-            android:label="@string/title_activity_splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Helpline"
             android:label="@string/title_activity_helpline" />
@@ -155,7 +167,8 @@
             android:label="@string/title_activity_course_select" />
         <activity
             android:name=".OnlineReg_epayment"
-            android:label="@string/title_activity_online_reg_epayment"></activity>
+            android:label="@string/title_activity_online_reg_epayment" />
+
     </application>
 
 </manifest>
