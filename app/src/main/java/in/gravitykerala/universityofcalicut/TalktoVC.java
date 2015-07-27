@@ -54,14 +54,14 @@ public class TalktoVC extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         name = (EditText) findViewById(R.id.name);
-        final String name_s = name.toString();
 
-        email = (EditText) findViewById(R.id.email);
-        final String email_s = email.toString();
-        phn = (EditText) findViewById(R.id.phn_no);
+
+            email = (EditText) findViewById(R.id.email);
+
+            phn = (EditText) findViewById(R.id.phn_no);
         messages = (EditText) findViewById(R.id.msg);
-        final String phn_s = phn.toString();
-        submit = (Button) findViewById(R.id.button_submit);
+
+            submit = (Button) findViewById(R.id.button_submit);
         spinner = (Spinner) findViewById(R.id.spinner);
         } catch (MalformedURLException e) {
             //createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");

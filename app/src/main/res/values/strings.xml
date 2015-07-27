@@ -128,4 +128,5 @@ His dreams, vision, mission and actions are currently focused to transform Unive
         <item>Medical</item>
     </string-array>
     <string name="title_activity_online_reg_epayment">E-Payment</string>
+    <string name="title_activity_courses_offered">Courses Offered</string>
 </resources>

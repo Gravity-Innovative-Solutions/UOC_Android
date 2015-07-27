@@ -2,6 +2,7 @@ package in.gravitykerala.universityofcalicut.Fragment;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -133,6 +134,11 @@ public class DemoFragment extends Fragment {
 
             @Override
             public void onComplete(RippleView rippleView) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/diary_2015_revised_det_29jan2015.pdf"));
+                startActivity(intent);
 
             }
 

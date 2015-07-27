@@ -12,7 +12,6 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
@@ -155,7 +154,10 @@
             android:label="@string/title_activity_course_select" />
         <activity
             android:name=".OnlineReg_epayment"
-            android:label="@string/title_activity_online_reg_epayment"></activity>
+            android:label="@string/title_activity_online_reg_epayment" />
+        <activity
+            android:name=".CoursesOffered"
+            android:label="@string/title_activity_courses_offered"></activity>
     </application>
 
 </manifest>
