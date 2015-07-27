@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.andexert.library.RippleView;
 
+import in.gravitykerala.universityofcalicut.CoursesOffered;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
 import in.gravitykerala.universityofcalicut.R;
 
@@ -113,10 +114,8 @@ public class DistanceEducation extends Fragment {
             @Override
             public void onComplete(RippleView rippleView) {
 //                Log.d("Sample", "Ripple completed");
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.universityofcalicut.info/index.php?option=com_content&task=view&id=2152&Itemid=286"));
+                Intent intent = new Intent(getActivity(), CoursesOffered.class);
+
                 startActivity(intent);
             }
 

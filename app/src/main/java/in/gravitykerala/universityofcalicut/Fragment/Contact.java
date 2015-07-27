@@ -53,7 +53,7 @@ public class Contact extends Fragment {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=10.760719,76.230712(Malabar College of Engineering and Technology,Deshamangalam)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=11.1382028,75.8893323(University of Calicut,Thenjipalam,Malappuram)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
