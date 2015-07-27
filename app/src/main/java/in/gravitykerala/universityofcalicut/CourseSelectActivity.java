@@ -128,6 +128,7 @@ public class CourseSelectActivity extends AppCompatActivity implements GravitySu
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 selectedDepartmentId = (String) view.getTag();
+                Log.d("selectedDepartmentId:", selectedDepartmentId);
                 if ("none".equals(selectedDepartmentId)) {
                     if (courseAsyncTask != null) {
                         courseAsyncTask.cancel(true);
@@ -350,7 +351,7 @@ public class CourseSelectActivity extends AppCompatActivity implements GravitySu
         protected List<CourseItemDTO> doInBackground(Void... params) {
             List<CourseItemDTO> results = null;
             try {
-                results = courseTable.where().field("departmentId").eq(selectedDepartmentId).execute().get();
+                results = courseTable.where().field("DepartmentId").eq(selectedDepartmentId).execute().get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
