@@ -24,6 +24,7 @@ import in.gravitykerala.universityofcalicut.Models.MobileUserRegistrationDTO;
 
 public class Registration extends AppCompatActivity implements GravitySupport {
     EditText name, email, phn;
+    Button register;
     String MobilePattern = "[0-9]{10}";
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     //    Context currentContext;
@@ -56,6 +57,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
 
             email = (EditText) findViewById(R.id.email);
             phn = (EditText) findViewById(R.id.phn_no);
+            register = (Button) findViewById(R.id.button_register);
             //listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the Mobile Service
@@ -66,7 +68,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
         }
         prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
 //        currentContext = this;
-        Button register = (Button) findViewById(R.id.button_register);
+
 //        name = (EditText) findViewById(R.id.name);
 //////        final String name_s = name.toString();
 ////

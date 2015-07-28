@@ -201,7 +201,8 @@ With ‘Nirmaya Karmana Sree’ as it motto, the University has been able to sur
                             android:id="@+id/imageView3"
                             android:src="@drawable/img_home_pvc"
                             android:scaleType="centerCrop"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true" />
 
                         <LinearLayout
                             android:orientation="vertical"
