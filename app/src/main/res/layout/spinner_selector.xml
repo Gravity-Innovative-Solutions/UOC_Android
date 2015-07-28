@@ -1,12 +1,13 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:theme="@style/Base.Widget.AppCompat.TextView.SpinnerItem"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:layout_gravity="center"
     android:padding="5dp"
 
     android:text="DemoText"
+    style="@style/holoSpinner"
 
     android:textSize="20sp"
 

@@ -4,7 +4,6 @@ package in.gravitykerala.universityofcalicut;
 import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +18,8 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
+import com.microsoft.windowsazure.mobileservices.MobileServiceException;
+import com.microsoft.windowsazure.mobileservices.MobileServiceList;
 import com.microsoft.windowsazure.mobileservices.http.NextServiceFilterCallback;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
@@ -26,6 +27,7 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import in.gravitykerala.universityofcalicut.Models.MobileNotification;
 
@@ -45,7 +47,7 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
     final public static String NOTIFICATION_DISTANCE_QUESTION_BANK = "DISTANCE_QUESTION_BANK";
     final public static String NOTIFICATION_COMMON = "NOTIFICATION_COMMON";
     private SwipeRefreshLayout mSwipeLayout;
-
+    AsyncCourseLoader courseAsyncTask;
     /**
      * Mobile Service Table used to access data
      */
@@ -76,9 +78,11 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_notification);
+
 //        mClient=NotificationActivity.mClient;
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
@@ -92,15 +96,7 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_red_light,
                 android.R.color.holo_green_light, android.R.color.holo_orange_light,
                 android.R.color.holo_blue_light);
-
-
-//        buttonRefresh.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                refreshItemsFromTable();
-//
-//            }
-//        });
+        mSwipeLayout.setEnabled(true);
         try {
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL and key
@@ -152,11 +148,12 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
             listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the Mobile Service
-            refreshItemsFromTable();
+            // refreshItemsFromTable();
 
+            refreshCourseItems();
         } catch (Exception e) {
             e.printStackTrace();
-            createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
+            ///createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
         }
     }
 
@@ -175,7 +172,7 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_refresh) {
-            refreshItemsFromTable();
+            refreshCourseItems();
         }
 
         return true;
@@ -185,139 +182,10 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
 
 
     /**
-     * Mark an item as completed
-     *
-     * @param item
-     *            The item to mark
-     */
-    /*
-    public void checkItem(final MobileNotification item) {
-        if (mClient == null) {
-            return;
-        }
-
-        // Set the item as completed and update it in the table
-        item.setComplete(true);
-
-
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    final ToDoItem entity = mToDoTable.update(item).get();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (entity.isComplete()) {
-                                mAdapter.remove(entity);
-                            }
-                        }
-                    });
-                } catch (Exception e){
-                    createAndShowDialog(e, "Error");
-                }
-
-                return null;
-            }
-        }.execute();
-    }
-*/
-    /**
-     * Add a new item
-     *
-     * @param view
-     *            The view that originated the call
-     */
-    /*
-    public void addItem(View view) {
-        if (mClient == null) {
-            return;
-        }
-
-        // Create a new item
-        final ToDoItem item = new ToDoItem();
-
-        item.setText(mTextNewToDo.getText().toString());
-        item.setComplete(false);
-
-        // Insert the new item
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    final ToDoItem entity = mToDoTable.insert(item).get();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if(!entity.isComplete()){
-                                mAdapter.add(entity);
-                            }
-                        }
-                    });
-                } catch (Exception e){
-                    createAndShowDialog(e, "Error");
-
-                }
-
-                return null;
-            }
-        }.execute();
-
-        mTextNewToDo.setText("");
-    }
-*/
-
-    /**
      * Refresh the list with the items in the Mobile Service Table
      */
 
-    private void refreshItemsFromTable() {
 
-        // Get the items that weren't marked as completed and add them in the
-        // adapter
-
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    final List<MobileNotification> results =
-                            mToDoTable.execute().get();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            mAdapter.clear();
-
-                            for (MobileNotification item : results) {
-                                mAdapter.add(item);
-                            }
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    createAndShowDialog(e, "Error");
-
-                }
-
-                return null;
-            }
-        }.execute();
-
-    }
-
-    /**
-     * Creates a dialog and shows it
-     *
-     * @param exception The exception to show in the dialog
-     * @param title     The dialog title
-     */
-
-    private void createAndShowDialog(Exception exception, String title) {
-        Throwable ex = exception;
-        if (exception.getCause() != null) {
-            ex = exception.getCause();
-        }
-        createAndShowDialog(ex.getMessage(), title);
-    }
 
     /**
      * Creates a dialog and shows it
@@ -335,17 +203,89 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
 
     @Override
     public void onRefresh() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mSwipeLayout.setRefreshing(false);
-                Toast.makeText(getApplicationContext(), "No new Notifications!",
-                        Toast.LENGTH_LONG).show();
-                refreshItemsFromTable();
-            }
-        }, 5000);
+
+        refreshCourseItems();
+        mSwipeLayout.setRefreshing(true);
+
     }
 
+    private void refreshCourseItems() {
+
+        courseAsyncTask = new AsyncCourseLoader();
+        courseAsyncTask.execute();
+
+
+    }
+
+    private class AsyncCourseLoader extends AsyncTask<Void, Void, List<MobileNotification>> {
+
+        protected List<MobileNotification> doInBackground(Void... params) {
+            MobileServiceList<MobileNotification> results = null;
+            try {
+                final List<MobileNotification> result =
+                        mToDoTable.execute().get();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdapter.clear();
+
+                        for (MobileNotification item : result) {
+                            mAdapter.add(item);
+                        }
+                    }
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+//                courseAsyncTask = new AsyncCourseLoader();
+//                courseAsyncTask.execute();
+
+            }
+            try {
+                results = mToDoTable.execute().get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (MobileServiceException e) {
+                e.printStackTrace();
+            }
+            return results;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            //  mSwipeLayout.setRefreshing(true);
+
+
+        }
+
+        protected void onPostExecute(List<MobileNotification> MobileNotification) {
+            super.onPostExecute(MobileNotification);
+            mSwipeLayout.setRefreshing(false);
+
+            if (MobileNotification != null && !MobileNotification.isEmpty()) //Successfull results
+            {
+//            DepartmentDTO dummySelector = new DepartmentDTO(); //Used for showing the first element to be a prompt
+//            dummySelector.setDepartmentName("Select your department");
+//            dummySelector.setId("none");
+                // MobileNotification.add(0, dummySelector);
+
+//            DepartmentSpinAdapter depAdapter = new DepartmentSpinAdapter(NewNotificationActivity.this, R.layout.spinner_selector, R.layout.spinner_dropdown, MobileNotification);
+//            sp_Department.setAdapter(depAdapter);
+//                sp_Department.setSelection(-1);
+
+                Toast.makeText(getBaseContext(), "", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getBaseContext(), "Error retrieving notifications, Probably bad network connection!", Toast.LENGTH_LONG).show();
+            }
+
+//        mProgressBar.setVisibility(ProgressBar.GONE);
+//        sp_Department.setVisibility(Spinner.VISIBLE);
+
+
+        }
+    }
     private class ProgressFilter implements ServiceFilter {
 
         @Override
