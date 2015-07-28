@@ -21,6 +21,7 @@ public class OnlineReg_epayment extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.getSettings().setBuiltInZoomControls(true);
         myWebView.loadUrl("https://www.uoc.ac.in/gen_epay/pay1.php");
     }
 

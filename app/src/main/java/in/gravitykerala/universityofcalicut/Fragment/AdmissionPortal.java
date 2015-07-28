@@ -60,6 +60,7 @@ public class AdmissionPortal extends Fragment {
         mainWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
         mainWebView.loadUrl("http://www.cuonline.ac.in/");
+        mainWebView.getSettings().setBuiltInZoomControls(true);
 
 
 //
