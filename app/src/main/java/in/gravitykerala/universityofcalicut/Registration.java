@@ -14,15 +14,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.common.util.concurrent.FutureCallback;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.common.util.concurrent.SettableFuture;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
-import com.microsoft.windowsazure.mobileservices.http.NextServiceFilterCallback;
-import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
-import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
-import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 import java.net.MalformedURLException;
@@ -32,14 +24,14 @@ import in.gravitykerala.universityofcalicut.Models.MobileUserRegistrationDTO;
 
 public class Registration extends AppCompatActivity implements GravitySupport {
     EditText name, email, phn;
+    Button register;
     String MobilePattern = "[0-9]{10}";
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    private MobileServiceClient mClient;
-
-    private ProgressBar mProgressBar;
-    private MobileServiceTable<MobileUserRegistrationDTO> mToDoTable;
     //    Context currentContext;
     SharedPreferences prefs;
+    private MobileServiceClient mClient;
+    private ProgressBar mProgressBar;
+    private MobileServiceTable<MobileUserRegistrationDTO> mToDoTable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +45,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
             mClient = new MobileServiceClient(
                     "https://universityofcalicut.azure-mobile.net/",
                     "XWXXhaCoiYqzzERpfsqnhpJuQBgCAw42",
-                    this).withFilter(new ProgressFilter());
+                    this);
 
             // Get the Mobile Service Table instance to use
             mToDoTable = mClient.getTable(MobileUserRegistrationDTO.class);
@@ -65,6 +57,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
 
             email = (EditText) findViewById(R.id.email);
             phn = (EditText) findViewById(R.id.phn_no);
+            register = (Button) findViewById(R.id.button_register);
             //listViewToDo.setAdapter(mAdapter);
 
             // Load the items from the Mobile Service
@@ -75,7 +68,7 @@ public class Registration extends AppCompatActivity implements GravitySupport {
         }
         prefs = this.getSharedPreferences(KEY_PREFERENCE_ID, Context.MODE_APPEND);
 //        currentContext = this;
-        Button register = (Button) findViewById(R.id.button_register);
+
 //        name = (EditText) findViewById(R.id.name);
 //////        final String name_s = name.toString();
 ////
@@ -111,41 +104,13 @@ public class Registration extends AppCompatActivity implements GravitySupport {
                     // item.setComplete(false);
 
                     // Insert the new item
-                    new AsyncTask<Void, Void, Void>() {
-                        @Override
-                        protected Void doInBackground(Void... params) {
-                            try {
-                                final MobileUserRegistrationDTO entity = mToDoTable.insert(item).get();
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-//                            if(!entity.isComplete()){
-//                                mAdapter.add(entity);
-//                            }
-                                        Intent i;
-                                        if (prefs.getBoolean(KEY_FIRST_LAUNCH_COURSE_PREF, true)) {
-                                            i = new Intent(Registration.this, CourseSelectActivity.class);
-                                        } else {
-                                            i = new Intent(Registration.this, HomeDrawer.class);
-                                        }
-                                        prefs.edit().putBoolean(KEY_FIRST_LAUNCH_REGISTRATION, false).apply(); //Dont load this activity again
-                                        startActivity(i);
-                                        finish();
-                                        }
-                                });
-                            } catch (Exception e) {
-                                // createAndShowDialog(e, "Error");
-
-                            }
-
-                            return null;
-                            }
-                    }.execute();
-
-                    name.setText("");
-                    phn.setText("");
-                    email.setText("");
-                    }
+                    AsyncRegister registerAsync = new AsyncRegister();
+                    registerAsync.execute(item);
+//
+//                    name.setText("");
+//                    phn.setText("");
+//                    email.setText("");
+                }
 
             }
         });
@@ -155,65 +120,79 @@ public class Registration extends AppCompatActivity implements GravitySupport {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_registration, menu);
+//        getMenuInflater().inflate(R.menu.menu_registration, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private class ProgressFilter implements ServiceFilter {
+    private class AsyncRegister extends AsyncTask<MobileUserRegistrationDTO, Void, Boolean> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mProgressBar.setVisibility(ProgressBar.VISIBLE);
+        }
 
         @Override
-        public ListenableFuture<ServiceFilterResponse> handleRequest(ServiceFilterRequest request, NextServiceFilterCallback nextServiceFilterCallback) {
-
-            final SettableFuture<ServiceFilterResponse> resultFuture = SettableFuture.create();
-
-
-            runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
-                }
-            });
-
-            ListenableFuture<ServiceFilterResponse> future = nextServiceFilterCallback.onNext(request);
-
-            Futures.addCallback(future, new FutureCallback<ServiceFilterResponse>() {
-                @Override
-                public void onFailure(Throwable e) {
-                    resultFuture.setException(e);
-                }
-
-                @Override
-                public void onSuccess(ServiceFilterResponse response) {
-                    runOnUiThread(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
-                        }
-                    });
-
-                    resultFuture.set(response);
-                }
-            });
-
-            return resultFuture;
+        protected void onCancelled(Boolean aBoolean) {
+            super.onCancelled(aBoolean);
+            mProgressBar.setVisibility(ProgressBar.GONE);
         }
+
+        @Override
+        protected void onCancelled() {
+            super.onCancelled();
+            mProgressBar.setVisibility(ProgressBar.GONE);
+        }
+
+        @Override
+        protected void onPostExecute(Boolean resultSuccess) {
+            super.onPostExecute(resultSuccess);
+            mProgressBar.setVisibility(ProgressBar.GONE);
+            if (resultSuccess) {
+                prefs.edit().putBoolean(KEY_FIRST_LAUNCH_REGISTRATION, false).apply(); //Dont load this activity again
+
+            } else {
+                Toast.makeText(Registration.this, "Registration Failed, You can register later...", Toast.LENGTH_SHORT).show();
+            }
+            Intent i;
+            if (prefs.getBoolean(KEY_FIRST_LAUNCH_COURSE_PREF, true)) {
+                i = new Intent(Registration.this, CourseSelectActivity.class);
+            } else {
+                i = new Intent(Registration.this, HomeDrawer.class);
+            }
+
+            startActivity(i);
+            finish();
+        }
+
+        @Override
+        protected Boolean doInBackground(MobileUserRegistrationDTO... params) {
+
+            try {
+                final MobileUserRegistrationDTO entity = mToDoTable.insert(params[0]).get();
+                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return false;
+            }
+
+        }
+
     }
+
+
 }

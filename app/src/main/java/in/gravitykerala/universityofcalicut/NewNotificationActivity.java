@@ -162,8 +162,8 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_notification, menu);
-        return true;
+//        getMenuInflater().inflate(R.menu.activity_notification, menu);
+        return false;
     }
 
     /**
@@ -171,11 +171,10 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_refresh) {
-            refreshCourseItems();
-        }
+      
 
-        return true;
+
+        return false;
     }
 
 

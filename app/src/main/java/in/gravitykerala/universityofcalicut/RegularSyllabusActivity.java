@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +21,7 @@ import java.util.List;
 import in.gravitykerala.universityofcalicut.dbHelpers.DbSyllabusRegularHelper;
 
 
-public class RegularSyllabusActivity extends ActionBarActivity {
+public class RegularSyllabusActivity extends AppCompatActivity {
     Context currentContext;
     DbSyllabusRegularHelper dataDb;
     Spinner spinnerDepartment, spinnerCourse, spinnerBranch, spinnerScheme, spinnerYear;
@@ -30,6 +32,13 @@ public class RegularSyllabusActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.syllabus_regular);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setIcon(R.drawable.back_icon);
+
         currentContext = this;
 
         spinnerDepartment = (Spinner) findViewById(R.id.spinner_department);
@@ -48,8 +57,18 @@ public class RegularSyllabusActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> arg0, View arg1, final int position, long arg3) {
                 ArrayAdapter<String> spinnerAdapter;
                 if (position == 0) {
+                    spinnerCourse.setVisibility(Spinner.GONE);
+                    spinnerBranch.setVisibility(Spinner.GONE);
+                    spinnerScheme.setVisibility(Spinner.GONE);
+                    spinnerYear.setVisibility(Spinner.GONE);
+
+
                     spinnerAdapter = new ArrayAdapter<String>(currentContext, R.layout.spinner_selector, getResources().getStringArray(R.array.spinner_select_previous));
                 } else {
+                    spinnerCourse.setVisibility(Spinner.VISIBLE);
+                    spinnerBranch.setVisibility(Spinner.VISIBLE);
+                    spinnerScheme.setVisibility(Spinner.VISIBLE);
+                    spinnerYear.setVisibility(Spinner.VISIBLE);
                     String selectedDepartment = String.valueOf(spinnerDepartment.getSelectedItem());
 
                     List<String> resultStringList = dataDb.getCourses(selectedDepartment);
@@ -73,8 +92,14 @@ public class RegularSyllabusActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> arg0, View arg1, final int position, long arg3) {
                 ArrayAdapter<String> spinnerAdapter;
                 if (position == 0) {
+                    spinnerBranch.setVisibility(Spinner.GONE);
+                    spinnerScheme.setVisibility(Spinner.GONE);
+                    spinnerYear.setVisibility(Spinner.GONE);
                     spinnerAdapter = new ArrayAdapter<String>(currentContext, R.layout.spinner_selector, getResources().getStringArray(R.array.spinner_select_previous));
                 } else {
+                    spinnerBranch.setVisibility(Spinner.VISIBLE);
+                    spinnerScheme.setVisibility(Spinner.VISIBLE);
+                    spinnerYear.setVisibility(Spinner.VISIBLE);
                     String selectedDepartment = String.valueOf(spinnerDepartment.getSelectedItem());
                     String selectedCourse = String.valueOf(spinnerCourse.getSelectedItem());
 
@@ -99,8 +124,13 @@ public class RegularSyllabusActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> arg0, View arg1, final int position, long arg3) {
                 ArrayAdapter<String> spinnerAdapter;
                 if (position == 0) {
+
+                    spinnerScheme.setVisibility(Spinner.GONE);
+                    spinnerYear.setVisibility(Spinner.GONE);
                     spinnerAdapter = new ArrayAdapter<String>(currentContext, R.layout.spinner_selector, getResources().getStringArray(R.array.spinner_select_previous));
                 } else {
+                    spinnerScheme.setVisibility(Spinner.VISIBLE);
+                    spinnerYear.setVisibility(Spinner.VISIBLE);
                     String selectedDepartment = String.valueOf(spinnerDepartment.getSelectedItem());
                     String selectedCourse = String.valueOf(spinnerCourse.getSelectedItem());
                     String selectedBranch = String.valueOf(spinnerBranch.getSelectedItem());
@@ -125,8 +155,11 @@ public class RegularSyllabusActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> arg0, View arg1, final int position, long arg3) {
                 ArrayAdapter<String> spinnerAdapter;
                 if (position == 0) {
+                    spinnerYear.setVisibility(Spinner.GONE);
+
                     spinnerAdapter = new ArrayAdapter<String>(currentContext, R.layout.spinner_selector, getResources().getStringArray(R.array.spinner_select_previous));
                 } else {
+                    spinnerYear.setVisibility(Spinner.VISIBLE);
                     String selectedDepartment = String.valueOf(spinnerDepartment.getSelectedItem());
                     String selectedCourse = String.valueOf(spinnerCourse.getSelectedItem());
                     String selectedBranch = String.valueOf(spinnerBranch.getSelectedItem());

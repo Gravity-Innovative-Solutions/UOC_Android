@@ -84,7 +84,7 @@
         </activity>
         <activity
             android:name=".NewCommonNotificationActivity"
-            android:label="Notifications">
+            android:label="@string/title_activity_notification">
         </activity>
         <activity
             android:name=".TalktoVC"
@@ -152,7 +152,7 @@
             android:label="@string/title_activity_course_select" />
         <activity
             android:name=".NewNotificationActivity"
-            android:label="@string/title_activity_course_select" />
+            android:label="@string/title_activity_notification" />
         <activity
             android:name=".OnlineReg_epayment"
             android:label="@string/title_activity_online_reg_epayment" />
