@@ -127,8 +127,8 @@ public class NotificationActivity extends AppCompatActivity implements GravitySu
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_notification, menu);
-        return true;
+//        getMenuInflater().inflate(R.menu.activity_notification, menu);
+        return false;
     }
 
     /**
@@ -136,11 +136,11 @@ public class NotificationActivity extends AppCompatActivity implements GravitySu
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_refresh) {
-            refreshItemsFromTable();
-        }
+//        if (item.getItemId() == R.id.menu_refresh) {
+//            refreshItemsFromTable();
+//        }
 
-        return true;
+        return false;
     }
 
     public static void initializeMobileService(Context context) {
