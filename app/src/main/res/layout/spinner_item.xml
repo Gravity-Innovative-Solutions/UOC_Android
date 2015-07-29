@@ -6,4 +6,5 @@
     android:textSize="20sp"
     android:gravity="left"
     android:textColor="@color/primary_dark"
-    android:padding="5dip" />
+    android:padding="5dip"
+    style="@style/holoSpinner" />

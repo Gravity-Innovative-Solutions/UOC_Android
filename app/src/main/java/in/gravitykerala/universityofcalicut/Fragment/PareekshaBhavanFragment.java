@@ -15,8 +15,8 @@ import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
 
+import in.gravitykerala.universityofcalicut.Authorities;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
-import in.gravitykerala.universityofcalicut.News;
 import in.gravitykerala.universityofcalicut.QuestionPaperActivity;
 import in.gravitykerala.universityofcalicut.R;
 import in.gravitykerala.universityofcalicut.RegularSyllabusActivity;
@@ -115,7 +115,7 @@ public class PareekshaBhavanFragment extends Fragment {
 
             @Override
             public void onComplete(RippleView rippleView) {
-                Intent i1 = new Intent(getActivity(), News.class);
+                Intent i1 = new Intent(getActivity(), Authorities.class);
                 startActivity(i1);
 
             }

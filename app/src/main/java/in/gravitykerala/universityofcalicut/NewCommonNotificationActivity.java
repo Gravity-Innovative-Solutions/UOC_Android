@@ -1,12 +1,14 @@
 package in.gravitykerala.universityofcalicut;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Pair;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -22,12 +24,12 @@ import in.gravitykerala.universityofcalicut.Models.MobileNotification;
 
 //import in.gravitykerala.easysyllabi.R;
 
-public class NewCommonNotificationActivity extends Activity {
+public class NewCommonNotificationActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
     private MobileServiceClient mClient;
     private TextView tv;
     private MobileServiceTable<MobileCommonNotification> mToDoTable;
 
-
+    private SwipeRefreshLayout mSwipeLayout;
     private MCNAdapter mAdapter;
     private ProgressBar mProgressBar;
 
@@ -48,6 +50,12 @@ public class NewCommonNotificationActivity extends Activity {
 //
 //                }
         // });
+        mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        mSwipeLayout.setOnRefreshListener(this);
+        mSwipeLayout.setColorSchemeResources(android.R.color.holo_red_light,
+                android.R.color.holo_green_light, android.R.color.holo_orange_light,
+                android.R.color.holo_blue_light);
+        mSwipeLayout.setEnabled(true);
         mClient = NotificationActivity.mClient;
 
         // Get the Mobile Service Table instance to use
@@ -80,8 +88,10 @@ public class NewCommonNotificationActivity extends Activity {
                 return 0;
             }
         };
+        refreshnotification();
+    }
 
-
+    public void refreshnotification() {
         final ListenableFuture<MobileCommonNotification> result = mClient.invokeApi("CommonNotification", MobileCommonNotification.class);
 
         Futures.addCallback(result, new FutureCallback<MobileCommonNotification>() {
@@ -89,11 +99,13 @@ public class NewCommonNotificationActivity extends Activity {
             public void onFailure(Throwable exc) {
                 exc.printStackTrace();
                 Log.d("Output", "error");
+                Toast.makeText(NewCommonNotificationActivity.this, "No Network Access", Toast.LENGTH_LONG).show();
                 // createAndShowDialog((Exception) exc, "Error");
             }
 
             @Override
             public void onSuccess(MobileCommonNotification result) {
+                mAdapter.clear();
                 String[] r = null;
                 String r1 = "";
                 for (int i = 0; i < result.CC.length; i++) {
@@ -141,7 +153,16 @@ public class NewCommonNotificationActivity extends Activity {
 //                tv.setText(r1);
 
             }
+
         });
+
+
+    }
+
+    public void onRefresh() {
+
+        refreshnotification();
+        mSwipeLayout.setRefreshing(false);
 
     }
 //    public void Internal(final MobileCommonNotification.Exam item){
