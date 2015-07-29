@@ -7,7 +7,7 @@
     android:padding="5dp"
     android:textColor="@color/primary_dark"
     android:text="DemoText"
-    style="@style/holoSpinner"
+    
 
     android:textSize="20sp"
 
