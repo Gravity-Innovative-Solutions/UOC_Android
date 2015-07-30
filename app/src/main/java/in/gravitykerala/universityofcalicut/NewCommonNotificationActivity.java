@@ -3,6 +3,7 @@ package in.gravitykerala.universityofcalicut;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.Pair;
 import android.widget.ListView;
@@ -37,6 +38,12 @@ public class NewCommonNotificationActivity extends AppCompatActivity implements 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_notification);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         // mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         //buttonRefresh = (Button) findViewById(R.id.button_refresh);

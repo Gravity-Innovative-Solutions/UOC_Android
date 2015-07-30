@@ -304,6 +304,23 @@
             </LinearLayout>
             </com.andexert.library.RippleView>
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#97ff1d1d"
+                android:id="@+id/qp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Previous Question Papers"
+                    android:id="@+id/textView222"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

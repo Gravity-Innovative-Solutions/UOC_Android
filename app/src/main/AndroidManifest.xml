@@ -159,9 +159,16 @@
         <activity
             android:name=".RegularSyllabusActivity"
             android:label="@string/title_activity_syllabus" />
+
+        <activity
+            android:name=".OnlineApplicationActivity"
+            android:label="@string/title_activity_online_application" />
         <activity
             android:name=".CoursesOffered"
-            android:label="@string/title_activity_courses_offered"></activity>
+            android:label="@string/title_activity_courses_offered" />
+        <activity
+            android:name=".QuestionPaperActivity"
+            android:label="Previous Question Papers"></activity>
 
 
     </application>

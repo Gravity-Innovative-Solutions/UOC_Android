@@ -8,12 +8,12 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 
 
-public class OnlineReg_epayment extends AppCompatActivity {
+public class OnlineApplicationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_online_reg_epayment);
+        setContentView(R.layout.activity_online_application);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
@@ -22,8 +22,7 @@ public class OnlineReg_epayment extends AppCompatActivity {
 
         WebView myWebView = (WebView) findViewById(R.id.webview);
         myWebView.getSettings().setBuiltInZoomControls(true);
-        myWebView.loadUrl("http://202.88.252.18/CuPbOnline/online_portal/registration.php");
-//        http:
+        myWebView.loadUrl("https://www.uoc.ac.in/gen_epay/pay1.php");
     }
 
     @Override

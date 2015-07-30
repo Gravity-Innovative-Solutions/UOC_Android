@@ -160,10 +160,10 @@ public class PareekshaBhavanFragment extends Fragment {
         v.findViewById(R.id.a).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), QuestionPaperActivity.class);
-//                intent.setAction(Intent.ACTION_VIEW);
-//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-//                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/revised_feestructure_on29june2015.pdf"));
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.universityofcalicut.info/news/revised_feestructure_on29june2015.pdf"));
                 startActivity(intent);
 
             }

@@ -70,7 +70,7 @@ public class HomeDrawer extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(R.string.title_activity_diedu).withIcon(GoogleMaterial.Icon.gmd_people).withIdentifier(6).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_online_reg).withIcon(GoogleMaterial.Icon.gmd_adb).withIdentifier(5).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_plcmnt).withIcon(GoogleMaterial.Icon.gmd_business).withIdentifier(7).withCheckable(true),
-                        new PrimaryDrawerItem().withName(R.string.online_application).withIcon(GoogleMaterial.Icon.gmd_perm_identity).withIdentifier(8).withCheckable(true),
+                        new PrimaryDrawerItem().withName(R.string.online_payment).withIcon(GoogleMaterial.Icon.gmd_perm_identity).withIdentifier(8).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_feedback).withIcon(GoogleMaterial.Icon.gmd_feedback).withIdentifier(10).withCheckable(true),
                         new PrimaryDrawerItem().withName(R.string.title_activity_contact).withIcon(GoogleMaterial.Icon.gmd_contact_phone).withIdentifier(11).withCheckable(true)
 

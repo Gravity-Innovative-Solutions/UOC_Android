@@ -7,11 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.andexert.library.RippleView;
 
 import in.gravitykerala.universityofcalicut.CoursesOffered;
 import in.gravitykerala.universityofcalicut.NewNotificationActivity;
+import in.gravitykerala.universityofcalicut.QuestionPaperActivity;
 import in.gravitykerala.universityofcalicut.R;
 
 
@@ -21,6 +23,7 @@ import in.gravitykerala.universityofcalicut.R;
 public class DistanceEducation extends Fragment {
     private static final String KEY_TITLE = "title";
     RippleView notification, onlineidcard, course, contact_class, affltd_clgs, study_material, qbank;
+    LinearLayout qp;
 
     public DistanceEducation() {
         // Required empty public constructor
@@ -49,6 +52,7 @@ public class DistanceEducation extends Fragment {
         affltd_clgs = (RippleView) v.findViewById(R.id.affil_clgs);
         study_material = (RippleView) v.findViewById(R.id.stdy_materials);
         qbank = (RippleView) v.findViewById(R.id.qustn_bank);
+        qp = (LinearLayout) v.findViewById(R.id.qp);
 //        notification.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -69,6 +73,13 @@ public class DistanceEducation extends Fragment {
                 startActivity(i6);
             }
 
+        });
+        qp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), QuestionPaperActivity.class);
+                startActivity(i);
+            }
         });
 
 

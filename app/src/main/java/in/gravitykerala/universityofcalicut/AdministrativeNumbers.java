@@ -68,7 +68,7 @@ public class AdministrativeNumbers extends AppCompatActivity {
         TextView myPhone40 = (TextView) findViewById(R.id.textView152);
         TextView myPhone41 = (TextView) findViewById(R.id.textView154);
 
-        SpannableString content = new SpannableString("Content");
+        SpannableString content = new SpannableString("0494-2407102");
         content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
         myPhone.setText(content);
 

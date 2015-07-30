@@ -31,7 +31,7 @@ import java.util.concurrent.ExecutionException;
 
 import in.gravitykerala.universityofcalicut.Models.MobileNotification;
 
-public class NewNotificationActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class NewNotificationActivity extends AppCompatActivity implements GravitySupport {
 
     final public static String KEY_NOTIFICATION_TYPE = "NOTIFICATION_TYPE";
 
@@ -92,7 +92,13 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
         // Initialize the progress bar
 //        mProgressBar.setVisibility(ProgressBar.GONE);
         mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
-        mSwipeLayout.setOnRefreshListener(this);
+        mSwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshCourseItems();
+                mSwipeLayout.setRefreshing(true);
+            }
+        });
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_red_light,
                 android.R.color.holo_green_light, android.R.color.holo_orange_light,
                 android.R.color.holo_blue_light);
@@ -200,13 +206,7 @@ public class NewNotificationActivity extends AppCompatActivity implements SwipeR
         builder.create().show();
     }
 
-    @Override
-    public void onRefresh() {
 
-        refreshCourseItems();
-        mSwipeLayout.setRefreshing(true);
-
-    }
 
     private void refreshCourseItems() {
 
