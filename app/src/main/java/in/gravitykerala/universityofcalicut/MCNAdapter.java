@@ -2,6 +2,8 @@ package in.gravitykerala.universityofcalicut;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,16 +60,28 @@ public class MCNAdapter extends ArrayAdapter<MobileNotification> {
         final TextView tvurl = (TextView) row.findViewById(R.id.row_url);
         tvTitle.setText(currentItem.mTitle);
         tvContent.setText(currentItem.mcontent);
-        tvurl.setText(currentItem.url);
-//            tvContent.setOnClickListener(new View.OnClickListener() {
-//                //
-//                @Override
-//                public void onClick(View arg0) {
-//                    InternalExam activity = (InternalExam) mContext;
-//                    activity.Internal(currentItem);
-//                }
-//            });
+        tvurl.setVisibility(TextView.GONE);
+        if (currentItem.url != null && !(currentItem.url.isEmpty())) {
+            tvurl.setText(currentItem.url);
+
+            row.setOnClickListener(new View.OnClickListener() {
+                //
+                @Override
+                public void onClick(View arg0) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(currentItem.url));
+                    mContext.startActivity(intent);
+
+
+                }
+            });
+        }
         return row;
+
     }
+
+
 }
 

@@ -19,7 +19,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Content: sadasdasd asd sadas asdasdasdas asdasdasdas sadasdasdas asdasdasda"
         android:id="@+id/row_content"
-        android:paddingBottom="7dp"
+        android:paddingBottom="5dp"
         android:layout_marginLeft="3dp" />
 
 </LinearLayout>
