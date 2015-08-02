@@ -30,12 +30,10 @@ public class PushNotificationHandler extends NotificationsHandler implements Gra
 
 
     public static final int NOTIFICATION_ID = 1;
-    private NotificationManager mNotificationManager;
     NotificationCompat.Builder builder;
     Context ctx, currentContext;
-
-
     SharedPreferences prefs;
+    private NotificationManager mNotificationManager;
 
     @Override
     public void onRegistered(Context context, final String gcmRegistrationId) {
@@ -70,16 +68,42 @@ public class PushNotificationHandler extends NotificationsHandler implements Gra
         ctx = context;
         String nhMessage = bundle.getString("message");
         String msgContent = bundle.getString("content");
+        String notificationType = bundle.getString(KEY_NOTIFICATION_TYPE);
 
-        sendNotification(nhMessage, msgContent);
+        sendNotification(nhMessage, msgContent, notificationType);
     }
 
-    private void sendNotification(String msg, String content) {
+    private void sendNotification(String msg, String content, String notificationType) {
         mNotificationManager = (NotificationManager)
                 ctx.getSystemService(Context.NOTIFICATION_SERVICE);
 
+        Intent notificationIntent = new Intent(ctx, NewNotificationActivity.class);
+
+
+        if (ID_NOTIFICATION_DISTANCE_CONTACT_CLASS.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_CONTACT_CLASS);
+        } else if (ID_NOTIFICATION_DISTANCE_NOTIFICATION.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_NOTIFICATION);
+        } else if (ID_NOTIFICATION_DISTANCE_QUESTION_BANK.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_QUESTION_BANK);
+        } else if (ID_NOTIFICATION_DISTANCE_STUDY_MATERIAL.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_DISTANCE_STUDY_MATERIAL);
+        } else if (ID_NOTIFICATION_EXAM_NOTIFICATIONS.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_EXAM_NOTIFICATIONS);
+        } else if (ID_NOTIFICATION_EXAM_RESULT.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_EXAM_RESULT);
+        } else if (ID_NOTIFICATION_EXAM_TIMETABLE.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_EXAM_TIMETABLE);
+        } else if (ID_NOTIFICATION_NEWS.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_NOTIFICATION_NEWS);
+        } else if (ID_NOTIFICATION_ORDERS.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_NOTIFICATION_ORDERS);
+        } else if (ID_NOTIFICATION_VC_DESK.contentEquals(notificationType)) {
+            notificationIntent.putExtra(NewNotificationActivity.KEY_NOTIFICATION_TYPE, NewNotificationActivity.NOTIFICATION_VC_DESK);
+        }
+
         PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0,
-                new Intent(ctx, NotificationActivity.class), 0);
+                notificationIntent, 0);
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(ctx)
