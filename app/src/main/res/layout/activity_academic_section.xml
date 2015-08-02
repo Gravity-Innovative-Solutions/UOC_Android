@@ -169,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="0494-240-7207"
+                        android:text="0494-240-7315"
                         android:id="@+id/textView132"
                         android:autoLink="phone" />
 
@@ -1134,14 +1134,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B.Tech EE – I, EE – II"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView208" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7471"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView209"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1158,14 +1158,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B.Tech EE – III"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView210" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7472"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView211"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1182,14 +1182,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B.Tech EE IX"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView212" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7483"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView213"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1206,14 +1206,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B.Tech EE V"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView214" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7479"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView215"
                         android:autoLink="phone"
                         android:layout_marginRight="5dp" />
                 </TableRow>
@@ -1231,14 +1231,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B.Tech EE VI"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView216" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7401"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView217"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1255,7 +1255,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B.Tech EE VIII"
-                        android:id="@+id/textView206"
+                        android:id="@+id/textView218"
                         android:layout_marginRight="5dp" />
 
                     <TextView
@@ -1263,7 +1263,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7482"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView219"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1280,14 +1280,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA Joint Controller of Exams-II"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView220" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7223"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView221"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1304,14 +1304,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA Asst. Registrar VII"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView222" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7224"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView223"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1328,14 +1328,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA Asst. Registrar VIII"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView224" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7436"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView225"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1352,14 +1352,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA Dy. Registrar-V"
-                        android:id="@+id/textView206" />
+                        android:id="@+id/textView226" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7225"
-                        android:id="@+id/textView207"
+                        android:id="@+id/textView227"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1376,14 +1376,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA – I, ERD II Migration"
-                        android:id="@+id/textView205" />
+                        android:id="@+id/textView228" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7462"
-                        android:id="@+id/textView61"
+                        android:id="@+id/textView229"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1400,14 +1400,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA IX, EAX"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView230" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7437"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView231"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1424,14 +1424,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA –V, EA XXII"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView232" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7459"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView233"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1448,14 +1448,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA –VI, EA XXIII"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView234" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7458"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView235"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1472,14 +1472,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA VII, EA VIII"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView236" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7442"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView237"
                         android:autoLink="phone"
                         android:layout_marginRight="5dp" />
                 </TableRow>
@@ -1497,14 +1497,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA XII, EAXI"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView238" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7438"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView239"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1521,14 +1521,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA XIII, EAXIX"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView240" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7437"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView241"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1545,14 +1545,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA XIX, EA XX"
-                        android:id="@+id/textView208" />
+                        android:id="@+id/textView242" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7433"
-                        android:id="@+id/textView209"
+                        android:id="@+id/textView243"
                         android:autoLink="phone" />
 
                 </TableRow>
@@ -1570,14 +1570,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA XV, EA XVI"
-                        android:id="@+id/textView210" />
+                        android:id="@+id/textView244" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7435"
-                        android:id="@+id/textView211"
+                        android:id="@+id/textView245"
                         android:phoneNumber="true"
                         android:autoLink="phone" />
                 </TableRow>
@@ -1595,14 +1595,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA XVII, EA XVIII"
-                        android:id="@+id/textView210" />
+                        android:id="@+id/textView246" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7434"
-                        android:id="@+id/textView211"
+                        android:id="@+id/textView247"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1619,14 +1619,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EA-III, EA IIA"
-                        android:id="@+id/textView210" />
+                        android:id="@+id/textView248" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7229"
-                        android:id="@+id/textView211"
+                        android:id="@+id/textView249"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1643,14 +1643,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EAIV, EA XXI"
-                        android:id="@+id/textView210" />
+                        android:id="@+id/textView250" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7460"
-                        android:id="@+id/textView211"
+                        android:id="@+id/textView251"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1667,14 +1667,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA Section"
-                        android:id="@+id/textView210" />
+                        android:id="@+id/textView252" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7449"
-                        android:id="@+id/textView211"
+                        android:id="@+id/textView253"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1691,14 +1691,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BA EOT I &amp;II"
-                        android:id="@+id/textView210" />
+                        android:id="@+id/textView254" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="0494-240-7457"
-                        android:id="@+id/textView211"
+                        android:id="@+id/textView255"
                         android:autoLink="phone" />
                 </TableRow>
 
@@ -1715,15 +1715,15 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Despatch Section"
-                        android:id="@+id/textView210"
+                        android:id="@+id/textView256"
                         android:paddingBottom="25dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="+4942407261"
-                        android:id="@+id/textView211"
+                        android:text="04942407261"
+                        android:id="@+id/textView257"
                         android:autoLink="phone"
                         android:paddingBottom="25dp" />
                 </TableRow>
