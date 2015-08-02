@@ -111,7 +111,7 @@ public class PushNotificationHandler extends NotificationsHandler implements Gra
                         .setContentTitle("University")
                         .setStyle(new NotificationCompat.BigTextStyle()
                                 .bigText(msg))
-                        .setContentText(content);
+                        .setContentText(msg + ": \n" + content);
 
         mBuilder.setContentIntent(contentIntent);
         mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
