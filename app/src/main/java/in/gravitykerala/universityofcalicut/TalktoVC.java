@@ -41,6 +41,9 @@ public class TalktoVC extends AppCompatActivity {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
+//        Drawer result;
+//        result.getActionBarDrawerToggle().setDrawerIndicatorEnabled(false);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         try {
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL and key
