@@ -6,6 +6,7 @@
     <string name="about_fragment_title">About</string>
     <string name="demo_fragment_title_one">Home</string>
     <string name="action_settings">Settings</string>
+    <string name="action_course_preference">Notification Preference</string>
     <string name="demo_two">Notifications</string>
     <string name="title_activity_pareeksha_bhavan">Directorate of Admission</string>
     <string name="title_fragment_pareekshabavan">Pareeksha Bhavan</string>

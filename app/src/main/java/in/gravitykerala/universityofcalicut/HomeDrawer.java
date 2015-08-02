@@ -194,8 +194,11 @@ public class HomeDrawer extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_course_preference) {
+            Intent i = new Intent(HomeDrawer.this, CourseSelectActivity.class);
+            startActivity(i);
+            finish();
+            return false;
         }
 
         return super.onOptionsItemSelected(item);
