@@ -15,3 +15,37 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+#
+#-keep class com.google.common.base.** { *; }
+#-dontwarn com.google.common.base.**
+#
+#-keep class com.google.common.Cache.** { *; }
+#-dontwarn com.google.common.Cache.**
+#
+#-keep class com.google.common.collect.** { *; }
+#-dontwarn com.google.common.collect.**
+#
+#-keep class com.google.common.collect.** { *; }
+#-dontwarn com.google.common.collect.**
+
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
+-dontwarn sun.misc.Unsafe
+
+-keepattributes Signature,*Annotation*,EnclosingMethod
+-keep @interface com.google.gson.annotations.SerializedName
+
+##---------------Begin: proguard configuration for Gson  ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+#-keepattributes Signature
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+ -keep class in.gravitykerala.universityofcalicut.Models.** { *; }
+
+# Mcrosoft libraries
+-keep class com.microsoft.** { *; }
