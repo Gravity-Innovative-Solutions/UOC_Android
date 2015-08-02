@@ -14,7 +14,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="COURSES OFFERED BY SCHOOL OF DISTANCE EDUCATION"
+            android:text="COURSES OFFERED"
             android:id="@+id/textView217"
             android:layout_margin="10dp"
             android:gravity="center"
@@ -29,7 +29,8 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:paddingBottom="10dp">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -58,7 +59,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A ENGLISH"
                         android:id="@+id/textView219" />
 
@@ -76,7 +77,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A MALAYALAM"
                         android:id="@+id/textView218" />
                 </TableRow>
@@ -88,7 +89,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A HINDI"
                         android:id="@+id/textView223" />
                 </TableRow>
@@ -100,7 +101,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A ARABIC"
                         android:id="@+id/textView224" />
                 </TableRow>
@@ -112,7 +113,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A TAMIL"
                         android:id="@+id/textView225" />
                 </TableRow>
@@ -124,7 +125,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A SANSKRIT"
                         android:id="@+id/textView226" />
                 </TableRow>
@@ -136,7 +137,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A AFZAL UL ULAMA"
                         android:id="@+id/textView227" />
                 </TableRow>
@@ -148,7 +149,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A HISTORY"
                         android:id="@+id/textView228" />
                 </TableRow>
@@ -160,7 +161,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A SOCIOLOGY"
                         android:id="@+id/textView229" />
                 </TableRow>
@@ -172,7 +173,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A POLITICAL SCIENCE"
                         android:id="@+id/textView230" />
                 </TableRow>
@@ -184,7 +185,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A PHILOSOPHY"
                         android:id="@+id/textView231" />
                 </TableRow>
@@ -196,7 +197,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B A ECONOMICS "
                         android:id="@+id/textView232" />
                 </TableRow>
@@ -208,7 +209,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B Sc MATHEMATICS"
                         android:id="@+id/textView233" />
                 </TableRow>
@@ -220,7 +221,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B Com     Finance"
                         android:id="@+id/textView234"
                         android:layout_column="0" />
@@ -234,7 +235,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B Com     Co-operation"
                         android:id="@+id/textView236" />
                 </TableRow>
@@ -246,7 +247,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B Com     Banking  Insurance"
                         android:id="@+id/textView238"
                         android:layout_column="0" />
@@ -260,7 +261,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B Com     Computer Applications"
                         android:id="@+id/textView240"
                         android:layout_column="0" />
@@ -275,7 +276,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B B A     Finance"
                         android:id="@+id/textView242"
                         android:layout_column="0" />
@@ -290,7 +291,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B B A     Marketing"
                         android:id="@+id/textView244"
                         android:layout_column="0" />
@@ -305,7 +306,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B B A     Human Resource Management"
                         android:id="@+id/textView246"
                         android:layout_column="0" />
@@ -320,7 +321,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     ENGLISH"
                         android:id="@+id/textView248"
                         android:layout_column="0" />
@@ -335,7 +336,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     MALAYALAM"
                         android:id="@+id/textView250"
                         android:layout_column="0" />
@@ -350,7 +351,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     ARABIC"
                         android:id="@+id/textView252"
                         android:layout_column="0" />
@@ -365,7 +366,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     HINDI"
                         android:id="@+id/textView254"
                         android:layout_column="0" />
@@ -380,7 +381,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     SANSKRIT"
                         android:id="@+id/textView256"
                         android:layout_column="0" />
@@ -395,7 +396,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     TAMIL"
                         android:id="@+id/textView258"
                         android:layout_column="0" />
@@ -409,7 +410,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     HISTORY"
                         android:id="@+id/textView260"
                         android:layout_column="0" />
@@ -424,7 +425,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     SOCIOLOGY"
                         android:id="@+id/textView262"
                         android:layout_column="0" />
@@ -438,7 +439,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     POLITICS"
                         android:id="@+id/textView264"
                         android:layout_column="0" />
@@ -453,7 +454,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     PHILOSOPHY"
                         android:id="@+id/textView266"
                         android:layout_column="0" />
@@ -468,7 +469,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M A     ECONOMICS"
                         android:id="@+id/textView268"
                         android:layout_column="0" />
@@ -483,7 +484,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M Sc     MATHS"
                         android:id="@+id/textView270"
                         android:layout_column="0" />
@@ -498,7 +499,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M Com     Financial Management"
                         android:id="@+id/textView272"
                         android:layout_column="0" />
@@ -513,7 +514,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M Com     Marketing Management"
                         android:id="@+id/textView274"
                         android:layout_column="0" />
@@ -527,7 +528,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M B A     Finance"
                         android:id="@+id/textView276"
                         android:layout_column="0" />
@@ -542,7 +543,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M B A     Marketing"
                         android:id="@+id/textView278"
                         android:layout_column="0" />
@@ -557,7 +558,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M B A     Human Resource Management"
                         android:id="@+id/textView280"
                         android:layout_column="0" />
@@ -572,7 +573,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="M B A     International Business Studies"
                         android:id="@+id/textView282"
                         android:layout_column="0" />
@@ -587,7 +588,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="PROGRAMME COURSES"
                         android:id="@+id/textView384"
                         android:layout_column="0" />
@@ -601,7 +602,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BACHELOR OF MULTIMEDIA COMMUNICATION"
                         android:id="@+id/textView284"
                         android:layout_column="0" />
@@ -615,7 +616,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BACHELOR OF INTERIOR DESIGN"
                         android:id="@+id/textView285"
                         android:layout_column="0" />
@@ -629,7 +630,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="BACHELOR OF GRAPHIC DESIGN AND ANIMATION"
                         android:id="@+id/textView286"
                         android:layout_column="0" />
@@ -643,7 +644,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="B Sc IN COUNSELLING PSYCHOLOGY"
                         android:id="@+id/textView287"
                         android:layout_column="0" />
@@ -658,7 +659,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="PG DIPLOMA IN TV PROGRAMME PRODUCTION"
                         android:id="@+id/textView288"
                         android:layout_column="0" />
@@ -672,7 +673,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="PG DIPLOMA IN TV NEWS PRESENTATION AND ANCHORING"
                         android:id="@+id/textView289"
                         android:layout_column="0" />
@@ -687,7 +688,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="PG DIPLOMA IN MULTIMEDIA"
                         android:id="@+id/textView290"
                         android:layout_column="0" />
@@ -702,7 +703,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="PG DIPLOMA IN WEB TECHNOLOGY"
                         android:id="@+id/textView291"
                         android:layout_column="0" />
@@ -716,7 +717,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="PG DIPLOMA IN FOREIGN TRADE"
                         android:id="@+id/textView292"
                         android:layout_column="0" />
@@ -730,7 +731,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="DIPLOMA IN ARCHITECTURAL VISUALISATION"
                         android:id="@+id/textView293"
                         android:layout_column="0" />
@@ -744,7 +745,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="DIPLOMA IN MUTIMEDIA AND ANIMATION"
                         android:id="@+id/textView294"
                         android:layout_column="0" />
@@ -758,7 +759,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="DIPLOMA IN GEMMOLOGY"
                         android:id="@+id/textView295"
                         android:layout_column="0" />
@@ -772,7 +773,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="DIPLOMA IN HOTEL MANAGEMENT"
                         android:id="@+id/textView296"
                         android:layout_column="0" />
@@ -786,7 +787,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="CERTIFICATE COURSES"
                         android:id="@+id/textView297"
                         android:layout_column="0" />
@@ -800,7 +801,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="AUTOMOBILE SERVICE AND MAINTENANCE - 1 Year"
                         android:id="@+id/textView298"
                         android:layout_column="0" />
@@ -814,7 +815,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="AUTO CAD - 1 Year"
                         android:id="@+id/textView299"
                         android:layout_column="0" />
@@ -828,7 +829,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="LAP TOP AND DESK TOP ENGINEERING - 1 Year"
                         android:id="@+id/textView300"
                         android:layout_column="0" />
