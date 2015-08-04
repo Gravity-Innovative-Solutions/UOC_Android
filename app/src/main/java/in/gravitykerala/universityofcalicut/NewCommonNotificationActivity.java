@@ -25,7 +25,7 @@ import in.gravitykerala.universityofcalicut.Models.MobileNotification;
 
 //import in.gravitykerala.easysyllabi.R;
 
-public class NewCommonNotificationActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class NewCommonNotificationActivity extends AppCompatActivity implements GravitySupport {
     private MobileServiceClient mClient;
     private TextView tv;
     private MobileServiceTable<MobileCommonNotification> mToDoTable;
@@ -58,7 +58,15 @@ public class NewCommonNotificationActivity extends AppCompatActivity implements 
 //                }
         // });
         mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
-        mSwipeLayout.setOnRefreshListener(this);
+        //mSwipeLayout.setOnRefreshListener(this);
+        mSwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                //mSwipeLayout.setRefreshing(true);
+                refreshnotification();
+                //mSwipeLayout.setRefreshing(true);
+            }
+        });
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_red_light,
                 android.R.color.holo_green_light, android.R.color.holo_orange_light,
                 android.R.color.holo_blue_light);
@@ -99,11 +107,13 @@ public class NewCommonNotificationActivity extends AppCompatActivity implements 
     }
 
     public void refreshnotification() {
+
         final ListenableFuture<MobileCommonNotification> result = mClient.invokeApi("CommonNotification", MobileCommonNotification.class);
 
         Futures.addCallback(result, new FutureCallback<MobileCommonNotification>() {
             @Override
             public void onFailure(Throwable exc) {
+                mSwipeLayout.setRefreshing(false);
                 exc.printStackTrace();
                 Log.d("Output", "error");
                 Toast.makeText(NewCommonNotificationActivity.this, "No Network Access", Toast.LENGTH_LONG).show();
@@ -111,7 +121,9 @@ public class NewCommonNotificationActivity extends AppCompatActivity implements 
             }
 
             @Override
+
             public void onSuccess(MobileCommonNotification result) {
+                mSwipeLayout.setRefreshing(false);
                 mAdapter.clear();
                 String[] r = null;
                 String r1 = "";
@@ -166,12 +178,12 @@ public class NewCommonNotificationActivity extends AppCompatActivity implements 
 
     }
 
-    public void onRefresh() {
-
-        refreshnotification();
-        mSwipeLayout.setRefreshing(false);
-
-    }
+//    public void onRefresh() {
+//
+//        refreshnotification();
+//        mSwipeLayout.setRefreshing(false);
+//
+//    }
 //    public void Internal(final MobileCommonNotification.Exam item){
 //
 //        Intent newActivity0 = new Intent(this, InternlSubjectMark.class).putExtra("<id>", item.getId());

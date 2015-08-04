@@ -274,7 +274,7 @@ public class NewNotificationActivity extends AppCompatActivity implements Gravit
 //            sp_Department.setAdapter(depAdapter);
 //                sp_Department.setSelection(-1);
 
-                Toast.makeText(getBaseContext(), "", Toast.LENGTH_LONG).show();
+                // Toast.makeText(getBaseContext(), "", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(getBaseContext(), "Error retrieving notifications, Probably bad network connection!", Toast.LENGTH_LONG).show();
             }
